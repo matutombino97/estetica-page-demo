@@ -2,9 +2,6 @@
 
 Una landing page optimizada para conversiones, diseñada específicamente para clínicas de estética, dermatología o centros de belleza que buscan captar pacientes de alto valor (High-Ticket).
 
-## 🚀 Demo en Vivo
-[Insertar tu link de Netlify acá, ej: https://lumina-demo.netlify.app]
-
 ## 🛠️ Tecnologías Utilizadas
 * **HTML5** (Semántico y accesible)
 * **Tailwind CSS** (Vía CDN para desarrollo rápido y responsive design)
