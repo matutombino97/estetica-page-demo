@@ -1,11 +1,15 @@
 import { initScrollAnimations } from '../components/scrollAnimations.js';
 
 export function renderHome() {
-    const app = document.getElementById('app');
-    app.innerHTML = `
+  const app = document.getElementById('app');
+  app.innerHTML = `
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80');"></div>
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" 
+           alt="Medicina Estética" 
+           class="hero-img" 
+           fetchpriority="high" 
+           loading="eager">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Medicina Estética Avanzada</span>
@@ -258,53 +262,53 @@ export function renderHome() {
     </section>
   `;
 
-    window.scrollTo(0, 0);
-    initScrollAnimations();
-    initTestimonialsCarousel();
+  window.scrollTo(0, 0);
+  initScrollAnimations();
+  initTestimonialsCarousel();
 }
 
 function initTestimonialsCarousel() {
-    const track = document.getElementById('testimonials-track');
-    const dotsContainer = document.getElementById('carousel-dots');
-    if (!track || !dotsContainer) return;
+  const track = document.getElementById('testimonials-track');
+  const dotsContainer = document.getElementById('carousel-dots');
+  if (!track || !dotsContainer) return;
 
-    const cards = track.querySelectorAll('.testimonial-card');
-    const total = cards.length;
-    let current = 0;
-    let interval;
+  const cards = track.querySelectorAll('.testimonial-card');
+  const total = cards.length;
+  let current = 0;
+  let interval;
 
-    // Create dots
-    for (let i = 0; i < total; i++) {
-        const dot = document.createElement('button');
-        dot.className = `carousel-dot${i === 0 ? ' active' : ''}`;
-        dot.setAttribute('aria-label', `Testimonial ${i + 1}`);
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
-    }
+  // Create dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('button');
+    dot.className = `carousel-dot${i === 0 ? ' active' : ''}`;
+    dot.setAttribute('aria-label', `Testimonial ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  }
 
-    function goTo(index) {
-        current = index;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-            d.classList.toggle('active', i === current);
-        });
-    }
+  function goTo(index) {
+    current = index;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
 
-    function next() {
-        goTo((current + 1) % total);
-    }
+  function next() {
+    goTo((current + 1) % total);
+  }
 
-    function startAutoplay() {
-        interval = setInterval(next, 5000);
-    }
+  function startAutoplay() {
+    interval = setInterval(next, 5000);
+  }
 
-    function stopAutoplay() {
-        clearInterval(interval);
-    }
+  function stopAutoplay() {
+    clearInterval(interval);
+  }
 
-    const carousel = document.getElementById('testimonials-carousel');
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
+  const carousel = document.getElementById('testimonials-carousel');
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
 
-    startAutoplay();
+  startAutoplay();
 }
