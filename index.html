@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumi Estética | Demo</title>
+    <link rel="icon" type="image/png" href="favicon.jpg" sizes="32x32">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#D4AF37', 
+                        'brand-dark': '#1a1a1a', 
+                        'brand-pink': '#fff0f5', 
+                        'brand-pink-dark': '#fce4ec', 
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .smooth-scroll { scroll-behavior: smooth; }
+        /* Transición suave para el acordeón */
+        .details-content { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-brand-pink text-gray-800 smooth-scroll">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-gem text-brand-gold text-2xl"></i>
+                    <span class="font-bold text-xl tracking-wider text-brand-dark">LUMI</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                    <a href="#tratamientos" class="hover:text-brand-gold transition">TRATAMIENTOS</a>
+                    <a href="#experiencia" class="hover:text-brand-gold transition">EXPERIENCIA</a>
+                    <a href="#contacto" class="hover:text-brand-gold transition">CONTACTO</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#contacto" class="bg-brand-gold text-white px-6 py-2 rounded-full font-semibold hover:bg-yellow-600 transition shadow-md">
+                        <i class="fa-regular fa-calendar-check mr-2"></i> Agendar Cita
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-lg">
+            <a href="#tratamientos" class="block text-gray-700 font-semibold">Tratamientos</a>
+            <a href="#experiencia" class="block text-gray-700 font-semibold">Experiencia</a>
+            <a href="#contacto" class="block text-brand-gold font-bold">Agendar Cita</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-brand-dark/30"></div> <div class="relative z-10 text-center text-white px-4 max-w-4xl mt-16">
+            <span class="uppercase tracking-[0.2em] text-sm text-brand-gold font-semibold mb-4 block">Medicina Estética Avanzada</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Realzá tu belleza natural <span class="text-brand-gold italic">sin filtros.</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 font-light text-gray-100 max-w-2xl mx-auto">
+                Tratamientos personalizados que combinan ciencia y arte para resultados visibles y duraderos.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#tratamientos" class="bg-brand-gold text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-600 transition shadow-xl hover:-translate-y-1">
+                    Descubrir Tratamientos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experiencia" class="py-20 relative z-10 -mt-20 px-4">
+         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:-translate-y-2 transition duration-300">
+                <div class="w-16 h-16 bg-brand-pink-dark rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold text-2xl">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Profesionales Médicos</h3>
+                <p class="text-gray-600">Tu salud es prioridad. Procedimientos realizados exclusivamente por doctores certificados.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:-translate-y-2 transition duration-300 md:scale-105 z-10 md:-mt-4 border-b-4 border-brand-gold">
+                <div class="w-16 h-16 bg-brand-pink-dark rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold text-2xl">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Resultados Naturales</h3>
+                <p class="text-gray-600">Nadie notará qué te hiciste, pero todos notarán que te ves radiante y descansada.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:-translate-y-2 transition duration-300">
+                <div class="w-16 h-16 bg-brand-pink-dark rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold text-2xl">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tecnología Premium</h3>
+                <p class="text-gray-600">Invertimos en la mejor aparatología del mercado mundial (FDA & ANMAT aprobados).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tratamientos" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                 <span class="text-brand-gold font-bold uppercase tracking-wider mb-2 block">Nuestros Favoritos</span>
+                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Tratamientos Estrella</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Botox & Rellenos Faciales</h3>
+                        <p class="text-gray-600 mb-4">Suaviza líneas de expresión y recupera el volumen perdido.</p>
+                        
+                        <div id="details-1" class="hidden mb-4 pt-4 border-t border-gray-100 text-sm text-gray-700 bg-brand-pink rounded-lg p-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Duración:</strong> 4 a 6 meses.</li>
+                                <li><strong>Sesión:</strong> 30 minutos.</li>
+                                <li><strong>Ideal para:</strong> Patas de gallo, entrecejo, relleno de labios y pómulos.</li>
+                                <li><strong>Dolor:</strong> Mínimo (usamos anestesia tópica).</li>
+                            </ul>
+                        </div>
+                        <button onclick="toggleDetails('details-1', this)" class="text-brand-gold font-bold hover:text-yellow-700 flex items-center focus:outline-none">
+                            <span>Más información</span> <i class="fa-solid fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Depilación Láser Soprano</h3>
+                        <p class="text-gray-600 mb-4">La solución definitiva para una piel suave todo el año.</p>
+                        
+                        <div id="details-2" class="hidden mb-4 pt-4 border-t border-gray-100 text-sm text-gray-700 bg-brand-pink rounded-lg p-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Tecnología:</strong> Soprano Ice Platinum (Trío láser).</li>
+                                <li><strong>Beneficio:</strong> Indoloro y apto para pieles bronceadas en verano.</li>
+                                <li><strong>Sesiones:</strong> Pack de 6 a 8 sesiones para eliminación total.</li>
+                                <li><strong>Zonas:</strong> Cuerpo entero y rostro.</li>
+                            </ul>
+                        </div>
+                        <button onclick="toggleDetails('details-2', this)" class="text-brand-gold font-bold hover:text-yellow-700 flex items-center focus:outline-none">
+                            <span>Más información</span> <i class="fa-solid fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Hydra-Glow Facial</h3>
+                        <p class="text-gray-600 mb-4">Limpieza profunda + hidratación intensa para un brillo instantáneo.</p>
+                        
+                        <div id="details-3" class="hidden mb-4 pt-4 border-t border-gray-100 text-sm text-gray-700 bg-brand-pink rounded-lg p-4">
+                             <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Procedimiento:</strong> Peeling ultrasónico, extracción de impurezas y máscara de ácido hialurónico.</li>
+                                <li><strong>Resultado:</strong> Piel luminosa, poros limpios y textura suave al instante.</li>
+                                <li><strong>Ideal:</strong> Previo a eventos o fiestas.</li>
+                            </ul>
+                        </div>
+                        <button onclick="toggleDetails('details-3', this)" class="text-brand-gold font-bold hover:text-yellow-700 flex items-center focus:outline-none">
+                            <span>Más información</span> <i class="fa-solid fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-brand-dark text-white text-center rounded-t-[3rem]">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tu mejor versión te está esperando.</h2>
+            <p class="text-gray-300 mb-10 text-lg">
+                No postergues más ese mimo que te merecés. La agenda de este mes se está llenando rápido.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="bg-brand-gold text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-yellow-600 transition flex items-center justify-center shadow-lg hover:scale-105">
+                    <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Reservar mi Turno Ahora
+                </a>
+            </div>
+            <div class="mt-12 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-gray-400">
+                <span><i class="fa-solid fa-location-dot mr-2 text-brand-gold"></i> Mendoza Capital, Barrio Bombal</span>
+                <span><i class="fa-regular fa-clock mr-2 text-brand-gold"></i> Lun-Sab 9hs a 20hs</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 Lumi Estética. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/549261000000?text=Hola!%20Vengo%20de%20la%20web." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+        <div class="fixed bottom-0 left-0 w-full bg-gray-900 text-white py-3 px-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] border-t-4 border-brand-gold flex flex-col md:flex-row justify-center items-center gap-3 text-center demo-banner">
+        
+        <div class="flex items-center gap-2 text-yellow-400 font-bold animate-pulse">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>SITIO DEMO</span>
+        </div>
+        
+        <p class="text-sm text-gray-300">
+            Esta página es un diseño de muestra. La estética no existe.
+        </p>
+        
+        <a href="https://wa.me/5492613433108?text=Hola!%20Vi%20la%20demo%20de%20estetica%20y%20quiero%20una%20web%20asi." 
+           class="bg-brand-gold text-brand-dark px-5 py-1.5 rounded-full text-xs md:text-sm font-extrabold hover:bg-white hover:text-brand-gold transition shadow-lg ml-0 md:ml-4 flex items-center gap-2">
+            <i class="fa-solid fa-laptop-code"></i> ¿Querés una web así? Contactame
+        </a>
+    </div>
+
+    <script>
+        // 1. Script para el menú móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // 2. Script para Expandir/Contraer detalles (Acordeón)
+        function toggleDetails(id, button) {
+            // Encuentra el div de detalles correspondiente
+            const detailsBox = document.getElementById(id);
+            
+            // Alterna la clase 'hidden' para mostrar/ocultar
+            detailsBox.classList.toggle('hidden');
+            
+            // Encuentra el icono dentro del botón
+            const icon = button.querySelector('i');
+            
+            // Rota el icono 180 grados si está abierto
+            if (!detailsBox.classList.contains('hidden')) {
+                icon.classList.add('rotate-180');
+                button.querySelector('span').textContent = "Menos información";
+            } else {
+                icon.classList.remove('rotate-180');
+                button.querySelector('span').textContent = "Más información";
+            }
+        }
+    </script>
+</body>
+</html>
