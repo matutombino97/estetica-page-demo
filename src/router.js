@@ -8,7 +8,7 @@ import { renderContacto } from './pages/contacto.js';
 import { renderArticulo } from './pages/articulo.js';
 import { setActiveLink } from './components/navbar.js';
 
-const router = new Navigo('/');
+const router = new Navigo('/estetica-page-demo/');
 
 function onRouteChange(renderFn, path) {
     return () => {
