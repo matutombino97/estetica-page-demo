@@ -7,14 +7,14 @@ const articles = {
         date: '28 Feb, 2026',
         author: 'Dra. Camila Sánchez',
         readTime: '8 min',
-        heroImg: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         Tu piel es tu carta de presentación. Y aunque no lo creas, hay hábitos cotidianos que están acelerando tu envejecimiento sin que te des cuenta. Después de más de 15 años tratando pacientes, puedo decirte que la mayoría de los signos prematuros de envejecimiento podrían haberse evitado con simples cambios de rutina.
       </p>
 
       <h2>1. No usar protector solar todos los días</h2>
-      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=900&q=80" alt="Protector solar" class="article-img">
+      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Protector solar" class="article-img">
       <p>
         Este es, sin exagerar, el error número uno. <strong>El 80% del envejecimiento visible de la piel se debe a la exposición solar acumulada</strong>, lo que los dermatólogos llamamos "fotoenvejecimiento". Y no, no hablo solo de cuando vas a la playa. El sol que recibís caminando al supermercado, manejando el auto o sentada cerca de una ventana también cuenta.
       </p>
@@ -44,7 +44,7 @@ const articles = {
       </p>
 
       <h2>3. No hidratar la piel grasa</h2>
-      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Hidratación facial" class="article-img">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Hidratación facial" class="article-img">
       <p>
         Este es un mito súper extendido: "Tengo piel grasa, no necesito hidratante". <strong>Error.</strong> La piel grasa produce exceso de sebo, pero eso no significa que esté hidratada. De hecho, muchas veces la piel produce más grasa precisamente porque está deshidratada y trata de compensar.
       </p>
@@ -95,7 +95,7 @@ const articles = {
         date: '15 Feb, 2026',
         author: 'Dr. Martín Rivas',
         readTime: '7 min',
-        heroImg: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         El botox es probablemente el tratamiento estético más popular del mundo y, al mismo tiempo, el que más mitos tiene a su alrededor. Después de aplicar más de 3.000 procedimientos, quiero contarte toda la verdad: lo bueno, lo que hay que tener en cuenta, y lo que es pura ficción.
@@ -110,7 +110,7 @@ const articles = {
       </p>
 
       <h2>MITO 1: "Te deja sin expresión facial"</h2>
-      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80" alt="Resultado natural de botox" class="article-img">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Resultado natural de botox" class="article-img">
       <p>
         <strong>FALSO</strong> (si está bien aplicado). Este es el mito más extendido y el que más miedo genera. La realidad es que un profesional experimentado aplica dosis mínimas y precisas en puntos estratégicos. El resultado no es una cara "congelada", sino una versión descansada y natural de vos misma.
       </p>
@@ -181,7 +181,7 @@ const articles = {
         date: '02 Feb, 2026',
         author: 'Lic. Sofía Moretti',
         readTime: '10 min',
-        heroImg: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         No existe una rutina universal de skincare. Lo que le funciona a tu amiga puede ser un desastre para tu piel. La clave está en conocer tu tipo de piel, entender qué necesita, y armar un protocolo personalizado. Después de 10 años como cosmiatra, te voy a dar las rutinas paso a paso para cada tipo.
@@ -193,7 +193,7 @@ const articles = {
       </p>
 
       <h2>Rutina para Piel Grasa</h2>
-      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80" alt="Skincare piel grasa" class="article-img">
+      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Skincare piel grasa" class="article-img">
       <p><strong>Tu piel produce exceso de sebo</strong>, lo que genera brillo, poros dilatados y tendencia al acné. El error más común es usar productos agresivos que la "sequen", porque eso solo genera más producción de grasa.</p>
       
       <h3>Mañana:</h3>
@@ -282,7 +282,7 @@ const articles = {
         date: '20 Ene, 2026',
         author: 'Lic. Sofía Moretti',
         readTime: '5 min',
-        heroImg: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         La limpieza facial profesional es la base de cualquier protocolo de cuidado serio. Pero una de las preguntas más frecuentes en el consultorio es: "¿cada cuánto me la tengo que hacer?" La respuesta, como en casi todo en estética, es: depende.
@@ -297,7 +297,7 @@ const articles = {
       </p>
 
       <h2>Frecuencia según tu tipo de piel</h2>
-      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Tratamiento facial" class="article-img">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Tratamiento facial" class="article-img">
       
       <h3>Piel grasa o acneica: cada 3-4 semanas</h3>
       <p>Tu piel produce más sebo, los poros se obstruyen más rápido y necesitás extracciones más frecuentes para evitar que se formen quistes e inflamaciones.</p>
@@ -342,7 +342,7 @@ const articles = {
         date: '10 Ene, 2026',
         author: 'Dra. Camila Sánchez',
         readTime: '6 min',
-        heroImg: 'https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         Si tuviera que recomendar un solo producto de skincare para el resto de tu vida, sería el protector solar. No el sérum más caro, no la crema más exclusiva. El protector solar. Sin negociación.
@@ -361,7 +361,7 @@ const articles = {
       </p>
 
       <h2>¿Qué SPF necesito?</h2>
-      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=900&q=80" alt="Protección solar SPF" class="article-img">
+      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Protección solar SPF" class="article-img">
       <p>
         <strong>SPF 30</strong> bloquea el 97% de los rayos UVB. <strong>SPF 50</strong> bloquea el 98%. La diferencia parece mínima, pero en el uso diario sostenido, ese 1% extra sí se nota a lo largo de los años. Mi recomendación: SPF 50+ siempre, especialmente en Argentina donde la radiación es alta.
       </p>
@@ -403,14 +403,14 @@ const articles = {
         date: '03 Ene, 2026',
         author: 'Dra. Camila Sánchez',
         readTime: '7 min',
-        heroImg: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80',
+        heroImg: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=1920&q=80',
         content: `
       <p class="article-intro">
         El mundo de la medicina estética evoluciona cada vez más rápido. Lo que hace 5 años parecía ciencia ficción, hoy es parte de nuestro día a día en el consultorio. Acabo de volver del Congreso Internacional de Medicina Estética en Miami, y estas son las tendencias que van a dominar este 2026.
       </p>
 
       <h2>1. Glass Skin: la obsesión por la piel transparente</h2>
-      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=80" alt="Glass skin tendencia" class="article-img">
+      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Glass skin tendencia" class="article-img">
       <p>
         El concepto viene de la K-Beauty (belleza coreana) y se refiere a una piel tan hidratada, luminosa y pareja que parece de vidrio. No se trata de cubrirla con maquillaje, sino de que la piel misma tenga esa calidad.
       </p>
@@ -471,7 +471,7 @@ export function renderArticulo(slug) {
     if (!article) {
         app.innerHTML = `
       <section class="sub-hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Artículo no encontrado</h1>
@@ -523,3 +523,5 @@ export function renderArticulo(slug) {
 }
 
 export { articles };
+
+

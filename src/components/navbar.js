@@ -19,8 +19,8 @@ export function renderNavbar() {
       </div>
 
       <div class="navbar-cta">
-        <a href="/contacto" class="btn btn-gold" data-navigo>
-          <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+        <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Cita
         </a>
       </div>
 
@@ -112,3 +112,5 @@ export function setActiveLink(path) {
         }
     });
 }
+
+

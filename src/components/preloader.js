@@ -12,3 +12,5 @@ export function initPreloader() {
         preloader.classList.add('hidden');
     }, 3000);
 }
+
+

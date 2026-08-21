@@ -3,42 +3,42 @@ import { initScrollAnimations } from '../components/scrollAnimations.js';
 const galleryItems = [
   {
     // Same close-up face photo — before: dull skin, after: glowing
-    photo: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Botox & Rellenos',
     category: 'botox',
     testimonial: 'Me veo 10 años más joven, pero natural. ¡Encantada!',
   },
   {
     // Close-up woman face with clean skin
-    photo: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Hydra-Glow Facial',
     category: 'facial',
     testimonial: 'Mi piel brilla sin maquillaje. Increíble resultado.',
   },
   {
     // Woman touching face
-    photo: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Peeling Químico',
     category: 'peeling',
     testimonial: 'Las manchas desaparecieron casi por completo. Muy recomendable.',
   },
   {
     // Close-up skin with good lighting
-    photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Mesoterapia Facial',
     category: 'mesoterapia',
     testimonial: 'La textura de mi piel mejoró un 100%. Estoy feliz.',
   },
   {
     // Woman profile with smooth skin
-    photo: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Dermapen',
     category: 'dermapen',
     testimonial: 'Mis cicatrices de acné se redujeron increíblemente.',
   },
   {
     // Close-up lips/lower face
-    photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80',
+    photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Botox & Rellenos',
     category: 'botox',
     testimonial: 'Labios perfectos, muy naturales. La doctora es una artista.',
@@ -53,7 +53,7 @@ export function renderGaleria() {
   app.innerHTML = `
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Resultados Reales</span>
@@ -185,3 +185,5 @@ function initGalleryFilters() {
     });
   });
 }
+
+

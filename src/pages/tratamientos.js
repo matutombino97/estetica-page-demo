@@ -5,7 +5,7 @@ const treatments = [
         id: 'botox',
         name: 'Botox & Rellenos Faciales',
         desc: 'Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos y naturales.',
-        img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '30 min',
         recovery: '4-6 meses',
         price: 'Desde $55.000',
@@ -21,7 +21,7 @@ const treatments = [
         id: 'laser',
         name: 'Depilación Láser Soprano',
         desc: 'La solución definitiva para una piel suave todo el año. Tecnología de trío láser indolora.',
-        img: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '45 min',
         recovery: '6-8 sesiones',
         price: 'Desde $35.000',
@@ -37,7 +37,7 @@ const treatments = [
         id: 'hydraglow',
         name: 'Hydra-Glow Facial',
         desc: 'Limpieza profunda + hidratación intensa. El tratamiento estrella para un brillo instantáneo.',
-        img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '60 min',
         recovery: 'Mensual',
         price: 'Desde $45.000',
@@ -53,7 +53,7 @@ const treatments = [
         id: 'peeling',
         name: 'Peeling Químico',
         desc: 'Renueva tu piel capa por capa. Elimina manchas, marcas de acné y textura irregular.',
-        img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '40 min',
         recovery: '3-7 días',
         price: 'Desde $40.000',
@@ -69,7 +69,7 @@ const treatments = [
         id: 'mesoterapia',
         name: 'Mesoterapia Facial',
         desc: 'Cóctel de vitaminas, minerales y ácido hialurónico inyectados directamente en la piel.',
-        img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '30 min',
         recovery: '24-48 hs',
         price: 'Desde $50.000',
@@ -85,7 +85,7 @@ const treatments = [
         id: 'dermapen',
         name: 'Dermapen / Microneedling',
         desc: 'Estimula la producción natural de colágeno a través de micro-punciones controladas.',
-        img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '45 min',
         recovery: '2-3 días',
         price: 'Desde $48.000',
@@ -101,7 +101,7 @@ const treatments = [
         id: 'limpieza',
         name: 'Limpieza Facial Profunda',
         desc: 'El paso fundamental para una piel sana. Extracción profesional y nutrición intensiva.',
-        img: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '50 min',
         recovery: 'Inmediato',
         price: 'Desde $25.000',
@@ -117,7 +117,7 @@ const treatments = [
         id: 'plasma',
         name: 'Plasma Rico en Plaquetas (PRP)',
         desc: 'Tu propia sangre es la medicina. Regeneración celular con factores de crecimiento autólogos.',
-        img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
         duration: '45 min',
         recovery: '1-2 días',
         price: 'Desde $60.000',
@@ -136,7 +136,7 @@ export function renderTratamientos() {
     app.innerHTML = `
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Catálogo Completo</span>
@@ -162,6 +162,9 @@ export function renderTratamientos() {
                   <span><i class="fa-solid fa-rotate"></i> ${t.recovery}</span>
                   <span><i class="fa-solid fa-tag"></i> ${t.price}</span>
                 </div>
+                <a href="https://wa.me/549261000000?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20por%20${encodeURIComponent(t.name)}" target="_blank" class="btn btn-gold" style="width: 100%; margin-top: var(--space-md); margin-bottom: var(--space-sm);">
+                  <i class="fa-brands fa-whatsapp"></i> Consultar
+                </a>
               </div>
               <div class="treatment-details" id="details-${t.id}">
                 <ul>
@@ -184,8 +187,8 @@ export function renderTratamientos() {
       <div class="container anim">
         <h2>¿No sabés cuál es el tratamiento ideal para vos?</h2>
         <p>Agendá una consulta gratuita y diseñamos un plan personalizado según tus necesidades.</p>
-        <a href="/contacto" class="btn btn-gold btn-lg" data-navigo>
-          <i class="fa-regular fa-calendar-check"></i> Agendar Consulta Gratis
+        <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20consulta%20gratuita%20para%20asesoramiento." target="_blank" class="btn btn-gold btn-lg">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Consulta Gratis
         </a>
       </div>
     </section>
@@ -204,3 +207,5 @@ export function renderTratamientos() {
 
     initScrollAnimations();
 }
+
+

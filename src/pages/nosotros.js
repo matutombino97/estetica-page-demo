@@ -4,43 +4,43 @@ const team = [
   {
     name: 'Dra. Camila Sánchez',
     role: 'Directora Médica',
-    photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Especialista en Dermatología Estética con 15 años de experiencia. Formada en la UBA y especializada en rejuvenecimiento facial en Barcelona.',
   },
   {
     name: 'Dr. Martín Rivas',
     role: 'Cirujano Plástico',
-    photo: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Cirujano plástico matriculado con maestría en Medicina Estética. Referente en técnicas de Botox y rellenos con ácido hialurónico.',
   },
   {
     name: 'Lic. Sofía Moretti',
     role: 'Cosmiatra Senior',
-    photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964ae17?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964ae17?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Cosmiatra con 10 años de práctica clínica. Certificada en dermapen, peelings avanzados y protocolos de skincare personalizados.',
   },
   {
     name: 'Dra. Valentina Lagos',
     role: 'Dermatóloga',
-    photo: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Dermatóloga clínica y estética. Especialista en tratamientos con láser, manchas pigmentarias y rosácea. Posgrado en la Universidad de Milán.',
   },
   {
     name: 'Lic. Joaquín Herrera',
     role: 'Kinesiólogo Estético',
-    photo: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Kinesiólogo con formación en drenaje linfático, masajes post-quirúrgicos y rehabilitación facial. Más de 2.000 procedimientos realizados.',
   },
   {
     name: 'Lic. Lucía Fernández',
     role: 'Nutricionista Estética',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Nutricionista especializada en dermonutrición y suplementación para piel. Diseña planes nutricionales que potencian los tratamientos estéticos.',
   },
   {
     name: 'Lic. Ana Paula Domínguez',
     role: 'Cosmiatra',
-    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
     bio: 'Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de luminosidad. Atención cálida y personalizada.',
   },
 ];
@@ -73,7 +73,7 @@ export function renderNosotros() {
   app.innerHTML = `
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Sobre Nosotros</span>
@@ -100,7 +100,7 @@ export function renderNosotros() {
             </p>
           </div>
           <div class="anim anim-right">
-            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format&fit=crop&w=800&q=80" alt="Clínica Lumi" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="Clínica Lumi" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
           </div>
         </div>
       </div>
@@ -201,3 +201,5 @@ export function renderNosotros() {
   window.scrollTo(0, 0);
   initScrollAnimations();
 }
+
+

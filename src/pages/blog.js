@@ -5,7 +5,7 @@ const articles = [
     slug: '5-errores-que-envejecen-tu-piel',
     title: '5 Errores que Envejecen tu Piel (y cómo evitarlos)',
     excerpt: 'Desde no usar protector solar hasta dormir con maquillaje. Descubrí los hábitos que te están sumando años y cómo revertirlos con simples cambios.',
-    img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Skincare',
     date: '28 Feb, 2026',
   },
@@ -13,7 +13,7 @@ const articles = [
     slug: 'botox-mitos-y-verdades',
     title: 'Botox: Mitos y Verdades que Tenés que Saber',
     excerpt: '¿El botox te deja sin expresión? ¿Es peligroso? Derribamos los mitos más comunes sobre uno de los tratamientos más populares del mundo.',
-    img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Tratamientos',
     date: '15 Feb, 2026',
   },
@@ -21,7 +21,7 @@ const articles = [
     slug: 'rutina-skincare-tipo-piel',
     title: 'Rutina de Skincare para Cada Tipo de Piel',
     excerpt: 'Piel grasa, seca, mixta o sensible: cada tipo necesita un protocolo diferente. Te armamos la rutina perfecta paso a paso con productos accesibles.',
-    img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Tips',
     date: '02 Feb, 2026',
   },
@@ -29,7 +29,7 @@ const articles = [
     slug: 'cada-cuanto-limpieza-facial',
     title: '¿Cada cuánto deberías hacerte una Limpieza Facial?',
     excerpt: 'La frecuencia ideal depende de tu tipo de piel y tu estilo de vida. Te explicamos cómo saber cuándo tu piel te pide una limpieza profesional.',
-    img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Cuidados',
     date: '20 Ene, 2026',
   },
@@ -37,7 +37,7 @@ const articles = [
     slug: 'protector-solar-regla-anti-edad',
     title: 'Protector Solar: La Regla de Oro Anti-Edad',
     excerpt: 'El 80% del envejecimiento de la piel se debe al sol. Por qué el SPF es tu mejor inversión y cómo elegir el ideal para cada tipo de piel.',
-    img: 'https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Cuidados',
     date: '10 Ene, 2026',
   },
@@ -45,7 +45,7 @@ const articles = [
     slug: 'tendencias-estetica-2026',
     title: 'Tendencias en Estética 2026: Lo que Viene',
     excerpt: 'Desde el "glass skin" hasta la bioestimulación con exosomas. Las tendencias que están revolucionando la medicina estética este año.',
-    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     tag: 'Tendencias',
     date: '03 Ene, 2026',
   },
@@ -56,7 +56,7 @@ export function renderBlog() {
   app.innerHTML = `
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Tips & Novedades</span>
@@ -152,3 +152,5 @@ export function initNewsletterForms() {
     });
   });
 }
+
+
