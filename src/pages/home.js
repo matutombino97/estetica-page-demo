@@ -94,7 +94,7 @@ export function renderHome() {
             <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Hydra-Glow Facial</h3>
-              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel luminosa.</p>
+              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel �CLATnosa.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 60 min</span>
                 <span><i class="fa-solid fa-rotate"></i> Mensual</span>
@@ -112,7 +112,7 @@ export function renderHome() {
     </section>
 
     <!-- QUIZ -->
-    <section class="section section-pink" style="background:var(--white-warm);">
+    <section class="section" style="background:#E6D5C3;">
       <div class="container text-center anim">
         <span class="section-label">Asesor Virtual</span>
         <h2 class="section-title">Descubrí tu tratamiento ideal</h2>
@@ -133,7 +133,7 @@ export function renderHome() {
             <div style="display:flex; flex-direction:column; gap:var(--space-md); align-items:center;">
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Manchas')">Eliminar Manchas o Cicatrices</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Arrugas')">Reducir Arrugas y Flacidez</button>
-              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Luminosidad')">Más Hidratación y Brillo</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, '�CLATnosidad')">Más Hidratación y Brillo</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Vello')">Eliminar Vello No Deseado</button>
             </div>
           </div>
@@ -395,9 +395,9 @@ window.calculateQuizResult = () => {
       title = 'Peeling Químico';
       desc = 'Renueva tu piel capa por capa, ideal para eliminar manchas y unificar el tono.';
       waMessage = 'Hola! Completé el asesor virtual y me recomendó Peeling Químico. Quiero más info.';
-    } else if (objetivo === 'Luminosidad') {
+    } else if (objetivo === '�CLATnosidad') {
       title = 'Hydra-Glow Facial';
-      desc = 'Limpieza profunda e hidratación intensa para un brillo instantáneo y piel luminosa.';
+      desc = 'Limpieza profunda e hidratación intensa para un brillo instantáneo y piel �CLATnosa.';
       waMessage = 'Hola! Completé el asesor virtual y me recomendó Hydra-Glow Facial. Quiero más info.';
     }
   } else if (zona === 'Cuerpo' || objetivo === 'Vello') {
@@ -424,4 +424,5 @@ window.resetQuiz = () => {
     step1.style.opacity = '1';
   }, 400);
 };
+
 

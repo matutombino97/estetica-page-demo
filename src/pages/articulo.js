@@ -357,7 +357,7 @@ const articles = {
         <li><strong>Rayos UVA:</strong> penetran más profundo, destruyen el colágeno y la elastina, generan manchas, y están presentes TODO el año, incluso en días nublados. Atraviesan vidrios.</li>
       </ul>
       <p>
-        El fotoenvejecimiento (envejecimiento por sol) es responsable del <strong>80-90% de los signos visibles de envejecimiento</strong>: arrugas, flacidez, manchas, textura despareja y pérdida de luminosidad.
+        El fotoenvejecimiento (envejecimiento por sol) es responsable del <strong>80-90% de los signos visibles de envejecimiento</strong>: arrugas, flacidez, manchas, textura despareja y pérdida de �CLATnosidad.
       </p>
 
       <h2>¿Qué SPF necesito?</h2>
@@ -380,7 +380,7 @@ const articles = {
       <h2>¿Cuál tipo de protector elegir?</h2>
       <ul>
         <li><strong>Piel grasa:</strong> Fluidos oil-free con acabado mate o toque seco</li>
-        <li><strong>Piel seca:</strong> Cremas con acabado hidratante y luminoso</li>
+        <li><strong>Piel seca:</strong> Cremas con acabado hidratante y �CLATnoso</li>
         <li><strong>Piel sensible:</strong> Filtros minerales (óxido de zinc, dióxido de titanio)</li>
         <li><strong>Uso diario urbano:</strong> Protectores con color que unifican el tono</li>
         <li><strong>Actividad al aire libre:</strong> Resistentes al agua y sudor</li>
@@ -412,7 +412,7 @@ const articles = {
       <h2>1. Glass Skin: la obsesión por la piel transparente</h2>
       <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Glass skin tendencia" class="article-img">
       <p>
-        El concepto viene de la K-Beauty (belleza coreana) y se refiere a una piel tan hidratada, luminosa y pareja que parece de vidrio. No se trata de cubrirla con maquillaje, sino de que la piel misma tenga esa calidad.
+        El concepto viene de la K-Beauty (belleza coreana) y se refiere a una piel tan hidratada, �CLATnosa y pareja que parece de vidrio. No se trata de cubrirla con maquillaje, sino de que la piel misma tenga esa calidad.
       </p>
       <p>
         Para lograrlo combinamos: peelings suaves periódicos, mesoterapia con ácido hialurónico, skinboosters y una rutina domiciliaria enfocada en hidratación multicapa. Los resultados son impresionantes y muy naturales.
@@ -523,5 +523,6 @@ export function renderArticulo(slug) {
 }
 
 export { articles };
+
 
 

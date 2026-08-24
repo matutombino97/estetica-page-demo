@@ -41,7 +41,7 @@ const team = [
     name: 'Lic. Ana Paula Domínguez',
     role: 'Cosmiatra',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de luminosidad. Atención cálida y personalizada.',
+    bio: 'Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de �CLATnosidad. Atención cálida y personalizada.',
   },
 ];
 
@@ -90,7 +90,7 @@ export function renderNosotros() {
             <span class="section-label">Nuestra Historia</span>
             <h2 class="section-title">Más de una década cuidando tu belleza</h2>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
-              Lumi nació en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estética se encuentre con el arte y la tecnología. Un lugar donde cada paciente sea tratada como única, con protocolos diseñados exclusivamente para ella.
+              �CLAT nació en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estética se encuentre con el arte y la tecnología. Un lugar donde cada paciente sea tratada como única, con protocolos diseñados exclusivamente para ella.
             </p>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
               Fundada por la Dra. Camila Sánchez en el corazón de Barrio Bombal, Mendoza, lo que comenzó como un consultorio de 40m² hoy es un centro de referencia con más de 150m² equipados con la última tecnología del mercado mundial.
@@ -100,7 +100,7 @@ export function renderNosotros() {
             </p>
           </div>
           <div class="anim anim-right">
-            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="Clínica Lumi" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="Clínica �CLAT" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
           </div>
         </div>
       </div>
@@ -201,5 +201,6 @@ export function renderNosotros() {
   window.scrollTo(0, 0);
   initScrollAnimations();
 }
+
 
 

@@ -43,7 +43,7 @@ const treatments = [
         price: 'Desde $45.000',
         details: [
             '<strong>Procedimiento:</strong> Peeling ultrasónico + extracción + mascarilla de ácido hialurónico.',
-            '<strong>Resultado:</strong> Piel luminosa, poros limpios y textura suave al instante.',
+            '<strong>Resultado:</strong> Piel �CLATnosa, poros limpios y textura suave al instante.',
             '<strong>Ideal:</strong> Previo a eventos, fiestas, bodas o sesiones de fotos.',
             '<strong>Frecuencia:</strong> Una vez al mes para mantener resultados óptimos.',
             '<strong>Incluye:</strong> Sérum vitamínico y protección solar post-tratamiento.',
@@ -60,7 +60,7 @@ const treatments = [
         details: [
             '<strong>Tipos:</strong> Superficial (ácido glicólico), medio (TCA), profundo (fenol).',
             '<strong>Beneficios:</strong> Elimina manchas solares, líneas finas, textura irregular.',
-            '<strong>Post:</strong> Descamación suave de 3-7 días. Piel renovada y luminosa.',
+            '<strong>Post:</strong> Descamación suave de 3-7 días. Piel renovada y �CLATnosa.',
             '<strong>Frecuencia:</strong> Cada 4-6 semanas según protocolo médico.',
             '<strong>Cuidado:</strong> Protección solar obligatoria SPF 50+.',
         ],
@@ -75,7 +75,7 @@ const treatments = [
         price: 'Desde $50.000',
         details: [
             '<strong>Ingredientes:</strong> Ácido hialurónico, vitaminas C y E, aminoácidos, péptidos.',
-            '<strong>Beneficios:</strong> Hidratación profunda, luminosidad, firmeza y elasticidad.',
+            '<strong>Beneficios:</strong> Hidratación profunda, �CLATnosidad, firmeza y elasticidad.',
             '<strong>Técnica:</strong> Micro-inyecciones con aguja ultrafina. Mínimas molestias.',
             '<strong>Sesiones:</strong> Protocolo de 4 sesiones cada 15 días.',
             '<strong>Resultado:</strong> Piel rejuvenecida, jugosa y con efecto "glass skin".',
@@ -152,7 +152,7 @@ export function renderTratamientos() {
           ${treatments
             .map(
                 (t, i) => `
-            <div class="treatment-card anim anim-delay-${(i % 3) + 1}" id="treatment-${t.id}">
+            <div class="treatment-card anim anim-delay-${(i % 3) + 1}" id="treatment-${t.id}" onclick="toggleTreatment('${t.id}', this.querySelector('.treatment-toggle'))">
               <div class="treatment-card-img" style="background-image: url('${t.img}');"></div>
               <div class="treatment-card-body">
                 <h3>${t.name}</h3>
@@ -162,16 +162,14 @@ export function renderTratamientos() {
                   <span><i class="fa-solid fa-rotate"></i> ${t.recovery}</span>
                   <span><i class="fa-solid fa-tag"></i> ${t.price}</span>
                 </div>
-                <a href="https://wa.me/549261000000?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20por%20${encodeURIComponent(t.name)}" target="_blank" class="btn btn-gold" style="width: 100%; margin-top: var(--space-md); margin-bottom: var(--space-sm);">
-                  <i class="fa-brands fa-whatsapp"></i> Consultar
-                </a>
+                <button class="btn btn-gold" style="width: 100%; margin-top: var(--space-md); margin-bottom: var(--space-sm);" onclick="event.stopPropagation(); window.openBookingModal('${t.name}')"><i class="fa-brands fa-whatsapp"></i> Consultar</button>
               </div>
               <div class="treatment-details" id="details-${t.id}">
                 <ul>
                   ${t.details.map((d) => `<li>${d}</li>`).join('')}
                 </ul>
               </div>
-              <button class="treatment-toggle" onclick="toggleTreatment('${t.id}', this)">
+              <button class="treatment-toggle" onclick="event.stopPropagation(); toggleTreatment('${t.id}', this)">
                 <span>Más información</span> <i class="fa-solid fa-chevron-down"></i>
               </button>
             </div>
@@ -187,25 +185,47 @@ export function renderTratamientos() {
       <div class="container anim">
         <h2>¿No sabés cuál es el tratamiento ideal para vos?</h2>
         <p>Agendá una consulta gratuita y diseñamos un plan personalizado según tus necesidades.</p>
-        <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20consulta%20gratuita%20para%20asesoramiento." target="_blank" class="btn btn-gold btn-lg">
-          <i class="fa-brands fa-whatsapp"></i> Agendar Consulta Gratis
-        </a>
+        <button class="btn btn-gold btn-lg" onclick="window.openBookingModal('Consulta Gratuita')"><i class="fa-brands fa-whatsapp"></i> Agendar Consulta Gratis</button>
       </div>
     </section>
   `;
 
     window.scrollTo(0, 0);
 
-    // Global toggle function
+        // Global toggle function
     window.toggleTreatment = (id, btn) => {
-        const details = document.getElementById(`details-${id}`);
+        const card = document.getElementById('treatment-' + id);
+        const details = document.getElementById('details-' + id);
         const isOpen = details.classList.contains('open');
+        
+        // Remove active class from all cards
+        document.querySelectorAll('.treatment-card').forEach(c => {
+            if (c.id !== 'treatment-' + id) c.classList.remove('active');
+        });
+        // Close all other details
+        document.querySelectorAll('.treatment-details').forEach(d => {
+            if (d.id !== 'details-' + id) d.classList.remove('open');
+        });
+        document.querySelectorAll('.treatment-toggle').forEach(b => {
+            if (b !== btn) {
+                b.classList.remove('open');
+                b.querySelector('span').textContent = 'M�s informaci�n';
+            }
+        });
+
+        // Toggle current card
         details.classList.toggle('open');
+        card.classList.toggle('active');
         btn.classList.toggle('open');
-        btn.querySelector('span').textContent = isOpen ? 'Más información' : 'Menos información';
+        btn.querySelector('span').textContent = isOpen ? 'M�s informaci�n' : 'Menos informaci�n';
     };
 
     initScrollAnimations();
 }
+
+
+
+
+
 
 

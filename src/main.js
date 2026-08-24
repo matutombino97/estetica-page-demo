@@ -3,6 +3,7 @@ import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { renderWhatsApp } from './components/whatsapp.js';
 import { initPreloader } from './components/preloader.js';
+import { initBookingModal } from './components/bookingModal.js';
 import { initNewsletterForms } from './pages/blog.js';
 import router from './router.js';
 
@@ -13,6 +14,7 @@ function init() {
     renderFooter();
     renderWhatsApp();
     initPreloader();
+    initBookingModal();
 
     // Init footer newsletter
     initNewsletterForms();
@@ -39,4 +41,6 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+
+
 

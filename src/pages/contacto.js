@@ -63,7 +63,7 @@ export function renderContacto() {
                 style="border:0;"
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de Lumi Estética">
+                title="Ubicación de �CLAT Estética">
               </iframe>
             </div>
           </div>
@@ -75,5 +75,6 @@ export function renderContacto() {
     window.scrollTo(0, 0);
     initScrollAnimations();
 }
+
 
 
