@@ -23,16 +23,9 @@ router
     .on('/tratamientos', onRouteChange(renderTratamientos, '/tratamientos'))
     .on('/nosotros', onRouteChange(renderNosotros, '/nosotros'))
     .on('/galeria', onRouteChange(renderGaleria, '/galeria'))
-    => {
-        renderArticulo(data.slug);
-        setActiveLink('/blog');
-        window.scrollTo(0, 0);
-        initScrollAnimations();
-    })
     .on('/contacto', onRouteChange(renderContacto, '/contacto'))
     .notFound(() => {
         onRouteChange(renderHome, '/')();
     });
 
 export default router;
-
