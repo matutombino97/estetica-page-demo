@@ -8,7 +8,7 @@ export function renderFooter() {
           <div class="footer-brand">
             <div class="navbar-logo">
               <i class="fa-solid fa-gem" style="color:var(--gold);font-size:1.5rem;"></i>
-              <span class="navbar-logo-text">�CLAT</span>
+              <span class="navbar-logo-text">ÉCLAT</span>
             </div>
             <p>Medicina estética avanzada. Combinamos ciencia y arte para realzar tu belleza natural con resultados visibles y duraderos.</p>
             <div class="footer-social">
@@ -53,13 +53,10 @@ export function renderFooter() {
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; ${new Date().getFullYear()} �CLAT Estética. Todos los derechos reservados.</p>
+          <p>&copy; ${new Date().getFullYear()} ÉCLAT Estética. Todos los derechos reservados.</p>
           <p>Mendoza Capital, Barrio Bombal</p>
         </div>
       </div>
     </div>
   `;
 }
-
-
-

@@ -1,5 +1,3 @@
-import { initScrollAnimations } from '../components/scrollAnimations.js';
-
 const articles = [
   {
     slug: '5-errores-que-envejecen-tu-piel',
@@ -112,10 +110,6 @@ export function renderBlog() {
       </div>
     </section>
   `;
-
-  window.scrollTo(0, 0);
-  initScrollAnimations();
-  initNewsletterForms();
 }
 
 export function initNewsletterForms() {
@@ -152,6 +146,3 @@ export function initNewsletterForms() {
     });
   });
 }
-
-
-

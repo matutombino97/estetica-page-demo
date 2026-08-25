@@ -7,6 +7,7 @@ import { renderBlog } from './pages/blog.js';
 import { renderContacto } from './pages/contacto.js';
 import { renderArticulo } from './pages/articulo.js';
 import { setActiveLink } from './components/navbar.js';
+import { initScrollAnimations } from './components/scrollAnimations.js';
 
 const router = new Navigo('/');
 
@@ -14,6 +15,8 @@ function onRouteChange(renderFn, path) {
     return () => {
         renderFn();
         setActiveLink(path);
+        window.scrollTo(0, 0);
+        initScrollAnimations();
     };
 }
 
@@ -26,6 +29,8 @@ router
     .on('/blog/:slug', ({ data }) => {
         renderArticulo(data.slug);
         setActiveLink('/blog');
+        window.scrollTo(0, 0);
+        initScrollAnimations();
     })
     .on('/contacto', onRouteChange(renderContacto, '/contacto'))
     .notFound(() => {
@@ -33,6 +38,3 @@ router
     });
 
 export default router;
-
-
-

@@ -6,7 +6,7 @@ export function renderNavbar() {
     <div class="navbar-inner">
       <a href="/" class="navbar-logo" data-navigo>
         <i class="fa-solid fa-gem"></i>
-        <span class="navbar-logo-text">ÉCLAT</span>
+        <span class="navbar-logo-text">Ã‰CLAT</span>
       </a>
 
       <div class="navbar-links">
@@ -112,6 +112,3 @@ export function setActiveLink(path) {
         }
     });
 }
-
-
-

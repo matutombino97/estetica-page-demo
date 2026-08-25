@@ -1,5 +1,3 @@
-import { initScrollAnimations } from '../components/scrollAnimations.js';
-
 const treatments = [
     {
         id: 'botox',
@@ -43,7 +41,7 @@ const treatments = [
         price: 'Desde $45.000',
         details: [
             '<strong>Procedimiento:</strong> Peeling ultras贸nico + extracci贸n + mascarilla de 谩cido hialur贸nico.',
-            '<strong>Resultado:</strong> Piel 蒀LATnosa, poros limpios y textura suave al instante.',
+            '<strong>Resultado:</strong> Piel luminosa, poros limpios y textura suave al instante.',
             '<strong>Ideal:</strong> Previo a eventos, fiestas, bodas o sesiones de fotos.',
             '<strong>Frecuencia:</strong> Una vez al mes para mantener resultados 贸ptimos.',
             '<strong>Incluye:</strong> S茅rum vitam铆nico y protecci贸n solar post-tratamiento.',
@@ -60,7 +58,7 @@ const treatments = [
         details: [
             '<strong>Tipos:</strong> Superficial (谩cido glic贸lico), medio (TCA), profundo (fenol).',
             '<strong>Beneficios:</strong> Elimina manchas solares, l铆neas finas, textura irregular.',
-            '<strong>Post:</strong> Descamaci贸n suave de 3-7 d铆as. Piel renovada y 蒀LATnosa.',
+            '<strong>Post:</strong> Descamaci贸n suave de 3-7 d铆as. Piel renovada y luminosa.',
             '<strong>Frecuencia:</strong> Cada 4-6 semanas seg煤n protocolo m茅dico.',
             '<strong>Cuidado:</strong> Protecci贸n solar obligatoria SPF 50+.',
         ],
@@ -75,7 +73,7 @@ const treatments = [
         price: 'Desde $50.000',
         details: [
             '<strong>Ingredientes:</strong> 脕cido hialur贸nico, vitaminas C y E, amino谩cidos, p茅ptidos.',
-            '<strong>Beneficios:</strong> Hidrataci贸n profunda, 蒀LATnosidad, firmeza y elasticidad.',
+            '<strong>Beneficios:</strong> Hidrataci贸n profunda, luminosidad, firmeza y elasticidad.',
             '<strong>T茅cnica:</strong> Micro-inyecciones con aguja ultrafina. M铆nimas molestias.',
             '<strong>Sesiones:</strong> Protocolo de 4 sesiones cada 15 d铆as.',
             '<strong>Resultado:</strong> Piel rejuvenecida, jugosa y con efecto "glass skin".',
@@ -189,9 +187,6 @@ export function renderTratamientos() {
       </div>
     </section>
   `;
-
-    window.scrollTo(0, 0);
-
         // Global toggle function
     window.toggleTreatment = (id, btn) => {
         const card = document.getElementById('treatment-' + id);
@@ -209,7 +204,7 @@ export function renderTratamientos() {
         document.querySelectorAll('.treatment-toggle').forEach(b => {
             if (b !== btn) {
                 b.classList.remove('open');
-                b.querySelector('span').textContent = 'M醩 informaci髇';
+                b.querySelector('span').textContent = 'M谩s informaci贸n';
             }
         });
 
@@ -217,15 +212,6 @@ export function renderTratamientos() {
         details.classList.toggle('open');
         card.classList.toggle('active');
         btn.classList.toggle('open');
-        btn.querySelector('span').textContent = isOpen ? 'M醩 informaci髇' : 'Menos informaci髇';
+        btn.querySelector('span').textContent = isOpen ? 'M谩s informaci贸n' : 'Menos informaci贸n';
     };
-
-    initScrollAnimations();
 }
-
-
-
-
-
-
-

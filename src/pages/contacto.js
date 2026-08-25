@@ -1,5 +1,3 @@
-import { initScrollAnimations } from '../components/scrollAnimations.js';
-
 export function renderContacto() {
     const app = document.getElementById('app');
     app.innerHTML = `
@@ -63,7 +61,7 @@ export function renderContacto() {
                 style="border:0;"
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de �CLAT Estética">
+                title="Ubicación de ÉCLAT Estética">
               </iframe>
             </div>
           </div>
@@ -71,10 +69,4 @@ export function renderContacto() {
       </div>
     </section>
   `;
-
-    window.scrollTo(0, 0);
-    initScrollAnimations();
 }
-
-
-

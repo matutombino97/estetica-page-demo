@@ -16,12 +16,6 @@ function init() {
     initPreloader();
     initBookingModal();
 
-    // Init footer newsletter
-    initNewsletterForms();
-
-    // Start router (will render the correct page)
-    router.resolve();
-
     // Update Navigo links after each navigation
     router.hooks({
         after: () => {
@@ -30,6 +24,9 @@ function init() {
             initNewsletterForms();
         },
     });
+
+    // Start router (will render the correct page)
+    router.resolve();
 
     // Initial link update
     router.updatePageLinks();
@@ -41,6 +38,3 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
-
-
-

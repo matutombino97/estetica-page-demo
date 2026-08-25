@@ -1,8 +1,8 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))o(t);new MutationObserver(t=>{for(const r of t)if(r.type==="childList")for(const l of r.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function s(t){const r={};return t.integrity&&(r.integrity=t.integrity),t.referrerPolicy&&(r.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?r.credentials="include":t.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function o(t){if(t.ep)return;t.ep=!0;const r=s(t);fetch(t.href,r)}})();function Ea(){const a=document.getElementById("navbar");a.className="navbar",a.innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))o(i);new MutationObserver(i=>{for(const n of i)if(n.type==="childList")for(const l of n.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&o(l)}).observe(document,{childList:!0,subtree:!0});function s(i){const n={};return i.integrity&&(n.integrity=i.integrity),i.referrerPolicy&&(n.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?n.credentials="include":i.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function o(i){if(i.ep)return;i.ep=!0;const n=s(i);fetch(i.href,n)}})();function we(){const e=document.getElementById("navbar");e.className="navbar",e.innerHTML=`
     <div class="navbar-inner">
       <a href="/" class="navbar-logo" data-navigo>
         <i class="fa-solid fa-gem"></i>
-        <span class="navbar-logo-text">�CLAT</span>
+        <span class="navbar-logo-text">ÉCLAT</span>
       </a>
 
       <div class="navbar-links">
@@ -15,8 +15,8 @@
       </div>
 
       <div class="navbar-cta">
-        <a href="/contacto" class="btn btn-gold" data-navigo>
-          <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+        <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Cita
         </a>
       </div>
 
@@ -26,7 +26,7 @@
         <span></span>
       </button>
     </div>
-  `,La(),wa(),ka()}function La(){const a=document.getElementById("mobile-menu-overlay");a.className="mobile-overlay",a.innerHTML=`
+  `,qe(),Ee(),Le()}function qe(){const e=document.getElementById("mobile-menu-overlay");e.className="mobile-overlay",e.innerHTML=`
     <a href="/" class="mobile-link" data-navigo>Inicio</a>
     <a href="/tratamientos" class="mobile-link" data-navigo>Tratamientos</a>
     <a href="/nosotros" class="mobile-link" data-navigo>Nosotros</a>
@@ -36,7 +36,7 @@
     <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold btn-lg" style="margin-top:auto;">
       <i class="fa-brands fa-whatsapp"></i> Agendar Cita
     </a>
-  `}function wa(){const a=document.querySelector(".navbar");window.addEventListener("scroll",()=>{window.scrollY>80?a.classList.add("scrolled"):a.classList.remove("scrolled")}),window.scrollY>80&&a.classList.add("scrolled")}function ka(){const a=document.getElementById("menu-toggle"),e=document.getElementById("mobile-menu-overlay");let s=document.querySelector(".mobile-overlay-backdrop");s||(s=document.createElement("div"),s.className="mobile-overlay-backdrop",document.body.appendChild(s));const o=()=>{a.classList.remove("open"),e.classList.remove("open"),s.classList.remove("open"),document.body.style.overflow=""};a.addEventListener("click",()=>{e.classList.contains("open")?o():(a.classList.add("open"),e.classList.add("open"),s.classList.add("open"),document.body.style.overflow="hidden")}),s.addEventListener("click",o),e.querySelectorAll(".mobile-link").forEach(t=>{t.addEventListener("click",o)})}function K(a){document.querySelectorAll(".navbar-link, .mobile-link").forEach(e=>{e.classList.remove("active");const s=e.getAttribute("href");(s===a||a==="/"&&s==="/")&&e.classList.add("active")})}function Ta(){const a=document.getElementById("footer-container");a.innerHTML=`
+  `}function Ee(){const e=document.querySelector(".navbar");window.addEventListener("scroll",()=>{window.scrollY>80?e.classList.add("scrolled"):e.classList.remove("scrolled")}),window.scrollY>80&&e.classList.add("scrolled")}function Le(){const e=document.getElementById("menu-toggle"),a=document.getElementById("mobile-menu-overlay");let s=document.querySelector(".mobile-overlay-backdrop");s||(s=document.createElement("div"),s.className="mobile-overlay-backdrop",document.body.appendChild(s));const o=()=>{e.classList.remove("open"),a.classList.remove("open"),s.classList.remove("open"),document.body.style.overflow=""};e.addEventListener("click",()=>{a.classList.contains("open")?o():(e.classList.add("open"),a.classList.add("open"),s.classList.add("open"),document.body.style.overflow="hidden")}),s.addEventListener("click",o),a.querySelectorAll(".mobile-link").forEach(i=>{i.addEventListener("click",o)})}function X(e){document.querySelectorAll(".navbar-link, .mobile-link").forEach(a=>{a.classList.remove("active");const s=a.getAttribute("href");(s===e||e==="/"&&s==="/")&&a.classList.add("active")})}function ke(){const e=document.getElementById("footer-container");e.innerHTML=`
     <div class="footer">
       <div class="container">
         <div class="footer-grid">
@@ -44,7 +44,7 @@
           <div class="footer-brand">
             <div class="navbar-logo">
               <i class="fa-solid fa-gem" style="color:var(--gold);font-size:1.5rem;"></i>
-              <span class="navbar-logo-text">�CLAT</span>
+              <span class="navbar-logo-text">ÉCLAT</span>
             </div>
             <p>Medicina estética avanzada. Combinamos ciencia y arte para realzar tu belleza natural con resultados visibles y duraderos.</p>
             <div class="footer-social">
@@ -89,12 +89,12 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; ${new Date().getFullYear()} �CLAT Estética. Todos los derechos reservados.</p>
+          <p>&copy; ${new Date().getFullYear()} ÉCLAT Estética. Todos los derechos reservados.</p>
           <p>Mendoza Capital, Barrio Bombal</p>
         </div>
       </div>
     </div>
-  `}function Sa(){const a=document.getElementById("whatsapp-container");a.innerHTML=`
+  `}function xe(){const e=document.getElementById("whatsapp-container");e.innerHTML=`
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/549261000000?text=Hola!%20Vengo%20de%20la%20web." target="_blank" class="wa-float" aria-label="WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
@@ -112,10 +112,42 @@
         <i class="fa-solid fa-laptop-code"></i> ¿Querés una web así? Contactame
       </a>
     </div>
-  `}function Aa(){const a=document.getElementById("preloader");window.addEventListener("load",()=>{setTimeout(()=>{a.classList.add("hidden")},800)}),setTimeout(()=>{a.classList.add("hidden")},3e3)}function w(){const a=new IntersectionObserver(e=>{e.forEach(s=>{s.isIntersecting&&(s.target.classList.add("anim-visible"),a.unobserve(s.target))})},{threshold:.1,rootMargin:"0px 0px -50px 0px"});document.querySelectorAll(".anim, .anim-scale, .anim-left, .anim-right").forEach(e=>{a.observe(e)})}const Pa=[{slug:"5-errores-que-envejecen-tu-piel",title:"5 Errores que Envejecen tu Piel (y cómo evitarlos)",excerpt:"Desde no usar protector solar hasta dormir con maquillaje. Descubrí los hábitos que te están sumando años y cómo revertirlos con simples cambios.",img:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",tag:"Skincare",date:"28 Feb, 2026"},{slug:"botox-mitos-y-verdades",title:"Botox: Mitos y Verdades que Tenés que Saber",excerpt:"¿El botox te deja sin expresión? ¿Es peligroso? Derribamos los mitos más comunes sobre uno de los tratamientos más populares del mundo.",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",tag:"Tratamientos",date:"15 Feb, 2026"},{slug:"rutina-skincare-tipo-piel",title:"Rutina de Skincare para Cada Tipo de Piel",excerpt:"Piel grasa, seca, mixta o sensible: cada tipo necesita un protocolo diferente. Te armamos la rutina perfecta paso a paso con productos accesibles.",img:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",tag:"Tips",date:"02 Feb, 2026"},{slug:"cada-cuanto-limpieza-facial",title:"¿Cada cuánto deberías hacerte una Limpieza Facial?",excerpt:"La frecuencia ideal depende de tu tipo de piel y tu estilo de vida. Te explicamos cómo saber cuándo tu piel te pide una limpieza profesional.",img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",tag:"Cuidados",date:"20 Ene, 2026"},{slug:"protector-solar-regla-anti-edad",title:"Protector Solar: La Regla de Oro Anti-Edad",excerpt:"El 80% del envejecimiento de la piel se debe al sol. Por qué el SPF es tu mejor inversión y cómo elegir el ideal para cada tipo de piel.",img:"https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=800&q=80",tag:"Cuidados",date:"10 Ene, 2026"},{slug:"tendencias-estetica-2026",title:"Tendencias en Estética 2026: Lo que Viene",excerpt:'Desde el "glass skin" hasta la bioestimulación con exosomas. Las tendencias que están revolucionando la medicina estética este año.',img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",tag:"Tendencias",date:"03 Ene, 2026"}];function xa(){const a=document.getElementById("app");a.innerHTML=`
+  `}function ze(){const e=document.getElementById("preloader");window.addEventListener("load",()=>{setTimeout(()=>{e.classList.add("hidden")},800)}),setTimeout(()=>{e.classList.add("hidden")},3e3)}function Se(){if(!document.getElementById("booking-modal")){const e=`
+        <div id="booking-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <button class="modal-close" onclick="window.closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+                <h3 id="booking-title">Agendar Turno</h3>
+                <p>Seleccioná una fecha y el momento del día que prefieras.</p>
+                <form id="booking-form" onsubmit="window.submitBooking(event)">
+                    <div class="form-group">
+                        <label for="booking-date">Día</label>
+                        <input type="date" id="booking-date" required min="${new Date().toISOString().split("T")[0]}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-time">Horario preferido</label>
+                        <select id="booking-time" required>
+                            <option value="">Seleccionar horario...</option>
+                            <option value="Mañana (9:00 - 13:00)">Mañana (9:00 - 13:00)</option>
+                            <option value="Tarde (13:00 - 17:00)">Tarde (13:00 - 17:00)</option>
+                            <option value="Noche (17:00 - 20:00)">Noche (17:00 - 20:00)</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="booking-treatment" value="" />
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">
+                        <i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+        `;document.body.insertAdjacentHTML("beforeend",e),window.openBookingModal=a=>{document.getElementById("booking-treatment").value=a,document.getElementById("booking-title").innerText=`Agendar: ${a}`,document.getElementById("booking-modal").style.display="flex"},window.closeBookingModal=()=>{document.getElementById("booking-modal").style.display="none"},window.submitBooking=a=>{a.preventDefault();const s=document.getElementById("booking-date").value,o=document.getElementById("booking-time").value,i=document.getElementById("booking-treatment").value,n=s.split("-"),l=`${n[2]}/${n[1]}/${n[0]}`,m=`Hola! Quiero agendar un turno para *${i}*.
+
+📅 Fecha: ${l}
+⏰ Horario: ${o}
+
+¿Tienen disponibilidad?`,f=`https://wa.me/549261000000?text=${encodeURIComponent(m)}`;window.closeBookingModal(),window.open(f,"_blank")}}}const Ae=[{slug:"5-errores-que-envejecen-tu-piel",title:"5 Errores que Envejecen tu Piel (y cómo evitarlos)",excerpt:"Desde no usar protector solar hasta dormir con maquillaje. Descubrí los hábitos que te están sumando años y cómo revertirlos con simples cambios.",img:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Skincare",date:"28 Feb, 2026"},{slug:"botox-mitos-y-verdades",title:"Botox: Mitos y Verdades que Tenés que Saber",excerpt:"¿El botox te deja sin expresión? ¿Es peligroso? Derribamos los mitos más comunes sobre uno de los tratamientos más populares del mundo.",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Tratamientos",date:"15 Feb, 2026"},{slug:"rutina-skincare-tipo-piel",title:"Rutina de Skincare para Cada Tipo de Piel",excerpt:"Piel grasa, seca, mixta o sensible: cada tipo necesita un protocolo diferente. Te armamos la rutina perfecta paso a paso con productos accesibles.",img:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Tips",date:"02 Feb, 2026"},{slug:"cada-cuanto-limpieza-facial",title:"¿Cada cuánto deberías hacerte una Limpieza Facial?",excerpt:"La frecuencia ideal depende de tu tipo de piel y tu estilo de vida. Te explicamos cómo saber cuándo tu piel te pide una limpieza profesional.",img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Cuidados",date:"20 Ene, 2026"},{slug:"protector-solar-regla-anti-edad",title:"Protector Solar: La Regla de Oro Anti-Edad",excerpt:"El 80% del envejecimiento de la piel se debe al sol. Por qué el SPF es tu mejor inversión y cómo elegir el ideal para cada tipo de piel.",img:"https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Cuidados",date:"10 Ene, 2026"},{slug:"tendencias-estetica-2026",title:"Tendencias en Estética 2026: Lo que Viene",excerpt:'Desde el "glass skin" hasta la bioestimulación con exosomas. Las tendencias que están revolucionando la medicina estética este año.',img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=800&q=80",tag:"Tendencias",date:"03 Ene, 2026"}];function Te(){const e=document.getElementById("app");e.innerHTML=`
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Tips & Novedades</span>
@@ -128,18 +160,18 @@
     <section class="section">
       <div class="container">
         <div class="blog-grid">
-          ${Pa.map((e,s)=>`
+          ${Ae.map((a,s)=>`
             <article class="blog-card anim anim-delay-${s%3+1}">
-              <a href="/blog/${e.slug}" data-navigo style="display:block;">
-                <div class="blog-card-img" style="background-image: url('${e.img}');">
-                  <span class="blog-card-tag">${e.tag}</span>
+              <a href="/blog/${a.slug}" data-navigo style="display:block;">
+                <div class="blog-card-img" style="background-image: url('${a.img}');">
+                  <span class="blog-card-tag">${a.tag}</span>
                 </div>
               </a>
               <div class="blog-card-body">
-                <div class="blog-card-date"><i class="fa-regular fa-calendar" style="margin-right:6px;"></i>${e.date}</div>
-                <h3><a href="/blog/${e.slug}" data-navigo style="color:inherit;transition:color 0.2s;">${e.title}</a></h3>
-                <p>${e.excerpt}</p>
-                <a href="/blog/${e.slug}" class="blog-read-more" data-navigo>
+                <div class="blog-card-date"><i class="fa-regular fa-calendar" style="margin-right:6px;"></i>${a.date}</div>
+                <h3><a href="/blog/${a.slug}" data-navigo style="color:inherit;transition:color 0.2s;">${a.title}</a></h3>
+                <p>${a.excerpt}</p>
+                <a href="/blog/${a.slug}" class="blog-read-more" data-navigo>
                   Leer artículo <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
@@ -166,14 +198,12 @@
         </div>
       </div>
     </section>
-  `,window.scrollTo(0,0),w(),R()}function R(){document.querySelectorAll(".newsletter-form").forEach(a=>{a.addEventListener("submit",e=>{e.preventDefault();const s=a.querySelector(".newsletter-input"),o=a.querySelector(".newsletter-btn"),t=a.querySelector(".newsletter-msg"),r=s.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r)){t.innerHTML='<span style="color:#e74c3c;"><i class="fa-solid fa-circle-xmark"></i> Ingresá un email válido</span>';return}o.disabled=!0,o.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i>',setTimeout(()=>{t.innerHTML='<span style="color:#10b981;"><i class="fa-solid fa-circle-check"></i> ¡Suscripción exitosa! Revisá tu casilla de email.</span>',o.innerHTML='<i class="fa-solid fa-check"></i> ¡Listo!',o.style.background="#10b981",s.value="",setTimeout(()=>{o.disabled=!1,o.innerHTML="Suscribirme",o.style.background="",t.innerHTML=""},4e3)},1200)})})}var za=/([:*])(\w+)/g,Ca="([^/]+)",ja=/\*/g,Ra="?(?:.*)",Ma=/\/\?/g,Ba="/?([^/]+|)",Fa="(?:/^|^)",Oa="";function J(a){return a===void 0&&(a="/"),O()?location.pathname+location.search+location.hash:a}function p(a){return a.replace(/\/+$/,"").replace(/^\/+/,"")}function P(a){return typeof a=="string"}function Da(a){return typeof a=="function"}function x(a){return a&&a.indexOf("#")>=0&&a.split("#").pop()||""}function Ia(a,e){return e.length===0||!a?null:a.slice(1,a.length).reduce(function(s,o,t){return s===null&&(s={}),s[e[t]]=decodeURIComponent(o),s},null)}function z(a){var e=p(a).split(/\?(.*)?$/);return[p(e[0]),e.slice(1).join("")]}function F(a){for(var e={},s=a.split("&"),o=0;o<s.length;o++){var t=s[o].split("=");if(t[0]!==""){var r=decodeURIComponent(t[0]);e[r]?(Array.isArray(e[r])||(e[r]=[e[r]]),e[r].push(decodeURIComponent(t[1]||""))):e[r]=decodeURIComponent(t[1]||"")}}return e}function Z(a,e){var s=z(p(a.currentLocationPath)),o=s[0],t=s[1],r=t===""?null:F(t),l=[],m;if(P(e.path)){if(m=Fa+p(e.path).replace(za,function(h,b,E){return l.push(E),Ca}).replace(ja,Ra).replace(Ma,Ba)+"$",p(e.path)===""&&p(o)==="")return{url:o,queryString:t,hashString:x(a.to),route:e,data:null,params:r}}else m=e.path;var g=new RegExp(m,Oa),f=o.match(g);if(f){var v=P(e.path)?Ia(f,l):f.groups?f.groups:f.slice(1);return{url:p(o.replace(new RegExp("^"+a.instance.root),"")),queryString:t,hashString:x(a.to),route:e,data:v,params:r}}return!1}function aa(){return!!(typeof window<"u"&&window.history&&window.history.pushState)}function k(a,e){return typeof a[e]>"u"||a[e]===!0}function _a(a){if(!a)return{};var e=a.split(","),s={},o;return e.forEach(function(t){var r=t.split(":").map(function(l){return l.replace(/(^ +| +$)/g,"")});switch(r[0]){case"historyAPIMethod":s.historyAPIMethod=r[1];break;case"resolveOptionsStrategy":o||(o={}),o.strategy=r[1];break;case"resolveOptionsHash":o||(o={}),o.hash=r[1]==="true";break;case"updateBrowserURL":case"callHandler":case"updateState":case"force":s[r[0]]=r[1]==="true";break}}),o&&(s.resolveOptions=o),s}function O(){return typeof window<"u"}function Ha(a,e){return a===void 0&&(a=[]),e===void 0&&(e={}),a.filter(function(s){return s}).forEach(function(s){["before","after","already","leave"].forEach(function(o){s[o]&&(e[o]||(e[o]=[]),e[o].push(s[o]))})}),e}function q(a,e,s){var o=e||{},t=0;(function r(){if(!a[t]){s&&s(o);return}Array.isArray(a[t])?(a.splice.apply(a,[t,1].concat(a[t][0](o)?a[t][1]:a[t][2])),r()):a[t](o,function(l){typeof l>"u"||l===!0?(t+=1,r()):s&&s(o)})})()}q.if=function(a,e,s){return Array.isArray(e)||(e=[e]),Array.isArray(s)||(s=[s]),[a,e,s]};function U(a,e){typeof a.currentLocationPath>"u"&&(a.currentLocationPath=a.to=J(a.instance.root)),a.currentLocationPath=a.instance._checkForAHash(a.currentLocationPath),e()}function C(a,e){for(var s=0;s<a.instance.routes.length;s++){var o=a.instance.routes[s],t=Z(a,o);if(t&&(a.matches||(a.matches=[]),a.matches.push(t),a.resolveOptions.strategy==="ONE")){e();return}}e()}function Na(a,e){a.navigateOptions&&(typeof a.navigateOptions.shouldResolve<"u"&&console.warn('"shouldResolve" is deprecated. Please check the documentation.'),typeof a.navigateOptions.silent<"u"&&console.warn('"silent" is deprecated. Please check the documentation.')),e()}function $a(a,e){a.navigateOptions.force===!0?(a.instance._setCurrent([a.instance._pathToMatchObject(a.to)]),e(!1)):e()}var G=O(),Ua=aa();function Ga(a,e){if(k(a.navigateOptions,"updateBrowserURL")){var s=("/"+a.to).replace(/\/\//g,"/"),o=G&&a.resolveOptions&&a.resolveOptions.hash===!0;Ua?(history[a.navigateOptions.historyAPIMethod||"pushState"](a.navigateOptions.stateObj||{},a.navigateOptions.title||"",o?"#"+s:s),location&&location.hash&&(a.instance.__freezeListening=!0,setTimeout(function(){if(!o){var t=location.hash;location.hash="",location.hash=t}a.instance.__freezeListening=!1},1))):G&&(window.location.href=a.to)}e()}function ea(a,e){var s=a.instance;if(!s.lastResolved()){e();return}q(s.lastResolved().map(function(o){return function(t,r){if(!o.route.hooks||!o.route.hooks.leave){r();return}var l=!1,m=a.instance.matchLocation(o.route.path,a.currentLocationPath,!1);if(o.route.path!=="*")l=!m;else{var g=a.matches?a.matches.find(function(f){return o.route.path===f.route.path}):!1;l=!g}if(k(a.navigateOptions,"callHooks")&&l){q(o.route.hooks.leave.map(function(f){return function(v,h){return f(function(b){b===!1?a.instance.__markAsClean(a):h()},a.matches&&a.matches.length>0?a.matches.length===1?a.matches[0]:a.matches:void 0)}}).concat([function(){return r()}]));return}else r()}}),{},function(){return e()})}function Va(a,e){a.match.route.hooks&&a.match.route.hooks.before&&k(a.navigateOptions,"callHooks")?q(a.match.route.hooks.before.map(function(s){return function(t,r){return s(function(l){l===!1?a.instance.__markAsClean(a):r()},a.match)}}).concat([function(){return e()}])):e()}function Qa(a,e){k(a.navigateOptions,"callHandler")&&a.match.route.handler(a.match),a.instance.updatePageLinks(),e()}function Wa(a,e){a.match.route.hooks&&a.match.route.hooks.after&&k(a.navigateOptions,"callHooks")&&a.match.route.hooks.after.forEach(function(s){return s(a.match)}),e()}function Xa(a,e){var s=a.instance.lastResolved();if(s&&s[0]&&s[0].route===a.match.route&&s[0].url===a.match.url&&s[0].queryString===a.match.queryString){s.forEach(function(o){o.route.hooks&&o.route.hooks.already&&k(a.navigateOptions,"callHooks")&&o.route.hooks.already.forEach(function(t){return t(a.match)})}),e(!1);return}e()}function Ya(a,e){var s=a.instance._notFoundRoute;if(s){a.notFoundHandled=!0;var o=z(a.currentLocationPath),t=o[0],r=o[1],l=x(a.to);s.path=p(t);var m={url:s.path,queryString:r,hashString:l,data:null,route:s,params:r!==""?F(r):null};a.matches=[m],a.match=m}e()}function Ka(a,e){(!a.resolveOptions||a.resolveOptions.noMatchWarning===!1||typeof a.resolveOptions.noMatchWarning>"u")&&console.warn('Navigo: "'+a.currentLocationPath+`" didn't match any of the registered routes.`),e()}function Ja(a,e){a.instance._setCurrent(null),e()}function sa(a,e){k(a.navigateOptions,"updateState")&&a.instance._setCurrent(a.matches),e()}var oa=[Xa,Va,Qa,Wa],V=[ea,Ya,q.if(function(a){var e=a.notFoundHandled;return e},oa.concat([sa]),[Ka,Ja])];function M(){return M=Object.assign||function(a){for(var e=1;e<arguments.length;e++){var s=arguments[e];for(var o in s)Object.prototype.hasOwnProperty.call(s,o)&&(a[o]=s[o])}return a},M.apply(this,arguments)}function Q(a,e){var s=0;function o(){if(s===a.matches.length){sa(a,e);return}q(oa,M({},a,{match:a.matches[s]}),function(){s+=1,o()})}ea(a,o)}function j(a){a.instance.__markAsClean(a)}function B(){return B=Object.assign||function(a){for(var e=1;e<arguments.length;e++){var s=arguments[e];for(var o in s)Object.prototype.hasOwnProperty.call(s,o)&&(a[o]=s[o])}return a},B.apply(this,arguments)}var W="[data-navigo]";function Za(a,e){var s=e||{strategy:"ONE",hash:!1,noMatchWarning:!1,linksSelector:W},o=this,t="/",r=null,l=[],m=!1,g,f=aa(),v=O();a?t=p(a):console.warn('Navigo requires a root path in its constructor. If not provided will use "/" as default.');function h(i){return i.indexOf("#")>=0&&(s.hash===!0?i=i.split("#")[1]||"/":i=i.split("#")[0]),i}function b(i){return p(t+"/"+p(i))}function E(i,n,c,u){return i=P(i)?b(i):i,{name:u||p(String(i)),path:i,handler:n,hooks:Ha(c)}}function ia(i,n,c){var u=this;return typeof i=="object"&&!(i instanceof RegExp)?(Object.keys(i).forEach(function(d){if(typeof i[d]=="function")u.on(d,i[d]);else{var y=i[d],T=y.uses,ya=y.as,qa=y.hooks;l.push(E(d,T,[g,qa],ya))}}),this):(typeof i=="function"&&(c=n,n=i,i=t),l.push(E(i,n,[g,c])),this)}function D(i,n){if(o.__dirty){o.__waiting.push(function(){return o.resolve(i,n)});return}else o.__dirty=!0;i=i?p(t)+"/"+p(i):void 0;var c={instance:o,to:i,currentLocationPath:i,navigateOptions:{},resolveOptions:B({},s,n)};return q([U,C,q.if(function(u){var d=u.matches;return d&&d.length>0},Q,V)],c,j),c.matches?c.matches:!1}function I(i,n){if(o.__dirty){o.__waiting.push(function(){return o.navigate(i,n)});return}else o.__dirty=!0;i=p(t)+"/"+p(i);var c={instance:o,to:i,navigateOptions:n||{},resolveOptions:n&&n.resolveOptions?n.resolveOptions:s,currentLocationPath:h(i)};q([Na,$a,C,q.if(function(u){var d=u.matches;return d&&d.length>0},Q,V),Ga,j],c,j)}function ta(i,n,c){var u=H(i,n);return u!==null?(I(u.replace(new RegExp("^/?"+t),""),c),!0):!1}function na(i){return this.routes=l=l.filter(function(n){return P(i)?p(n.path)!==p(i):Da(i)?i!==n.handler:String(n.path)!==String(i)}),this}function ra(){f&&(this.__popstateListener=function(){o.__freezeListening||D()},window.addEventListener("popstate",this.__popstateListener))}function la(){this.routes=l=[],f&&window.removeEventListener("popstate",this.__popstateListener),this.destroyed=m=!0}function ca(i,n){return o._notFoundRoute=E("*",i,[g,n],"__NOT_FOUND__"),this}function _(){if(v)return da().forEach(function(i){if(i.getAttribute("data-navigo")==="false"||i.getAttribute("target")==="_blank"){i.hasListenerAttached&&i.removeEventListener("click",i.navigoHandler);return}i.hasListenerAttached||(i.hasListenerAttached=!0,i.navigoHandler=function(n){if((n.ctrlKey||n.metaKey)&&n.target.tagName.toLowerCase()==="a")return!1;var c=i.getAttribute("href");if(typeof c>"u"||c===null)return!1;if(c.match(/^(http|https)/)&&typeof URL<"u")try{var u=new URL(c);c=u.pathname+u.search}catch{}var d=_a(i.getAttribute("data-navigo-options"));m||(n.preventDefault(),n.stopPropagation(),o.navigate(p(c),d))},i.addEventListener("click",i.navigoHandler))}),o}function da(){return v?[].slice.call(document.querySelectorAll(s.linksSelector||W)):[]}function ua(i){return"/"+t+"/"+p(i)}function pa(i){return g=i,this}function ma(){return r}function H(i,n,c){var u=l.find(function(T){return T.name===i}),d=null;if(u){if(d=u.path,n)for(var y in n)d=d.replace(":"+y,n[y]);d=d.match(/^\//)?d:"/"+d}return d&&c&&!c.includeRoot&&(d=d.replace(new RegExp("^/"+t),"")),d}function fa(i){return i.getAttribute("href")}function N(i){var n=z(p(i)),c=n[0],u=n[1],d=u===""?null:F(u),y=x(i),T=E(c,function(){},[g],c);return{url:c,queryString:u,hashString:y,route:T,data:null,params:d}}function ga(){return N(p(J(t)).replace(new RegExp("^"+t),""))}function va(i){var n={instance:o,currentLocationPath:i,to:i,resolveOptions:s};return C(n,function(){}),n.matches?n.matches:!1}function ha(i,n,c){typeof n<"u"&&(typeof c>"u"||c)&&(n=b(n));var u={instance:o,to:n,currentLocationPath:n};U(u,function(){}),typeof i=="string"&&(i=typeof c>"u"||c?b(i):i);var d=Z(u,{name:String(i),path:i,handler:function(){},hooks:{}});return d||!1}function A(i,n,c){return typeof n=="string"&&(n=$(n)),n?(n.hooks[i]||(n.hooks[i]=[]),n.hooks[i].push(c),function(){n.hooks[i]=n.hooks[i].filter(function(u){return u!==c})}):(console.warn("Route doesn't exists: "+n),function(){})}function $(i){return typeof i=="string"?l.find(function(n){return n.name===b(i)}):l.find(function(n){return n.handler===i})}function ba(i){i.instance.__dirty=!1,i.instance.__waiting.length>0&&i.instance.__waiting.shift()()}this.root=t,this.routes=l,this.destroyed=m,this.current=r,this.__freezeListening=!1,this.__waiting=[],this.__dirty=!1,this.__markAsClean=ba,this.on=ia,this.off=na,this.resolve=D,this.navigate=I,this.navigateByName=ta,this.destroy=la,this.notFound=ca,this.updatePageLinks=_,this.link=ua,this.hooks=pa,this.extractGETParameters=function(i){return z(h(i))},this.lastResolved=ma,this.generate=H,this.getLinkPath=fa,this.match=va,this.matchLocation=ha,this.getCurrentLocation=ga,this.addBeforeHook=A.bind(this,"before"),this.addAfterHook=A.bind(this,"after"),this.addAlreadyHook=A.bind(this,"already"),this.addLeaveHook=A.bind(this,"leave"),this.getRoute=$,this._pathToMatchObject=N,this._clean=p,this._checkForAHash=h,this._setCurrent=function(i){return r=o.current=i},ra.call(this),_.call(this)}function X(){const a=document.getElementById("app");a.innerHTML=`
+  `}function Pe(){document.querySelectorAll(".newsletter-form").forEach(e=>{e.addEventListener("submit",a=>{a.preventDefault();const s=e.querySelector(".newsletter-input"),o=e.querySelector(".newsletter-btn"),i=e.querySelector(".newsletter-msg"),n=s.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(n)){i.innerHTML='<span style="color:#e74c3c;"><i class="fa-solid fa-circle-xmark"></i> Ingresá un email válido</span>';return}o.disabled=!0,o.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i>',setTimeout(()=>{i.innerHTML='<span style="color:#10b981;"><i class="fa-solid fa-circle-check"></i> ¡Suscripción exitosa! Revisá tu casilla de email.</span>',o.innerHTML='<i class="fa-solid fa-check"></i> ¡Listo!',o.style.background="#10b981",s.value="",setTimeout(()=>{o.disabled=!1,o.innerHTML="Suscribirme",o.style.background="",i.innerHTML=""},4e3)},1200)})})}var Ce=/([:*])(\w+)/g,je="([^/]+)",Re=/\*/g,Me="?(?:.*)",Be=/\/\?/g,Ie="/?([^/]+|)",De="(?:/^|^)",He="";function Y(e){return e===void 0&&(e="/"),B()?location.pathname+location.search+location.hash:e}function p(e){return e.replace(/\/+$/,"").replace(/^\/+/,"")}function S(e){return typeof e=="string"}function _e(e){return typeof e=="function"}function A(e){return e&&e.indexOf("#")>=0&&e.split("#").pop()||""}function Fe(e,a){return a.length===0||!e?null:e.slice(1,e.length).reduce(function(s,o,i){return s===null&&(s={}),s[a[i]]=decodeURIComponent(o),s},null)}function T(e){var a=p(e).split(/\?(.*)?$/);return[p(a[0]),a.slice(1).join("")]}function M(e){for(var a={},s=e.split("&"),o=0;o<s.length;o++){var i=s[o].split("=");if(i[0]!==""){var n=decodeURIComponent(i[0]);a[n]?(Array.isArray(a[n])||(a[n]=[a[n]]),a[n].push(decodeURIComponent(i[1]||""))):a[n]=decodeURIComponent(i[1]||"")}}return a}function K(e,a){var s=T(p(e.currentLocationPath)),o=s[0],i=s[1],n=i===""?null:M(i),l=[],m;if(S(a.path)){if(m=De+p(a.path).replace(Ce,function(g,v,q){return l.push(q),je}).replace(Re,Me).replace(Be,Ie)+"$",p(a.path)===""&&p(o)==="")return{url:o,queryString:i,hashString:A(e.to),route:a,data:null,params:n}}else m=a.path;var h=new RegExp(m,He),f=o.match(h);if(f){var w=S(a.path)?Fe(f,l):f.groups?f.groups:f.slice(1);return{url:p(o.replace(new RegExp("^"+e.instance.root),"")),queryString:i,hashString:A(e.to),route:a,data:w,params:n}}return!1}function J(){return!!(typeof window<"u"&&window.history&&window.history.pushState)}function L(e,a){return typeof e[a]>"u"||e[a]===!0}function Oe(e){if(!e)return{};var a=e.split(","),s={},o;return a.forEach(function(i){var n=i.split(":").map(function(l){return l.replace(/(^ +| +$)/g,"")});switch(n[0]){case"historyAPIMethod":s.historyAPIMethod=n[1];break;case"resolveOptionsStrategy":o||(o={}),o.strategy=n[1];break;case"resolveOptionsHash":o||(o={}),o.hash=n[1]==="true";break;case"updateBrowserURL":case"callHandler":case"updateState":case"force":s[n[0]]=n[1]==="true";break}}),o&&(s.resolveOptions=o),s}function B(){return typeof window<"u"}function $e(e,a){return e===void 0&&(e=[]),a===void 0&&(a={}),e.filter(function(s){return s}).forEach(function(s){["before","after","already","leave"].forEach(function(o){s[o]&&(a[o]||(a[o]=[]),a[o].push(s[o]))})}),a}function y(e,a,s){var o=a||{},i=0;(function n(){if(!e[i]){s&&s(o);return}Array.isArray(e[i])?(e.splice.apply(e,[i,1].concat(e[i][0](o)?e[i][1]:e[i][2])),n()):e[i](o,function(l){typeof l>"u"||l===!0?(i+=1,n()):s&&s(o)})})()}y.if=function(e,a,s){return Array.isArray(a)||(a=[a]),Array.isArray(s)||(s=[s]),[e,a,s]};function $(e,a){typeof e.currentLocationPath>"u"&&(e.currentLocationPath=e.to=Y(e.instance.root)),e.currentLocationPath=e.instance._checkForAHash(e.currentLocationPath),a()}function P(e,a){for(var s=0;s<e.instance.routes.length;s++){var o=e.instance.routes[s],i=K(e,o);if(i&&(e.matches||(e.matches=[]),e.matches.push(i),e.resolveOptions.strategy==="ONE")){a();return}}a()}function Ne(e,a){e.navigateOptions&&(typeof e.navigateOptions.shouldResolve<"u"&&console.warn('"shouldResolve" is deprecated. Please check the documentation.'),typeof e.navigateOptions.silent<"u"&&console.warn('"silent" is deprecated. Please check the documentation.')),a()}function Ue(e,a){e.navigateOptions.force===!0?(e.instance._setCurrent([e.instance._pathToMatchObject(e.to)]),a(!1)):a()}var N=B(),Ge=J();function Qe(e,a){if(L(e.navigateOptions,"updateBrowserURL")){var s=("/"+e.to).replace(/\/\//g,"/"),o=N&&e.resolveOptions&&e.resolveOptions.hash===!0;Ge?(history[e.navigateOptions.historyAPIMethod||"pushState"](e.navigateOptions.stateObj||{},e.navigateOptions.title||"",o?"#"+s:s),location&&location.hash&&(e.instance.__freezeListening=!0,setTimeout(function(){if(!o){var i=location.hash;location.hash="",location.hash=i}e.instance.__freezeListening=!1},1))):N&&(window.location.href=e.to)}a()}function Z(e,a){var s=e.instance;if(!s.lastResolved()){a();return}y(s.lastResolved().map(function(o){return function(i,n){if(!o.route.hooks||!o.route.hooks.leave){n();return}var l=!1,m=e.instance.matchLocation(o.route.path,e.currentLocationPath,!1);if(o.route.path!=="*")l=!m;else{var h=e.matches?e.matches.find(function(f){return o.route.path===f.route.path}):!1;l=!h}if(L(e.navigateOptions,"callHooks")&&l){y(o.route.hooks.leave.map(function(f){return function(w,g){return f(function(v){v===!1?e.instance.__markAsClean(e):g()},e.matches&&e.matches.length>0?e.matches.length===1?e.matches[0]:e.matches:void 0)}}).concat([function(){return n()}]));return}else n()}}),{},function(){return a()})}function Ve(e,a){e.match.route.hooks&&e.match.route.hooks.before&&L(e.navigateOptions,"callHooks")?y(e.match.route.hooks.before.map(function(s){return function(i,n){return s(function(l){l===!1?e.instance.__markAsClean(e):n()},e.match)}}).concat([function(){return a()}])):a()}function We(e,a){L(e.navigateOptions,"callHandler")&&e.match.route.handler(e.match),e.instance.updatePageLinks(),a()}function Xe(e,a){e.match.route.hooks&&e.match.route.hooks.after&&L(e.navigateOptions,"callHooks")&&e.match.route.hooks.after.forEach(function(s){return s(e.match)}),a()}function Ye(e,a){var s=e.instance.lastResolved();if(s&&s[0]&&s[0].route===e.match.route&&s[0].url===e.match.url&&s[0].queryString===e.match.queryString){s.forEach(function(o){o.route.hooks&&o.route.hooks.already&&L(e.navigateOptions,"callHooks")&&o.route.hooks.already.forEach(function(i){return i(e.match)})}),a(!1);return}a()}function Ke(e,a){var s=e.instance._notFoundRoute;if(s){e.notFoundHandled=!0;var o=T(e.currentLocationPath),i=o[0],n=o[1],l=A(e.to);s.path=p(i);var m={url:s.path,queryString:n,hashString:l,data:null,route:s,params:n!==""?M(n):null};e.matches=[m],e.match=m}a()}function Je(e,a){(!e.resolveOptions||e.resolveOptions.noMatchWarning===!1||typeof e.resolveOptions.noMatchWarning>"u")&&console.warn('Navigo: "'+e.currentLocationPath+`" didn't match any of the registered routes.`),a()}function Ze(e,a){e.instance._setCurrent(null),a()}function ee(e,a){L(e.navigateOptions,"updateState")&&e.instance._setCurrent(e.matches),a()}var ae=[Ye,Ve,We,Xe],U=[Z,Ke,y.if(function(e){var a=e.notFoundHandled;return a},ae.concat([ee]),[Je,Ze])];function j(){return j=Object.assign||function(e){for(var a=1;a<arguments.length;a++){var s=arguments[a];for(var o in s)Object.prototype.hasOwnProperty.call(s,o)&&(e[o]=s[o])}return e},j.apply(this,arguments)}function G(e,a){var s=0;function o(){if(s===e.matches.length){ee(e,a);return}y(ae,j({},e,{match:e.matches[s]}),function(){s+=1,o()})}Z(e,o)}function C(e){e.instance.__markAsClean(e)}function R(){return R=Object.assign||function(e){for(var a=1;a<arguments.length;a++){var s=arguments[a];for(var o in s)Object.prototype.hasOwnProperty.call(s,o)&&(e[o]=s[o])}return e},R.apply(this,arguments)}var Q="[data-navigo]";function ea(e,a){var s=a||{strategy:"ONE",hash:!1,noMatchWarning:!1,linksSelector:Q},o=this,i="/",n=null,l=[],m=!1,h,f=J(),w=B();e?i=p(e):console.warn('Navigo requires a root path in its constructor. If not provided will use "/" as default.');function g(t){return t.indexOf("#")>=0&&(s.hash===!0?t=t.split("#")[1]||"/":t=t.split("#")[0]),t}function v(t){return p(i+"/"+p(t))}function q(t,r,c,u){return t=S(t)?v(t):t,{name:u||p(String(t)),path:t,handler:r,hooks:$e(c)}}function oe(t,r,c){var u=this;return typeof t=="object"&&!(t instanceof RegExp)?(Object.keys(t).forEach(function(d){if(typeof t[d]=="function")u.on(d,t[d]);else{var b=t[d],k=b.uses,be=b.as,ye=b.hooks;l.push(q(d,k,[h,ye],be))}}),this):(typeof t=="function"&&(c=r,r=t,t=i),l.push(q(t,r,[h,c])),this)}function I(t,r){if(o.__dirty){o.__waiting.push(function(){return o.resolve(t,r)});return}else o.__dirty=!0;t=t?p(i)+"/"+p(t):void 0;var c={instance:o,to:t,currentLocationPath:t,navigateOptions:{},resolveOptions:R({},s,r)};return y([$,P,y.if(function(u){var d=u.matches;return d&&d.length>0},G,U)],c,C),c.matches?c.matches:!1}function D(t,r){if(o.__dirty){o.__waiting.push(function(){return o.navigate(t,r)});return}else o.__dirty=!0;t=p(i)+"/"+p(t);var c={instance:o,to:t,navigateOptions:r||{},resolveOptions:r&&r.resolveOptions?r.resolveOptions:s,currentLocationPath:g(t)};y([Ne,Ue,P,y.if(function(u){var d=u.matches;return d&&d.length>0},G,U),Qe,C],c,C)}function te(t,r,c){var u=_(t,r);return u!==null?(D(u.replace(new RegExp("^/?"+i),""),c),!0):!1}function ie(t){return this.routes=l=l.filter(function(r){return S(t)?p(r.path)!==p(t):_e(t)?t!==r.handler:String(r.path)!==String(t)}),this}function ne(){f&&(this.__popstateListener=function(){o.__freezeListening||I()},window.addEventListener("popstate",this.__popstateListener))}function re(){this.routes=l=[],f&&window.removeEventListener("popstate",this.__popstateListener),this.destroyed=m=!0}function le(t,r){return o._notFoundRoute=q("*",t,[h,r],"__NOT_FOUND__"),this}function H(){if(w)return ce().forEach(function(t){if(t.getAttribute("data-navigo")==="false"||t.getAttribute("target")==="_blank"){t.hasListenerAttached&&t.removeEventListener("click",t.navigoHandler);return}t.hasListenerAttached||(t.hasListenerAttached=!0,t.navigoHandler=function(r){if((r.ctrlKey||r.metaKey)&&r.target.tagName.toLowerCase()==="a")return!1;var c=t.getAttribute("href");if(typeof c>"u"||c===null)return!1;if(c.match(/^(http|https)/)&&typeof URL<"u")try{var u=new URL(c);c=u.pathname+u.search}catch{}var d=Oe(t.getAttribute("data-navigo-options"));m||(r.preventDefault(),r.stopPropagation(),o.navigate(p(c),d))},t.addEventListener("click",t.navigoHandler))}),o}function ce(){return w?[].slice.call(document.querySelectorAll(s.linksSelector||Q)):[]}function de(t){return"/"+i+"/"+p(t)}function ue(t){return h=t,this}function pe(){return n}function _(t,r,c){var u=l.find(function(k){return k.name===t}),d=null;if(u){if(d=u.path,r)for(var b in r)d=d.replace(":"+b,r[b]);d=d.match(/^\//)?d:"/"+d}return d&&c&&!c.includeRoot&&(d=d.replace(new RegExp("^/"+i),"")),d}function me(t){return t.getAttribute("href")}function F(t){var r=T(p(t)),c=r[0],u=r[1],d=u===""?null:M(u),b=A(t),k=q(c,function(){},[h],c);return{url:c,queryString:u,hashString:b,route:k,data:null,params:d}}function fe(){return F(p(Y(i)).replace(new RegExp("^"+i),""))}function ge(t){var r={instance:o,currentLocationPath:t,to:t,resolveOptions:s};return P(r,function(){}),r.matches?r.matches:!1}function ve(t,r,c){typeof r<"u"&&(typeof c>"u"||c)&&(r=v(r));var u={instance:o,to:r,currentLocationPath:r};$(u,function(){}),typeof t=="string"&&(t=typeof c>"u"||c?v(t):t);var d=K(u,{name:String(t),path:t,handler:function(){},hooks:{}});return d||!1}function z(t,r,c){return typeof r=="string"&&(r=O(r)),r?(r.hooks[t]||(r.hooks[t]=[]),r.hooks[t].push(c),function(){r.hooks[t]=r.hooks[t].filter(function(u){return u!==c})}):(console.warn("Route doesn't exists: "+r),function(){})}function O(t){return typeof t=="string"?l.find(function(r){return r.name===v(t)}):l.find(function(r){return r.handler===t})}function he(t){t.instance.__dirty=!1,t.instance.__waiting.length>0&&t.instance.__waiting.shift()()}this.root=i,this.routes=l,this.destroyed=m,this.current=n,this.__freezeListening=!1,this.__waiting=[],this.__dirty=!1,this.__markAsClean=he,this.on=oe,this.off=ie,this.resolve=I,this.navigate=D,this.navigateByName=te,this.destroy=re,this.notFound=le,this.updatePageLinks=H,this.link=de,this.hooks=ue,this.extractGETParameters=function(t){return T(g(t))},this.lastResolved=pe,this.generate=_,this.getLinkPath=me,this.match=ge,this.matchLocation=ve,this.getCurrentLocation=fe,this.addBeforeHook=z.bind(this,"before"),this.addAfterHook=z.bind(this,"after"),this.addAlreadyHook=z.bind(this,"already"),this.addLeaveHook=z.bind(this,"leave"),this.getRoute=O,this._pathToMatchObject=F,this._clean=p,this._checkForAHash=g,this._setCurrent=function(t){return n=o.current=t},ne.call(this),H.call(this)}function V(){const e=document.getElementById("app");e.innerHTML=`
     <!-- HERO -->
     <section class="hero">
-      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" 
-           alt="Medicina Estética" 
-           class="hero-img" 
-           fetchpriority="high" 
-           loading="eager">
+      <video class="hero-img" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=1200&q=80" style="object-fit: cover;">
+        <source src="/video-clinica.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Medicina Estética Avanzada</span>
@@ -185,8 +215,8 @@
           <a href="/tratamientos" class="btn btn-gold btn-lg" data-navigo>
             <i class="fa-solid fa-sparkles"></i> Descubrir Tratamientos
           </a>
-          <a href="/contacto" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;" data-navigo>
-            <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+          <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;">
+            <i class="fa-brands fa-whatsapp"></i> Agendar Cita
           </a>
         </div>
       </div>
@@ -235,7 +265,7 @@
 
         <div class="treatments-grid">
           <div class="treatment-card anim anim-delay-1">
-            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Botox & Rellenos</h3>
               <p>Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos.</p>
@@ -246,7 +276,7 @@
             </div>
           </div>
           <div class="treatment-card anim anim-delay-2">
-            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Depilación Láser Soprano</h3>
               <p>La solución definitiva para una piel suave todo el año. Indolora y efectiva.</p>
@@ -257,10 +287,10 @@
             </div>
           </div>
           <div class="treatment-card anim anim-delay-3">
-            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Hydra-Glow Facial</h3>
-              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel �CLATnosa.</p>
+              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel luminosa.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 60 min</span>
                 <span><i class="fa-solid fa-rotate"></i> Mensual</span>
@@ -273,6 +303,50 @@
           <a href="/tratamientos" class="btn btn-gold" data-navigo>
             Ver Todos los Tratamientos <i class="fa-solid fa-arrow-right"></i>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section" style="background:#E6D5C3;">
+      <div class="container text-center anim">
+        <span class="section-label">Asesor Virtual</span>
+        <h2 class="section-title">Descubrí tu tratamiento ideal</h2>
+        <p class="section-subtitle" style="margin-bottom:var(--space-2xl);">Completá este test de 2 pasos y te recomendamos el mejor protocolo para vos.</p>
+        
+        <div class="quiz-container" id="quiz-container" style="background:var(--white); padding:var(--space-2xl); border-radius:var(--radius-xl); box-shadow: 0 15px 50px rgba(0,0,0,0.1); border: 1px solid var(--gold); max-width:600px; margin:0 auto; position:relative; overflow:hidden;">
+          
+          <div id="quiz-step-1" class="quiz-step" style="transition: transform 0.4s ease, opacity 0.4s ease;">
+            <h3 style="margin-bottom:var(--space-lg);">¿Qué zona querés tratar principalmente?</h3>
+            <div style="display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap;">
+              <button class="btn btn-outline" style="min-width:140px;" onclick="nextQuizStep(2, 'Rostro')">Rostro</button>
+              <button class="btn btn-outline" style="min-width:140px;" onclick="nextQuizStep(2, 'Cuerpo')">Cuerpo</button>
+            </div>
+          </div>
+          
+          <div id="quiz-step-2" class="quiz-step" style="display:none; transition: transform 0.4s ease, opacity 0.4s ease;">
+            <h3 style="margin-bottom:var(--space-lg);">¿Cuál es tu objetivo principal?</h3>
+            <div style="display:flex; flex-direction:column; gap:var(--space-md); align-items:center;">
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Manchas')">Eliminar Manchas o Cicatrices</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Arrugas')">Reducir Arrugas y Flacidez</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'luminosidad')">Más Hidratación y Brillo</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Vello')">Eliminar Vello No Deseado</button>
+            </div>
+          </div>
+          
+          <div id="quiz-step-3" class="quiz-step" style="display:none; transition: transform 0.4s ease, opacity 0.4s ease;">
+            <h3 style="margin-bottom:var(--space-md);">¡Tenemos tu plan perfecto!</h3>
+            <p style="color:var(--gray-500); margin-bottom:var(--space-lg);">Según tus respuestas, te recomendamos:</p>
+            <div style="background:var(--white-warm); padding:var(--space-lg); border-radius:var(--radius-md); margin-bottom:var(--space-lg); border: 1px solid var(--gold-light);">
+              <h4 id="quiz-result-title" style="color:var(--black); font-size:1.5rem; margin-bottom:var(--space-sm);">Glow Premium</h4>
+              <p id="quiz-result-desc" style="color:var(--gray-600);">El tratamiento ideal para renovar tu piel y lograr los objetivos que buscás.</p>
+            </div>
+            <a href="#" id="quiz-wa-btn" target="_blank" class="btn btn-gold btn-lg" style="width:100%;">
+              <i class="fa-brands fa-whatsapp"></i> Consultar por este tratamiento
+            </a>
+            <button style="border:none; background:transparent; color:var(--gray-400); text-decoration:underline; font-size:0.85rem; margin-top:var(--space-md); cursor:pointer;" onclick="resetQuiz()">Volver a intentar</button>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -317,7 +391,7 @@
               </div>
               <p class="testimonial-text">"Tenía miedo de verme artificial, pero el resultado fue increíble. Mis amigas me dicen que me veo descansada y radiante. ¡Nadie nota que es botox!"</p>
               <div class="testimonial-author">
-                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80');"></div>
+                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
                   <h4>Carolina M.</h4>
                   <p>Paciente desde 2022</p>
@@ -330,7 +404,7 @@
               </div>
               <p class="testimonial-text">"La depilación láser cambió mi vida. Después de 6 sesiones, olvídate de la cera y las cuchillas. El equipo es súper profesional y el lugar es hermoso."</p>
               <div class="testimonial-author">
-                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80');"></div>
+                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
                   <h4>Valentina R.</h4>
                   <p>Paciente desde 2023</p>
@@ -343,7 +417,7 @@
               </div>
               <p class="testimonial-text">"Me hice el Hydra-Glow antes de mi casamiento y mi piel nunca estuvo tan perfecta. Las fotos quedaron espectaculares. 100% recomendable."</p>
               <div class="testimonial-author">
-                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80');"></div>
+                <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
                   <h4>Lucía F.</h4>
                   <p>Paciente desde 2024</p>
@@ -376,7 +450,7 @@
               <li><i class="fa-solid fa-check"></i> Mascarilla revitalizante</li>
               <li><i class="fa-solid fa-check"></i> Protector solar premium</li>
             </ul>
-            <a href="/contacto" class="btn btn-outline" style="width:100%;" data-navigo>Consultar</a>
+            <a href="https://wa.me/549261000000?text=Hola!%20Me%20interesa%20consultar%20por%20los%20Packs%20Exclusivos." target="_blank" class="btn btn-outline" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Consultar</a>
           </div>
 
           <div class="pricing-card featured anim anim-delay-2">
@@ -390,7 +464,7 @@
               <li><i class="fa-solid fa-check"></i> Seguimiento personalizado</li>
               <li><i class="fa-solid fa-check"></i> 10% OFF en otros tratamientos</li>
             </ul>
-            <a href="/contacto" class="btn btn-gold" style="width:100%;" data-navigo>Reservar Ahora</a>
+            <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20reservar%20el%20Glow%20Premium." target="_blank" class="btn btn-gold" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Reservar Ahora</a>
           </div>
 
           <div class="pricing-card anim anim-delay-3">
@@ -404,7 +478,7 @@
               <li><i class="fa-solid fa-check"></i> Acceso prioritario a agenda</li>
               <li><i class="fa-solid fa-check"></i> 20% OFF en láser</li>
             </ul>
-            <a href="/contacto" class="btn btn-outline" style="width:100%;" data-navigo>Consultar</a>
+            <a href="https://wa.me/549261000000?text=Hola!%20Me%20interesa%20consultar%20por%20los%20Packs%20Exclusivos." target="_blank" class="btn btn-outline" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Consultar</a>
           </div>
         </div>
       </div>
@@ -424,10 +498,10 @@
         </div>
       </div>
     </section>
-  `,window.scrollTo(0,0),w(),ae()}function ae(){const a=document.getElementById("testimonials-track"),e=document.getElementById("carousel-dots");if(!a||!e)return;const o=a.querySelectorAll(".testimonial-card").length;let t=0,r;for(let h=0;h<o;h++){const b=document.createElement("button");b.className=`carousel-dot${h===0?" active":""}`,b.setAttribute("aria-label",`Testimonial ${h+1}`),b.addEventListener("click",()=>l(h)),e.appendChild(b)}function l(h){t=h,a.style.transform=`translateX(-${t*100}%)`,e.querySelectorAll(".carousel-dot").forEach((b,E)=>{b.classList.toggle("active",E===t)})}function m(){l((t+1)%o)}function g(){r=setInterval(m,5e3)}function f(){clearInterval(r)}const v=document.getElementById("testimonials-carousel");v.addEventListener("mouseenter",f),v.addEventListener("mouseleave",g),g()}const ee=[{id:"botox",name:"Botox & Rellenos Faciales",desc:"Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos y naturales.",img:"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80",duration:"30 min",recovery:"4-6 meses",price:"Desde $55.000",details:["<strong>Zonas:</strong> Patas de gallo, entrecejo, frente, labios, pómulos, mentón.","<strong>Producto:</strong> Toxina botulínica tipo A (Botox®, Dysport®).","<strong>Dolor:</strong> Mínimo. Usamos anestesia tópica para tu comodidad.","<strong>Resultado:</strong> Visible a las 48-72hs. Aspecto natural y descansado.","<strong>Recomendación:</strong> Evitar ejercicio intenso las primeras 24hs."]},{id:"laser",name:"Depilación Láser Soprano",desc:"La solución definitiva para una piel suave todo el año. Tecnología de trío láser indolora.",img:"https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80",duration:"45 min",recovery:"6-8 sesiones",price:"Desde $35.000",details:["<strong>Tecnología:</strong> Soprano Ice Platinum (Trío láser: Alejandrita, Diodo, Nd:YAG).","<strong>Beneficio:</strong> Indoloro y apto para todo tipo de piel, incluso bronceada.","<strong>Zonas:</strong> Cuerpo entero, rostro, bikini, axilas.","<strong>Sesiones:</strong> 6 a 8 para eliminación total. Mantenimiento anual.","<strong>Post-sesión:</strong> Proteger del sol 48hs. Sin depilación con cera entre sesiones."]},{id:"hydraglow",name:"Hydra-Glow Facial",desc:"Limpieza profunda + hidratación intensa. El tratamiento estrella para un brillo instantáneo.",img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80",duration:"60 min",recovery:"Mensual",price:"Desde $45.000",details:["<strong>Procedimiento:</strong> Peeling ultrasónico + extracción + mascarilla de ácido hialurónico.","<strong>Resultado:</strong> Piel �CLATnosa, poros limpios y textura suave al instante.","<strong>Ideal:</strong> Previo a eventos, fiestas, bodas o sesiones de fotos.","<strong>Frecuencia:</strong> Una vez al mes para mantener resultados óptimos.","<strong>Incluye:</strong> Sérum vitamínico y protección solar post-tratamiento."]},{id:"peeling",name:"Peeling Químico",desc:"Renueva tu piel capa por capa. Elimina manchas, marcas de acné y textura irregular.",img:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80",duration:"40 min",recovery:"3-7 días",price:"Desde $40.000",details:["<strong>Tipos:</strong> Superficial (ácido glicólico), medio (TCA), profundo (fenol).","<strong>Beneficios:</strong> Elimina manchas solares, líneas finas, textura irregular.","<strong>Post:</strong> Descamación suave de 3-7 días. Piel renovada y �CLATnosa.","<strong>Frecuencia:</strong> Cada 4-6 semanas según protocolo médico.","<strong>Cuidado:</strong> Protección solar obligatoria SPF 50+."]},{id:"mesoterapia",name:"Mesoterapia Facial",desc:"Cóctel de vitaminas, minerales y ácido hialurónico inyectados directamente en la piel.",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",duration:"30 min",recovery:"24-48 hs",price:"Desde $50.000",details:["<strong>Ingredientes:</strong> Ácido hialurónico, vitaminas C y E, aminoácidos, péptidos.","<strong>Beneficios:</strong> Hidratación profunda, �CLATnosidad, firmeza y elasticidad.","<strong>Técnica:</strong> Micro-inyecciones con aguja ultrafina. Mínimas molestias.","<strong>Sesiones:</strong> Protocolo de 4 sesiones cada 15 días.",'<strong>Resultado:</strong> Piel rejuvenecida, jugosa y con efecto "glass skin".']},{id:"dermapen",name:"Dermapen / Microneedling",desc:"Estimula la producción natural de colágeno a través de micro-punciones controladas.",img:"https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",duration:"45 min",recovery:"2-3 días",price:"Desde $48.000",details:["<strong>Cómo funciona:</strong> Micro-agujas estimulan la regeneración celular natural.","<strong>Beneficios:</strong> Reduce poros, cicatrices de acné, arrugas finas y estrías.","<strong>Combinación:</strong> Se potencia con sérum de vitamina C o factores de crecimiento.","<strong>Sesiones:</strong> 3-6 sesiones cada 4 semanas.","<strong>Resultado:</strong> Piel más firme, pareja y rejuvenecida progresivamente."]},{id:"limpieza",name:"Limpieza Facial Profunda",desc:"El paso fundamental para una piel sana. Extracción profesional y nutrición intensiva.",img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",duration:"50 min",recovery:"Inmediato",price:"Desde $25.000",details:["<strong>Pasos:</strong> Desmaquillado, vaporización, extracción, alta frecuencia, mascarilla.","<strong>Beneficios:</strong> Elimina puntos negros, células muertas y oxigena la piel.","<strong>Frecuencia:</strong> Cada 30-45 días como rutina de mantenimiento.","<strong>Para quién:</strong> Todo tipo de piel. Ideal como primer paso de cualquier protocolo.","<strong>Incluye:</strong> Diagnóstico personalizado de tu tipo de piel."]},{id:"plasma",name:"Plasma Rico en Plaquetas (PRP)",desc:"Tu propia sangre es la medicina. Regeneración celular con factores de crecimiento autólogos.",img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",duration:"45 min",recovery:"1-2 días",price:"Desde $60.000",details:["<strong>Proceso:</strong> Extracción de sangre → centrifugado → inyección del plasma en la piel.","<strong>Beneficios:</strong> Rejuvenecimiento natural, mejora textura, estimula colágeno.","<strong>Aplicación:</strong> Facial, cuero cabelludo (alopecia), ojeras y cuello.","<strong>Sesiones:</strong> 3 sesiones cada 4 semanas. Mantenimiento semestral.","<strong>Ventaja:</strong> 100% biocompatible. Sin riesgo de rechazo o alergia."]}];function se(){const a=document.getElementById("app");a.innerHTML=`
+  `,aa()}function aa(){const e=document.getElementById("testimonials-track"),a=document.getElementById("carousel-dots");if(!e||!a)return;const o=e.querySelectorAll(".testimonial-card").length;let i=0,n;for(let g=0;g<o;g++){const v=document.createElement("button");v.className=`carousel-dot${g===0?" active":""}`,v.setAttribute("aria-label",`Testimonial ${g+1}`),v.addEventListener("click",()=>l(g)),a.appendChild(v)}function l(g){i=g,e.style.transform=`translateX(-${i*100}%)`,a.querySelectorAll(".carousel-dot").forEach((v,q)=>{v.classList.toggle("active",q===i)})}function m(){l((i+1)%o)}function h(){n=setInterval(m,5e3)}function f(){clearInterval(n)}const w=document.getElementById("testimonials-carousel");w.addEventListener("mouseenter",f),w.addEventListener("mouseleave",h),h()}window.quizData={zona:"",objetivo:""};window.nextQuizStep=(e,a)=>{e===2&&(window.quizData.zona=a),e===3&&(window.quizData.objetivo=a);const s=document.getElementById(`quiz-step-${e-1}`),o=document.getElementById(`quiz-step-${e}`);s&&(s.style.opacity="0",setTimeout(()=>{s.style.display="none",o&&(e===3&&calculateQuizResult(),o.style.display="block",o.offsetWidth,o.style.opacity="1")},400))};window.calculateQuizResult=()=>{const{zona:e,objetivo:a}=window.quizData;let s="Glow Premium",o="El tratamiento ideal para renovar tu piel y lograr los objetivos que buscás.",i="Hola! Completé el asesor virtual y me recomendó el Glow Premium. Quiero más info.";e==="Rostro"?a==="Arrugas"?(s="Botox & Rellenos Faciales",o="Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos.",i="Hola! Completé el asesor virtual y me recomendó Botox & Rellenos. Quiero más info."):a==="Manchas"?(s="Peeling Químico",o="Renueva tu piel capa por capa, ideal para eliminar manchas y unificar el tono.",i="Hola! Completé el asesor virtual y me recomendó Peeling Químico. Quiero más info."):a==="luminosidad"&&(s="Hydra-Glow Facial",o="Limpieza profunda e hidratación intensa para un brillo instantáneo y piel luminosa.",i="Hola! Completé el asesor virtual y me recomendó Hydra-Glow Facial. Quiero más info."):(e==="Cuerpo"||a==="Vello")&&(s="Depilación Láser Soprano",o="La solución definitiva para una piel suave todo el año. Indolora y efectiva.",i="Hola! Completé el asesor virtual y me recomendó Depilación Láser Soprano. Quiero más info."),document.getElementById("quiz-result-title").textContent=s,document.getElementById("quiz-result-desc").textContent=o,document.getElementById("quiz-wa-btn").href=`https://wa.me/549261000000?text=${encodeURIComponent(i)}`};window.resetQuiz=()=>{window.quizData={zona:"",objetivo:""};const e=document.getElementById("quiz-step-3"),a=document.getElementById("quiz-step-1");e.style.opacity="0",setTimeout(()=>{e.style.display="none",a.style.display="block",a.offsetWidth,a.style.opacity="1"},400)};const sa=[{id:"botox",name:"Botox & Rellenos Faciales",desc:"Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos y naturales.",img:"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"30 min",recovery:"4-6 meses",price:"Desde $55.000",details:["<strong>Zonas:</strong> Patas de gallo, entrecejo, frente, labios, pómulos, mentón.","<strong>Producto:</strong> Toxina botulínica tipo A (Botox®, Dysport®).","<strong>Dolor:</strong> Mínimo. Usamos anestesia tópica para tu comodidad.","<strong>Resultado:</strong> Visible a las 48-72hs. Aspecto natural y descansado.","<strong>Recomendación:</strong> Evitar ejercicio intenso las primeras 24hs."]},{id:"laser",name:"Depilación Láser Soprano",desc:"La solución definitiva para una piel suave todo el año. Tecnología de trío láser indolora.",img:"https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"45 min",recovery:"6-8 sesiones",price:"Desde $35.000",details:["<strong>Tecnología:</strong> Soprano Ice Platinum (Trío láser: Alejandrita, Diodo, Nd:YAG).","<strong>Beneficio:</strong> Indoloro y apto para todo tipo de piel, incluso bronceada.","<strong>Zonas:</strong> Cuerpo entero, rostro, bikini, axilas.","<strong>Sesiones:</strong> 6 a 8 para eliminación total. Mantenimiento anual.","<strong>Post-sesión:</strong> Proteger del sol 48hs. Sin depilación con cera entre sesiones."]},{id:"hydraglow",name:"Hydra-Glow Facial",desc:"Limpieza profunda + hidratación intensa. El tratamiento estrella para un brillo instantáneo.",img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"60 min",recovery:"Mensual",price:"Desde $45.000",details:["<strong>Procedimiento:</strong> Peeling ultrasónico + extracción + mascarilla de ácido hialurónico.","<strong>Resultado:</strong> Piel luminosa, poros limpios y textura suave al instante.","<strong>Ideal:</strong> Previo a eventos, fiestas, bodas o sesiones de fotos.","<strong>Frecuencia:</strong> Una vez al mes para mantener resultados óptimos.","<strong>Incluye:</strong> Sérum vitamínico y protección solar post-tratamiento."]},{id:"peeling",name:"Peeling Químico",desc:"Renueva tu piel capa por capa. Elimina manchas, marcas de acné y textura irregular.",img:"https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"40 min",recovery:"3-7 días",price:"Desde $40.000",details:["<strong>Tipos:</strong> Superficial (ácido glicólico), medio (TCA), profundo (fenol).","<strong>Beneficios:</strong> Elimina manchas solares, líneas finas, textura irregular.","<strong>Post:</strong> Descamación suave de 3-7 días. Piel renovada y luminosa.","<strong>Frecuencia:</strong> Cada 4-6 semanas según protocolo médico.","<strong>Cuidado:</strong> Protección solar obligatoria SPF 50+."]},{id:"mesoterapia",name:"Mesoterapia Facial",desc:"Cóctel de vitaminas, minerales y ácido hialurónico inyectados directamente en la piel.",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"30 min",recovery:"24-48 hs",price:"Desde $50.000",details:["<strong>Ingredientes:</strong> Ácido hialurónico, vitaminas C y E, aminoácidos, péptidos.","<strong>Beneficios:</strong> Hidratación profunda, luminosidad, firmeza y elasticidad.","<strong>Técnica:</strong> Micro-inyecciones con aguja ultrafina. Mínimas molestias.","<strong>Sesiones:</strong> Protocolo de 4 sesiones cada 15 días.",'<strong>Resultado:</strong> Piel rejuvenecida, jugosa y con efecto "glass skin".']},{id:"dermapen",name:"Dermapen / Microneedling",desc:"Estimula la producción natural de colágeno a través de micro-punciones controladas.",img:"https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"45 min",recovery:"2-3 días",price:"Desde $48.000",details:["<strong>Cómo funciona:</strong> Micro-agujas estimulan la regeneración celular natural.","<strong>Beneficios:</strong> Reduce poros, cicatrices de acné, arrugas finas y estrías.","<strong>Combinación:</strong> Se potencia con sérum de vitamina C o factores de crecimiento.","<strong>Sesiones:</strong> 3-6 sesiones cada 4 semanas.","<strong>Resultado:</strong> Piel más firme, pareja y rejuvenecida progresivamente."]},{id:"limpieza",name:"Limpieza Facial Profunda",desc:"El paso fundamental para una piel sana. Extracción profesional y nutrición intensiva.",img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"50 min",recovery:"Inmediato",price:"Desde $25.000",details:["<strong>Pasos:</strong> Desmaquillado, vaporización, extracción, alta frecuencia, mascarilla.","<strong>Beneficios:</strong> Elimina puntos negros, células muertas y oxigena la piel.","<strong>Frecuencia:</strong> Cada 30-45 días como rutina de mantenimiento.","<strong>Para quién:</strong> Todo tipo de piel. Ideal como primer paso de cualquier protocolo.","<strong>Incluye:</strong> Diagnóstico personalizado de tu tipo de piel."]},{id:"plasma",name:"Plasma Rico en Plaquetas (PRP)",desc:"Tu propia sangre es la medicina. Regeneración celular con factores de crecimiento autólogos.",img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=800&q=80",duration:"45 min",recovery:"1-2 días",price:"Desde $60.000",details:["<strong>Proceso:</strong> Extracción de sangre → centrifugado → inyección del plasma en la piel.","<strong>Beneficios:</strong> Rejuvenecimiento natural, mejora textura, estimula colágeno.","<strong>Aplicación:</strong> Facial, cuero cabelludo (alopecia), ojeras y cuello.","<strong>Sesiones:</strong> 3 sesiones cada 4 semanas. Mantenimiento semestral.","<strong>Ventaja:</strong> 100% biocompatible. Sin riesgo de rechazo o alergia."]}];function oa(){const e=document.getElementById("app");e.innerHTML=`
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Catálogo Completo</span>
@@ -440,24 +514,25 @@
     <section class="section">
       <div class="container">
         <div class="treatments-grid" id="treatments-list">
-          ${ee.map((e,s)=>`
-            <div class="treatment-card anim anim-delay-${s%3+1}" id="treatment-${e.id}">
-              <div class="treatment-card-img" style="background-image: url('${e.img}');"></div>
+          ${sa.map((a,s)=>`
+            <div class="treatment-card anim anim-delay-${s%3+1}" id="treatment-${a.id}" onclick="toggleTreatment('${a.id}', this.querySelector('.treatment-toggle'))">
+              <div class="treatment-card-img" style="background-image: url('${a.img}');"></div>
               <div class="treatment-card-body">
-                <h3>${e.name}</h3>
-                <p>${e.desc}</p>
+                <h3>${a.name}</h3>
+                <p>${a.desc}</p>
                 <div class="treatment-meta">
-                  <span><i class="fa-regular fa-clock"></i> ${e.duration}</span>
-                  <span><i class="fa-solid fa-rotate"></i> ${e.recovery}</span>
-                  <span><i class="fa-solid fa-tag"></i> ${e.price}</span>
+                  <span><i class="fa-regular fa-clock"></i> ${a.duration}</span>
+                  <span><i class="fa-solid fa-rotate"></i> ${a.recovery}</span>
+                  <span><i class="fa-solid fa-tag"></i> ${a.price}</span>
                 </div>
+                <button class="btn btn-gold" style="width: 100%; margin-top: var(--space-md); margin-bottom: var(--space-sm);" onclick="event.stopPropagation(); window.openBookingModal('${a.name}')"><i class="fa-brands fa-whatsapp"></i> Consultar</button>
               </div>
-              <div class="treatment-details" id="details-${e.id}">
+              <div class="treatment-details" id="details-${a.id}">
                 <ul>
-                  ${e.details.map(o=>`<li>${o}</li>`).join("")}
+                  ${a.details.map(o=>`<li>${o}</li>`).join("")}
                 </ul>
               </div>
-              <button class="treatment-toggle" onclick="toggleTreatment('${e.id}', this)">
+              <button class="treatment-toggle" onclick="event.stopPropagation(); toggleTreatment('${a.id}', this)">
                 <span>Más información</span> <i class="fa-solid fa-chevron-down"></i>
               </button>
             </div>
@@ -471,15 +546,13 @@
       <div class="container anim">
         <h2>¿No sabés cuál es el tratamiento ideal para vos?</h2>
         <p>Agendá una consulta gratuita y diseñamos un plan personalizado según tus necesidades.</p>
-        <a href="/contacto" class="btn btn-gold btn-lg" data-navigo>
-          <i class="fa-regular fa-calendar-check"></i> Agendar Consulta Gratis
-        </a>
+        <button class="btn btn-gold btn-lg" onclick="window.openBookingModal('Consulta Gratuita')"><i class="fa-brands fa-whatsapp"></i> Agendar Consulta Gratis</button>
       </div>
     </section>
-  `,window.scrollTo(0,0),window.toggleTreatment=(e,s)=>{const o=document.getElementById(`details-${e}`),t=o.classList.contains("open");o.classList.toggle("open"),s.classList.toggle("open"),s.querySelector("span").textContent=t?"Más información":"Menos información"},w()}const oe=[{name:"Dra. Camila Sánchez",role:"Directora Médica",photo:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",bio:"Especialista en Dermatología Estética con 15 años de experiencia. Formada en la UBA y especializada en rejuvenecimiento facial en Barcelona."},{name:"Dr. Martín Rivas",role:"Cirujano Plástico",photo:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",bio:"Cirujano plástico matriculado con maestría en Medicina Estética. Referente en técnicas de Botox y rellenos con ácido hialurónico."},{name:"Lic. Sofía Moretti",role:"Cosmiatra Senior",photo:"https://images.unsplash.com/photo-1594824476967-48c8b964ae17?auto=format&fit=crop&w=600&q=80",bio:"Cosmiatra con 10 años de práctica clínica. Certificada en dermapen, peelings avanzados y protocolos de skincare personalizados."},{name:"Dra. Valentina Lagos",role:"Dermatóloga",photo:"https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=600&q=80",bio:"Dermatóloga clínica y estética. Especialista en tratamientos con láser, manchas pigmentarias y rosácea. Posgrado en la Universidad de Milán."},{name:"Lic. Joaquín Herrera",role:"Kinesiólogo Estético",photo:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",bio:"Kinesiólogo con formación en drenaje linfático, masajes post-quirúrgicos y rehabilitación facial. Más de 2.000 procedimientos realizados."},{name:"Lic. Lucía Fernández",role:"Nutricionista Estética",photo:"https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",bio:"Nutricionista especializada en dermonutrición y suplementación para piel. Diseña planes nutricionales que potencian los tratamientos estéticos."},{name:"Lic. Ana Paula Domínguez",role:"Cosmiatra",photo:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",bio:"Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de �CLATnosidad. Atención cálida y personalizada."}],ie=[{icon:"fa-solid fa-shield-heart",title:"Seguridad Primero",desc:"Todos nuestros procedimientos son realizados por profesionales matriculados con productos aprobados por ANMAT y FDA."},{icon:"fa-solid fa-leaf",title:"Resultados Naturales",desc:"Creemos en realzar tu belleza natural. Nada de caras congeladas: nuestro objetivo es que te veas como vos, pero mejor."},{icon:"fa-solid fa-microscope",title:"Tecnología de Punta",desc:"Equipamiento de última generación importado de Europa y Estados Unidos, con calibración y mantenimiento permanente."},{icon:"fa-solid fa-heart-pulse",title:"Atención Humana",desc:"Cada paciente es única. Escuchamos tus necesidades, evaluamos tu caso y diseñamos un plan 100% personalizado."}];function te(){const a=document.getElementById("app");a.innerHTML=`
+  `,window.toggleTreatment=(a,s)=>{const o=document.getElementById("treatment-"+a),i=document.getElementById("details-"+a),n=i.classList.contains("open");document.querySelectorAll(".treatment-card").forEach(l=>{l.id!=="treatment-"+a&&l.classList.remove("active")}),document.querySelectorAll(".treatment-details").forEach(l=>{l.id!=="details-"+a&&l.classList.remove("open")}),document.querySelectorAll(".treatment-toggle").forEach(l=>{l!==s&&(l.classList.remove("open"),l.querySelector("span").textContent="Más información")}),i.classList.toggle("open"),o.classList.toggle("active"),s.classList.toggle("open"),s.querySelector("span").textContent=n?"Más información":"Menos información"}}const ta=[{name:"Dra. Camila Sánchez",role:"Directora Médica",photo:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Especialista en Dermatología Estética con 15 años de experiencia. Formada en la UBA y especializada en rejuvenecimiento facial en Barcelona."},{name:"Dr. Martín Rivas",role:"Cirujano Plástico",photo:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Cirujano plástico matriculado con maestría en Medicina Estética. Referente en técnicas de Botox y rellenos con ácido hialurónico."},{name:"Lic. Sofía Moretti",role:"Cosmiatra Senior",photo:"https://images.unsplash.com/photo-1594824476967-48c8b964ae17?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Cosmiatra con 10 años de práctica clínica. Certificada en dermapen, peelings avanzados y protocolos de skincare personalizados."},{name:"Dra. Valentina Lagos",role:"Dermatóloga",photo:"https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Dermatóloga clínica y estética. Especialista en tratamientos con láser, manchas pigmentarias y rosácea. Posgrado en la Universidad de Milán."},{name:"Lic. Joaquín Herrera",role:"Kinesiólogo Estético",photo:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Kinesiólogo con formación en drenaje linfático, masajes post-quirúrgicos y rehabilitación facial. Más de 2.000 procedimientos realizados."},{name:"Lic. Lucía Fernández",role:"Nutricionista Estética",photo:"https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Nutricionista especializada en dermonutrición y suplementación para piel. Diseña planes nutricionales que potencian los tratamientos estéticos."},{name:"Lic. Ana Paula Domínguez",role:"Cosmiatra",photo:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format,compress&fit=crop&fm=webp&w=600&q=80",bio:"Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de luminosidad. Atención cálida y personalizada."}],ia=[{icon:"fa-solid fa-shield-heart",title:"Seguridad Primero",desc:"Todos nuestros procedimientos son realizados por profesionales matriculados con productos aprobados por ANMAT y FDA."},{icon:"fa-solid fa-leaf",title:"Resultados Naturales",desc:"Creemos en realzar tu belleza natural. Nada de caras congeladas: nuestro objetivo es que te veas como vos, pero mejor."},{icon:"fa-solid fa-microscope",title:"Tecnología de Punta",desc:"Equipamiento de última generación importado de Europa y Estados Unidos, con calibración y mantenimiento permanente."},{icon:"fa-solid fa-heart-pulse",title:"Atención Humana",desc:"Cada paciente es única. Escuchamos tus necesidades, evaluamos tu caso y diseñamos un plan 100% personalizado."}];function na(){const e=document.getElementById("app");e.innerHTML=`
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Sobre Nosotros</span>
@@ -496,7 +569,7 @@
             <span class="section-label">Nuestra Historia</span>
             <h2 class="section-title">Más de una década cuidando tu belleza</h2>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
-              �CLAT nació en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estética se encuentre con el arte y la tecnología. Un lugar donde cada paciente sea tratada como única, con protocolos diseñados exclusivamente para ella.
+              ÉCLAT nació en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estética se encuentre con el arte y la tecnología. Un lugar donde cada paciente sea tratada como única, con protocolos diseñados exclusivamente para ella.
             </p>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
               Fundada por la Dra. Camila Sánchez en el corazón de Barrio Bombal, Mendoza, lo que comenzó como un consultorio de 40m² hoy es un centro de referencia con más de 150m² equipados con la última tecnología del mercado mundial.
@@ -506,7 +579,7 @@
             </p>
           </div>
           <div class="anim anim-right">
-            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format&fit=crop&w=800&q=80" alt="Clínica �CLAT" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="Clínica ÉCLAT" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
           </div>
         </div>
       </div>
@@ -520,11 +593,11 @@
           <h2 class="section-title">Nuestros Valores</h2>
         </div>
         <div class="values-grid">
-          ${ie.map((e,s)=>`
+          ${ia.map((a,s)=>`
             <div class="value-card anim anim-delay-${s+1}">
-              <div class="value-icon"><i class="${e.icon}"></i></div>
-              <h3>${e.title}</h3>
-              <p>${e.desc}</p>
+              <div class="value-icon"><i class="${a.icon}"></i></div>
+              <h3>${a.title}</h3>
+              <p>${a.desc}</p>
             </div>
           `).join("")}
         </div>
@@ -540,13 +613,13 @@
           <p style="max-width:600px;margin:var(--space-md) auto 0;color:var(--gray-500);">7 especialistas trabajando en conjunto para ofrecerte los mejores resultados con la máxima seguridad.</p>
         </div>
         <div class="team-grid">
-          ${oe.map((e,s)=>`
+          ${ta.map((a,s)=>`
             <div class="team-card anim anim-delay-${s%4+1}">
-              <div class="team-photo" style="background-image: url('${e.photo}');"></div>
+              <div class="team-photo" style="background-image: url('${a.photo}');"></div>
               <div class="team-info">
-                <h3>${e.name}</h3>
-                <p class="team-role">${e.role}</p>
-                <p class="team-bio">${e.bio}</p>
+                <h3>${a.name}</h3>
+                <p class="team-role">${a.role}</p>
+                <p class="team-bio">${a.bio}</p>
               </div>
             </div>
           `).join("")}
@@ -594,10 +667,10 @@
         </a>
       </div>
     </section>
-  `,window.scrollTo(0,0),w()}const ne=[{photo:"https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80",treatment:"Botox & Rellenos",category:"botox",testimonial:"Me veo 10 años más joven, pero natural. ¡Encantada!"},{photo:"https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",treatment:"Hydra-Glow Facial",category:"facial",testimonial:"Mi piel brilla sin maquillaje. Increíble resultado."},{photo:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",treatment:"Peeling Químico",category:"peeling",testimonial:"Las manchas desaparecieron casi por completo. Muy recomendable."},{photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",treatment:"Mesoterapia Facial",category:"mesoterapia",testimonial:"La textura de mi piel mejoró un 100%. Estoy feliz."},{photo:"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",treatment:"Dermapen",category:"dermapen",testimonial:"Mis cicatrices de acné se redujeron increíblemente."},{photo:"https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80",treatment:"Botox & Rellenos",category:"botox",testimonial:"Labios perfectos, muy naturales. La doctora es una artista."}],re=["Todos","Botox","Facial","Peeling","Mesoterapia","Dermapen"];function le(){const a=document.getElementById("app");a.innerHTML=`
+  `}const ra=[{photo:"https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Botox & Rellenos",category:"botox",testimonial:"Me veo 10 años más joven, pero natural. ¡Encantada!"},{photo:"https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Hydra-Glow Facial",category:"facial",testimonial:"Mi piel brilla sin maquillaje. Increíble resultado."},{photo:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Peeling Químico",category:"peeling",testimonial:"Las manchas desaparecieron casi por completo. Muy recomendable."},{photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Mesoterapia Facial",category:"mesoterapia",testimonial:"La textura de mi piel mejoró un 100%. Estoy feliz."},{photo:"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Dermapen",category:"dermapen",testimonial:"Mis cicatrices de acné se redujeron increíblemente."},{photo:"https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format,compress&fit=crop&fm=webp&w=800&q=80",treatment:"Botox & Rellenos",category:"botox",testimonial:"Labios perfectos, muy naturales. La doctora es una artista."}],la=["Todos","Botox","Facial","Peeling","Mesoterapia","Dermapen"];function ca(){const e=document.getElementById("app");e.innerHTML=`
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Resultados Reales</span>
@@ -610,24 +683,24 @@
     <section class="section">
       <div class="container">
         <div class="gallery-filters anim">
-          ${re.map((e,s)=>`
-            <button class="gallery-filter-btn${s===0?" active":""}" data-filter="${e.toLowerCase()}">${e}</button>
+          ${la.map((a,s)=>`
+            <button class="gallery-filter-btn${s===0?" active":""}" data-filter="${a.toLowerCase()}">${a}</button>
           `).join("")}
         </div>
 
         <div class="gallery-grid" id="gallery-grid">
-          ${ne.map((e,s)=>`
-            <div class="gallery-item anim anim-delay-${s%3+1}" data-category="${e.category}">
+          ${ra.map((a,s)=>`
+            <div class="gallery-item anim anim-delay-${s%3+1}" data-category="${a.category}">
               <div class="ba-slider" data-index="${s}">
-                <div class="ba-image ba-before ba-before-filter" style="background-image: url('${e.photo}');"></div>
-                <div class="ba-image ba-after" style="background-image: url('${e.photo}');"></div>
+                <div class="ba-image ba-before ba-before-filter" style="background-image: url('${a.photo}');"></div>
+                <div class="ba-image ba-after" style="background-image: url('${a.photo}');"></div>
                 <div class="ba-handle"></div>
                 <span class="ba-label ba-label-before">Antes</span>
                 <span class="ba-label ba-label-after">Después</span>
               </div>
               <div class="gallery-item-info">
-                <h4>${e.treatment}</h4>
-                <p>"${e.testimonial}"</p>
+                <h4>${a.treatment}</h4>
+                <p>"${a.testimonial}"</p>
               </div>
             </div>
           `).join("")}
@@ -645,78 +718,35 @@
         </a>
       </div>
     </section>
-  `,window.scrollTo(0,0),w(),ce(),de()}function ce(){document.querySelectorAll(".ba-slider").forEach(a=>{let e=!1;const s=o=>{const t=a.getBoundingClientRect();let r=(o-t.left)/t.width*100;r=Math.max(5,Math.min(95,r));const l=a.querySelector(".ba-before"),m=a.querySelector(".ba-handle");l.style.clipPath=`inset(0 ${100-r}% 0 0)`,m.style.left=`${r}%`};a.addEventListener("mousedown",o=>{e=!0,s(o.clientX),o.preventDefault()}),document.addEventListener("mousemove",o=>{e&&s(o.clientX)}),document.addEventListener("mouseup",()=>{e=!1}),a.addEventListener("touchstart",o=>{e=!0,s(o.touches[0].clientX)}),a.addEventListener("touchmove",o=>{e&&(s(o.touches[0].clientX),o.preventDefault())}),a.addEventListener("touchend",()=>{e=!1})})}function de(){const a=document.querySelectorAll(".gallery-filter-btn"),e=document.querySelectorAll(".gallery-item");a.forEach(s=>{s.addEventListener("click",()=>{a.forEach(t=>t.classList.remove("active")),s.classList.add("active");const o=s.dataset.filter;e.forEach(t=>{o==="todos"||t.dataset.category===o?t.style.display="":t.style.display="none"})})})}function ue(){const a=document.getElementById("app");a.innerHTML=`
+  `,da(),ua()}function da(){document.querySelectorAll(".ba-slider").forEach(e=>{let a=!1;const s=o=>{const i=e.getBoundingClientRect();let n=(o-i.left)/i.width*100;n=Math.max(5,Math.min(95,n));const l=e.querySelector(".ba-before"),m=e.querySelector(".ba-handle");l.style.clipPath=`inset(0 ${100-n}% 0 0)`,m.style.left=`${n}%`};e.addEventListener("mousedown",o=>{a=!0,s(o.clientX),o.preventDefault()}),document.addEventListener("mousemove",o=>{a&&s(o.clientX)}),document.addEventListener("mouseup",()=>{a=!1}),e.addEventListener("touchstart",o=>{a=!0,s(o.touches[0].clientX)}),e.addEventListener("touchmove",o=>{a&&(s(o.touches[0].clientX),o.preventDefault())}),e.addEventListener("touchend",()=>{a=!1})})}function ua(){const e=document.querySelectorAll(".gallery-filter-btn"),a=document.querySelectorAll(".gallery-item");e.forEach(s=>{s.addEventListener("click",()=>{e.forEach(i=>i.classList.remove("active")),s.classList.add("active");const o=s.dataset.filter;a.forEach(i=>{o==="todos"||i.dataset.category===o?i.style.display="":i.style.display="none"})})})}function pa(){const e=document.getElementById("app");e.innerHTML=`
     <!-- SUB HERO -->
     <section class="sub-hero">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format,compress&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <span class="hero-label">✦ Hablemos</span>
         <h1>Contacto</h1>
-        <p class="hero-subtitle">Estamos para ayudarte. Agendá tu cita o consultanos lo que necesites.</p>
+        <p class="hero-subtitle">Estamos para ayudarte. Agendá tu cita o consultanos lo que necesites por WhatsApp.</p>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section">
       <div class="container">
-        <div class="contact-grid">
+        <div class="contact-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
           
-          <!-- FORM -->
-          <div class="anim-left">
-            <h2 class="section-title" style="text-align:left;font-size:2rem;margin-bottom:var(--space-sm);">Envianos tu consulta</h2>
-            <p style="color:var(--gray-500);margin-bottom:var(--space-xl);">Completá el formulario y te respondemos dentro de las 24hs.</p>
+          <!-- INFO -->
+          <div class="anim-up text-center" style="margin-bottom: var(--space-xl);">
+            <h2 class="section-title">¿En qué podemos ayudarte?</h2>
+            <p style="color:var(--gray-500); margin-bottom: var(--space-xl);">Escribinos directamente a nuestro WhatsApp y te responderemos a la brevedad para coordinar tu turno.</p>
             
-            <form id="contact-form" novalidate>
-              <div class="form-group">
-                <label for="name">Nombre completo *</label>
-                <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
-                <div class="form-error">Por favor ingresá tu nombre</div>
-              </div>
-
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md);">
-                <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" class="form-control" placeholder="tu@email.com" required>
-                  <div class="form-error">Ingresá un email válido</div>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Teléfono</label>
-                  <input type="tel" id="phone" class="form-control" placeholder="+54 261 000 0000">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="treatment">Tratamiento de interés</label>
-                <select id="treatment" class="form-control">
-                  <option value="">Seleccionar tratamiento...</option>
-                  <option value="botox">Botox & Rellenos Faciales</option>
-                  <option value="laser">Depilación Láser Soprano</option>
-                  <option value="hydraglow">Hydra-Glow Facial</option>
-                  <option value="peeling">Peeling Químico</option>
-                  <option value="mesoterapia">Mesoterapia Facial</option>
-                  <option value="dermapen">Dermapen / Microneedling</option>
-                  <option value="limpieza">Limpieza Facial Profunda</option>
-                  <option value="prp">Plasma Rico en Plaquetas</option>
-                  <option value="otro">Otro / No estoy segura</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Mensaje *</label>
-                <textarea id="message" class="form-control" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
-                <div class="form-error">Por favor escribí tu mensaje</div>
-              </div>
-
-              <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
-                <i class="fa-regular fa-paper-plane"></i> Enviar Consulta
-              </button>
-            </form>
+            <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita%20o%20hacer%20una%20consulta." target="_blank" class="btn btn-gold btn-lg" style="margin-bottom: var(--space-2xl);">
+              <i class="fa-brands fa-whatsapp"></i> Iniciar chat de WhatsApp
+            </a>
           </div>
 
-          <!-- INFO -->
-          <div class="anim-right">
-            <div class="contact-info-list">
+          <div class="anim-up">
+            <div class="contact-info-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); margin-bottom: var(--space-2xl);">
               <div class="contact-info-item">
                 <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
@@ -732,52 +762,37 @@
                 </div>
               </div>
               <div class="contact-info-item">
-                <div class="contact-info-icon"><i class="fa-regular fa-envelope"></i></div>
-                <div>
-                  <h4>Email</h4>
-                  <p>hola@�CLATestetica.com</p>
-                </div>
-              </div>
-              <div class="contact-info-item">
                 <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
                 <div>
                   <h4>Horarios</h4>
                   <p>Lun — Vie: 9:00 – 20:00 hs<br>Sábados: 9:00 – 14:00 hs</p>
                 </div>
               </div>
-              <div class="contact-info-item">
-                <div class="contact-info-icon" style="background:var(--green-wa);"><i class="fa-brands fa-whatsapp"></i></div>
-                <div>
-                  <h4>WhatsApp Directo</h4>
-                  <p>
-                    <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" style="color:var(--gold);font-weight:600;">
-                      Enviar mensaje ahora →
-                    </a>
-                  </p>
-                </div>
-              </div>
             </div>
 
             <!-- MAP -->
-            <div class="contact-map">
+            <div class="contact-map" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2!2d-68.84!3d-32.89!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUzJzI0LjAiUyA2OMKwNTAnMjQuMCJX!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                width="100%"
+                height="400"
+                style="border:0;"
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de �CLAT Estética">
+                title="Ubicación de ÉCLAT Estética">
               </iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
-  `,window.scrollTo(0,0),w(),pe()}function pe(){const a=document.getElementById("contact-form");a&&(a.addEventListener("submit",e=>{e.preventDefault();let s=!0;const o=document.getElementById("name"),t=o.closest(".form-group");o.value.trim()?t.classList.remove("error"):(t.classList.add("error"),s=!1);const r=document.getElementById("email"),l=r.closest(".form-group");/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.value)?l.classList.remove("error"):(l.classList.add("error"),s=!1);const g=document.getElementById("message"),f=g.closest(".form-group");if(g.value.trim()?f.classList.remove("error"):(f.classList.add("error"),s=!1),s){const v=a.querySelector('button[type="submit"]');v.innerHTML='<i class="fa-solid fa-check"></i> ¡Consulta Enviada!',v.style.background="#10b981",v.disabled=!0,setTimeout(()=>{v.innerHTML='<i class="fa-regular fa-paper-plane"></i> Enviar Consulta',v.style.background="",v.disabled=!1,a.reset()},3e3)}}),a.querySelectorAll(".form-control").forEach(e=>{e.addEventListener("input",()=>{e.closest(".form-group").classList.remove("error")})}))}const me={"5-errores-que-envejecen-tu-piel":{title:"5 Errores que Envejecen tu Piel (y cómo evitarlos)",tag:"Skincare",date:"28 Feb, 2026",author:"Dra. Camila Sánchez",readTime:"8 min",heroImg:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80",content:`
+  `}const ma={"5-errores-que-envejecen-tu-piel":{title:"5 Errores que Envejecen tu Piel (y cómo evitarlos)",tag:"Skincare",date:"28 Feb, 2026",author:"Dra. Camila Sánchez",readTime:"8 min",heroImg:"https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         Tu piel es tu carta de presentación. Y aunque no lo creas, hay hábitos cotidianos que están acelerando tu envejecimiento sin que te des cuenta. Después de más de 15 años tratando pacientes, puedo decirte que la mayoría de los signos prematuros de envejecimiento podrían haberse evitado con simples cambios de rutina.
       </p>
 
       <h2>1. No usar protector solar todos los días</h2>
-      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=900&q=80" alt="Protector solar" class="article-img">
+      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Protector solar" class="article-img">
       <p>
         Este es, sin exagerar, el error número uno. <strong>El 80% del envejecimiento visible de la piel se debe a la exposición solar acumulada</strong>, lo que los dermatólogos llamamos "fotoenvejecimiento". Y no, no hablo solo de cuando vas a la playa. El sol que recibís caminando al supermercado, manejando el auto o sentada cerca de una ventana también cuenta.
       </p>
@@ -807,7 +822,7 @@
       </p>
 
       <h2>3. No hidratar la piel grasa</h2>
-      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="Hidratación facial" class="article-img">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Hidratación facial" class="article-img">
       <p>
         Este es un mito súper extendido: "Tengo piel grasa, no necesito hidratante". <strong>Error.</strong> La piel grasa produce exceso de sebo, pero eso no significa que esté hidratada. De hecho, muchas veces la piel produce más grasa precisamente porque está deshidratada y trata de compensar.
       </p>
@@ -850,7 +865,7 @@
         <p>Agendá una consulta con nuestra Dra. Camila Sánchez para un análisis completo y un plan de skincare a tu medida.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Consulta</a>
       </div>
-    `},"botox-mitos-y-verdades":{title:"Botox: Mitos y Verdades que Tenés que Saber",tag:"Tratamientos",date:"15 Feb, 2026",author:"Dr. Martín Rivas",readTime:"7 min",heroImg:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1920&q=80",content:`
+    `},"botox-mitos-y-verdades":{title:"Botox: Mitos y Verdades que Tenés que Saber",tag:"Tratamientos",date:"15 Feb, 2026",author:"Dr. Martín Rivas",readTime:"7 min",heroImg:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         El botox es probablemente el tratamiento estético más popular del mundo y, al mismo tiempo, el que más mitos tiene a su alrededor. Después de aplicar más de 3.000 procedimientos, quiero contarte toda la verdad: lo bueno, lo que hay que tener en cuenta, y lo que es pura ficción.
       </p>
@@ -864,7 +879,7 @@
       </p>
 
       <h2>MITO 1: "Te deja sin expresión facial"</h2>
-      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80" alt="Resultado natural de botox" class="article-img">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Resultado natural de botox" class="article-img">
       <p>
         <strong>FALSO</strong> (si está bien aplicado). Este es el mito más extendido y el que más miedo genera. La realidad es que un profesional experimentado aplica dosis mínimas y precisas en puntos estratégicos. El resultado no es una cara "congelada", sino una versión descansada y natural de vos misma.
       </p>
@@ -927,7 +942,7 @@
         <p>El Dr. Rivas ofrece una consulta inicial donde evalúa tu caso, te muestra simulaciones y responde todas tus dudas sin compromiso.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Consulta</a>
       </div>
-    `},"rutina-skincare-tipo-piel":{title:"Rutina de Skincare para Cada Tipo de Piel",tag:"Tips",date:"02 Feb, 2026",author:"Lic. Sofía Moretti",readTime:"10 min",heroImg:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80",content:`
+    `},"rutina-skincare-tipo-piel":{title:"Rutina de Skincare para Cada Tipo de Piel",tag:"Tips",date:"02 Feb, 2026",author:"Lic. Sofía Moretti",readTime:"10 min",heroImg:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         No existe una rutina universal de skincare. Lo que le funciona a tu amiga puede ser un desastre para tu piel. La clave está en conocer tu tipo de piel, entender qué necesita, y armar un protocolo personalizado. Después de 10 años como cosmiatra, te voy a dar las rutinas paso a paso para cada tipo.
       </p>
@@ -938,7 +953,7 @@
       </p>
 
       <h2>Rutina para Piel Grasa</h2>
-      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80" alt="Skincare piel grasa" class="article-img">
+      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Skincare piel grasa" class="article-img">
       <p><strong>Tu piel produce exceso de sebo</strong>, lo que genera brillo, poros dilatados y tendencia al acné. El error más común es usar productos agresivos que la "sequen", porque eso solo genera más producción de grasa.</p>
       
       <h3>Mañana:</h3>
@@ -1019,7 +1034,7 @@
         <p>La Lic. Moretti realiza análisis completos con dermatoscopio para determinar tu tipo de piel exacto y armar tu rutina ideal.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Diagnóstico</a>
       </div>
-    `},"cada-cuanto-limpieza-facial":{title:"¿Cada cuánto deberías hacerte una Limpieza Facial?",tag:"Cuidados",date:"20 Ene, 2026",author:"Lic. Sofía Moretti",readTime:"5 min",heroImg:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1920&q=80",content:`
+    `},"cada-cuanto-limpieza-facial":{title:"¿Cada cuánto deberías hacerte una Limpieza Facial?",tag:"Cuidados",date:"20 Ene, 2026",author:"Lic. Sofía Moretti",readTime:"5 min",heroImg:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         La limpieza facial profesional es la base de cualquier protocolo de cuidado serio. Pero una de las preguntas más frecuentes en el consultorio es: "¿cada cuánto me la tengo que hacer?" La respuesta, como en casi todo en estética, es: depende.
       </p>
@@ -1033,7 +1048,7 @@
       </p>
 
       <h2>Frecuencia según tu tipo de piel</h2>
-      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Tratamiento facial" class="article-img">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Tratamiento facial" class="article-img">
       
       <h3>Piel grasa o acneica: cada 3-4 semanas</h3>
       <p>Tu piel produce más sebo, los poros se obstruyen más rápido y necesitás extracciones más frecuentes para evitar que se formen quistes e inflamaciones.</p>
@@ -1070,7 +1085,7 @@
         <p>Tu piel te lo está pidiendo. Agendá tu turno y salí del consultorio brillando.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Limpieza Facial</a>
       </div>
-    `},"protector-solar-regla-anti-edad":{title:"Protector Solar: La Regla de Oro Anti-Edad",tag:"Cuidados",date:"10 Ene, 2026",author:"Dra. Camila Sánchez",readTime:"6 min",heroImg:"https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=1920&q=80",content:`
+    `},"protector-solar-regla-anti-edad":{title:"Protector Solar: La Regla de Oro Anti-Edad",tag:"Cuidados",date:"10 Ene, 2026",author:"Dra. Camila Sánchez",readTime:"6 min",heroImg:"https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         Si tuviera que recomendar un solo producto de skincare para el resto de tu vida, sería el protector solar. No el sérum más caro, no la crema más exclusiva. El protector solar. Sin negociación.
       </p>
@@ -1084,11 +1099,11 @@
         <li><strong>Rayos UVA:</strong> penetran más profundo, destruyen el colágeno y la elastina, generan manchas, y están presentes TODO el año, incluso en días nublados. Atraviesan vidrios.</li>
       </ul>
       <p>
-        El fotoenvejecimiento (envejecimiento por sol) es responsable del <strong>80-90% de los signos visibles de envejecimiento</strong>: arrugas, flacidez, manchas, textura despareja y pérdida de �CLATnosidad.
+        El fotoenvejecimiento (envejecimiento por sol) es responsable del <strong>80-90% de los signos visibles de envejecimiento</strong>: arrugas, flacidez, manchas, textura despareja y pérdida de luminosidad.
       </p>
 
       <h2>¿Qué SPF necesito?</h2>
-      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format&fit=crop&w=900&q=80" alt="Protección solar SPF" class="article-img">
+      <img src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Protección solar SPF" class="article-img">
       <p>
         <strong>SPF 30</strong> bloquea el 97% de los rayos UVB. <strong>SPF 50</strong> bloquea el 98%. La diferencia parece mínima, pero en el uso diario sostenido, ese 1% extra sí se nota a lo largo de los años. Mi recomendación: SPF 50+ siempre, especialmente en Argentina donde la radiación es alta.
       </p>
@@ -1107,7 +1122,7 @@
       <h2>¿Cuál tipo de protector elegir?</h2>
       <ul>
         <li><strong>Piel grasa:</strong> Fluidos oil-free con acabado mate o toque seco</li>
-        <li><strong>Piel seca:</strong> Cremas con acabado hidratante y �CLATnoso</li>
+        <li><strong>Piel seca:</strong> Cremas con acabado hidratante y luminoso</li>
         <li><strong>Piel sensible:</strong> Filtros minerales (óxido de zinc, dióxido de titanio)</li>
         <li><strong>Uso diario urbano:</strong> Protectores con color que unifican el tono</li>
         <li><strong>Actividad al aire libre:</strong> Resistentes al agua y sudor</li>
@@ -1122,15 +1137,15 @@
         <p>Con nuestro análisis con luz de Wood, podemos ver manchas y daño solar que aún no es visible a simple vista. Prevenir es siempre mejor.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Análisis</a>
       </div>
-    `},"tendencias-estetica-2026":{title:"Tendencias en Estética 2026: Lo que Viene",tag:"Tendencias",date:"03 Ene, 2026",author:"Dra. Camila Sánchez",readTime:"7 min",heroImg:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80",content:`
+    `},"tendencias-estetica-2026":{title:"Tendencias en Estética 2026: Lo que Viene",tag:"Tendencias",date:"03 Ene, 2026",author:"Dra. Camila Sánchez",readTime:"7 min",heroImg:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format,compress&fit=crop&fm=webp&w=1920&q=80",content:`
       <p class="article-intro">
         El mundo de la medicina estética evoluciona cada vez más rápido. Lo que hace 5 años parecía ciencia ficción, hoy es parte de nuestro día a día en el consultorio. Acabo de volver del Congreso Internacional de Medicina Estética en Miami, y estas son las tendencias que van a dominar este 2026.
       </p>
 
       <h2>1. Glass Skin: la obsesión por la piel transparente</h2>
-      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=80" alt="Glass skin tendencia" class="article-img">
+      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=900&q=80" alt="Glass skin tendencia" class="article-img">
       <p>
-        El concepto viene de la K-Beauty (belleza coreana) y se refiere a una piel tan hidratada, �CLATnosa y pareja que parece de vidrio. No se trata de cubrirla con maquillaje, sino de que la piel misma tenga esa calidad.
+        El concepto viene de la K-Beauty (belleza coreana) y se refiere a una piel tan hidratada, luminosa y pareja que parece de vidrio. No se trata de cubrirla con maquillaje, sino de que la piel misma tenga esa calidad.
       </p>
       <p>
         Para lograrlo combinamos: peelings suaves periódicos, mesoterapia con ácido hialurónico, skinboosters y una rutina domiciliaria enfocada en hidratación multicapa. Los resultados son impresionantes y muy naturales.
@@ -1178,9 +1193,9 @@
         <p>Agendá una consulta y diseñamos un plan a medida con las últimas técnicas del mercado mundial.</p>
         <a href="/contacto" class="btn btn-gold" data-navigo><i class="fa-regular fa-calendar-check"></i> Agendar Consulta</a>
       </div>
-    `}};function fe(a){const e=document.getElementById("app"),s=me[a];if(!s){e.innerHTML=`
+    `}};function fa(e){const a=document.getElementById("app"),s=ma[e];if(!s){a.innerHTML=`
       <section class="sub-hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Artículo no encontrado</h1>
@@ -1192,7 +1207,7 @@
           <a href="/blog" class="btn btn-gold" data-navigo><i class="fa-solid fa-arrow-left"></i> Volver al Blog</a>
         </div>
       </section>
-    `,window.scrollTo(0,0);return}e.innerHTML=`
+    `;return}a.innerHTML=`
     <!-- ARTICLE HERO -->
     <section class="sub-hero" style="height:55vh;">
       <div class="hero-bg" style="background-image: url('${s.heroImg}');"></div>
@@ -1220,5 +1235,4 @@
         </div>
       </div>
     </section>
-  `,window.scrollTo(0,0),w()}const S=new Za("/estetica-page-demo/");function L(a,e){return()=>{a(),K(e)}}S.on("/",L(X,"/")).on("/tratamientos",L(se,"/tratamientos")).on("/nosotros",L(te,"/nosotros")).on("/galeria",L(le,"/galeria")).on("/blog",L(xa,"/blog")).on("/blog/:slug",({data:a})=>{fe(a.slug),K("/blog")}).on("/contacto",L(ue,"/contacto")).notFound(()=>{L(X,"/")()});function Y(){Ea(),Ta(),Sa(),Aa(),R(),S.resolve(),S.hooks({after:()=>{S.updatePageLinks(),R()}}),S.updatePageLinks()}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",Y):Y();
-
+  `}function se(){const e=new IntersectionObserver(a=>{a.forEach(s=>{s.isIntersecting&&(s.target.classList.add("anim-visible"),e.unobserve(s.target))})},{threshold:.1,rootMargin:"0px 0px -50px 0px"});document.querySelectorAll(".anim, .anim-scale, .anim-left, .anim-right").forEach(a=>{e.observe(a)})}const x=new ea("/");function E(e,a){return()=>{e(),X(a),window.scrollTo(0,0),se()}}x.on("/",E(V,"/")).on("/tratamientos",E(oa,"/tratamientos")).on("/nosotros",E(na,"/nosotros")).on("/galeria",E(ca,"/galeria")).on("/blog",E(Te,"/blog")).on("/blog/:slug",({data:e})=>{fa(e.slug),X("/blog"),window.scrollTo(0,0),se()}).on("/contacto",E(pa,"/contacto")).notFound(()=>{E(V,"/")()});function W(){we(),ke(),xe(),ze(),Se(),x.hooks({after:()=>{x.updatePageLinks(),Pe()}}),x.resolve(),x.updatePageLinks()}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",W):W();

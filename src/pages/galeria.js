@@ -1,5 +1,3 @@
-import { initScrollAnimations } from '../components/scrollAnimations.js';
-
 const galleryItems = [
   {
     // Same close-up face photo — before: dull skin, after: glowing
@@ -110,9 +108,6 @@ export function renderGaleria() {
       </div>
     </section>
   `;
-
-  window.scrollTo(0, 0);
-  initScrollAnimations();
   initBASliders();
   initGalleryFilters();
 }
@@ -185,6 +180,3 @@ function initGalleryFilters() {
     });
   });
 }
-
-
-

@@ -18,6 +18,3 @@ export function initScrollAnimations() {
         observer.observe(el);
     });
 }
-
-
-

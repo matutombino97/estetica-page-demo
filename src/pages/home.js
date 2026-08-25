@@ -1,5 +1,3 @@
-import { initScrollAnimations } from '../components/scrollAnimations.js';
-
 export function renderHome() {
   const app = document.getElementById('app');
   app.innerHTML = `
@@ -94,7 +92,7 @@ export function renderHome() {
             <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Hydra-Glow Facial</h3>
-              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel �CLATnosa.</p>
+              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel luminosa.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 60 min</span>
                 <span><i class="fa-solid fa-rotate"></i> Mensual</span>
@@ -133,7 +131,7 @@ export function renderHome() {
             <div style="display:flex; flex-direction:column; gap:var(--space-md); align-items:center;">
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Manchas')">Eliminar Manchas o Cicatrices</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Arrugas')">Reducir Arrugas y Flacidez</button>
-              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, '�CLATnosidad')">Más Hidratación y Brillo</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'luminosidad')">Más Hidratación y Brillo</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Vello')">Eliminar Vello No Deseado</button>
             </div>
           </div>
@@ -233,61 +231,6 @@ export function renderHome() {
         </div>
       </div>
     </section>
-
-    <!-- PRICING -->
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-header anim">
-          <span class="section-label">Precios</span>
-          <h2 class="section-title" style="color:var(--white);">Packs Exclusivos</h2>
-          <p class="section-subtitle" style="color:var(--gray-400);">Combinaciones diseñadas para potenciar tus resultados</p>
-        </div>
-
-        <div class="pricing-grid">
-          <div class="pricing-card anim anim-delay-1">
-            <h3>Glow Básico</h3>
-            <div class="pricing-price">$45.000</div>
-            <div class="pricing-period">por sesión</div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Limpieza facial profunda</li>
-              <li><i class="fa-solid fa-check"></i> Hidratación con ácido hialurónico</li>
-              <li><i class="fa-solid fa-check"></i> Mascarilla revitalizante</li>
-              <li><i class="fa-solid fa-check"></i> Protector solar premium</li>
-            </ul>
-            <a href="https://wa.me/549261000000?text=Hola!%20Me%20interesa%20consultar%20por%20los%20Packs%20Exclusivos." target="_blank" class="btn btn-outline" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Consultar</a>
-          </div>
-
-          <div class="pricing-card featured anim anim-delay-2">
-            <h3>Glow Premium</h3>
-            <div class="pricing-price">$120.000</div>
-            <div class="pricing-period">pack 3 sesiones</div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Todo lo del plan Básico</li>
-              <li><i class="fa-solid fa-check"></i> Peeling químico suave</li>
-              <li><i class="fa-solid fa-check"></i> Dermapen con vitaminas</li>
-              <li><i class="fa-solid fa-check"></i> Seguimiento personalizado</li>
-              <li><i class="fa-solid fa-check"></i> 10% OFF en otros tratamientos</li>
-            </ul>
-            <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20reservar%20el%20Glow%20Premium." target="_blank" class="btn btn-gold" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Reservar Ahora</a>
-          </div>
-
-          <div class="pricing-card anim anim-delay-3">
-            <h3>Glow VIP</h3>
-            <div class="pricing-price">$280.000</div>
-            <div class="pricing-period">programa trimestral</div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Todo lo del plan Premium</li>
-              <li><i class="fa-solid fa-check"></i> Botox zona entrecejo</li>
-              <li><i class="fa-solid fa-check"></i> Mesoterapia facial</li>
-              <li><i class="fa-solid fa-check"></i> Acceso prioritario a agenda</li>
-              <li><i class="fa-solid fa-check"></i> 20% OFF en láser</li>
-            </ul>
-            <a href="https://wa.me/549261000000?text=Hola!%20Me%20interesa%20consultar%20por%20los%20Packs%20Exclusivos." target="_blank" class="btn btn-outline" style="width:100%;" data-navigo><i class="fa-brands fa-whatsapp"></i> Consultar</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA FINAL -->
     <section class="cta-section">
       <div class="container anim">
@@ -303,9 +246,6 @@ export function renderHome() {
       </div>
     </section>
   `;
-
-  window.scrollTo(0, 0);
-  initScrollAnimations();
   initTestimonialsCarousel();
 }
 
@@ -395,9 +335,9 @@ window.calculateQuizResult = () => {
       title = 'Peeling Químico';
       desc = 'Renueva tu piel capa por capa, ideal para eliminar manchas y unificar el tono.';
       waMessage = 'Hola! Completé el asesor virtual y me recomendó Peeling Químico. Quiero más info.';
-    } else if (objetivo === '�CLATnosidad') {
+    } else if (objetivo === 'luminosidad') {
       title = 'Hydra-Glow Facial';
-      desc = 'Limpieza profunda e hidratación intensa para un brillo instantáneo y piel �CLATnosa.';
+      desc = 'Limpieza profunda e hidratación intensa para un brillo instantáneo y piel luminosa.';
       waMessage = 'Hola! Completé el asesor virtual y me recomendó Hydra-Glow Facial. Quiero más info.';
     }
   } else if (zona === 'Cuerpo' || objetivo === 'Vello') {
@@ -424,5 +364,4 @@ window.resetQuiz = () => {
     step1.style.opacity = '1';
   }, 400);
 };
-
 
