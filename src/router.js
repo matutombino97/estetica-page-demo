@@ -3,9 +3,7 @@ import { renderHome } from './pages/home.js';
 import { renderTratamientos } from './pages/tratamientos.js';
 import { renderNosotros } from './pages/nosotros.js';
 import { renderGaleria } from './pages/galeria.js';
-import { renderBlog } from './pages/blog.js';
 import { renderContacto } from './pages/contacto.js';
-import { renderArticulo } from './pages/articulo.js';
 import { setActiveLink } from './components/navbar.js';
 import { initScrollAnimations } from './components/scrollAnimations.js';
 
@@ -25,8 +23,7 @@ router
     .on('/tratamientos', onRouteChange(renderTratamientos, '/tratamientos'))
     .on('/nosotros', onRouteChange(renderNosotros, '/nosotros'))
     .on('/galeria', onRouteChange(renderGaleria, '/galeria'))
-    .on('/blog', onRouteChange(renderBlog, '/blog'))
-    .on('/blog/:slug', ({ data }) => {
+    => {
         renderArticulo(data.slug);
         setActiveLink('/blog');
         window.scrollTo(0, 0);
@@ -38,3 +35,4 @@ router
     });
 
 export default router;
+

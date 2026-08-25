@@ -4,7 +4,6 @@ import { renderFooter } from './components/footer.js';
 import { renderWhatsApp } from './components/whatsapp.js';
 import { initPreloader } from './components/preloader.js';
 import { initBookingModal } from './components/bookingModal.js';
-import { initNewsletterForms } from './pages/blog.js';
 import router from './router.js';
 
 // Initialize app
@@ -20,9 +19,7 @@ function init() {
     router.hooks({
         after: () => {
             router.updatePageLinks();
-            // Re-init newsletter forms on footer (persistent)
-            initNewsletterForms();
-        },
+            },
     });
 
     // Start router (will render the correct page)
@@ -38,3 +35,4 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+

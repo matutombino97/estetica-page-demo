@@ -25,7 +25,6 @@ export function renderFooter() {
             <a href="/tratamientos" data-navigo>Tratamientos</a>
             <a href="/nosotros" data-navigo>Nosotros</a>
             <a href="/galeria" data-navigo>Galería</a>
-            <a href="/blog" data-navigo>Blog</a>
             <a href="/contacto" data-navigo>Contacto</a>
           </div>
 
@@ -41,14 +40,6 @@ export function renderFooter() {
             </p>
           </div>
 
-          <div class="footer-col">
-            <h4>Newsletter</h4>
-            <p>Recibí tips de belleza y ofertas exclusivas.</p>
-            <form class="footer-newsletter newsletter-form" onsubmit="return false;">
-              <input type="email" placeholder="Tu email" aria-label="Email para newsletter" class="newsletter-input" required>
-              <button type="submit" class="newsletter-btn">OK</button>
-            </form>
-            <div class="newsletter-msg" style="margin-top:8px;font-size:0.8rem;"></div>
           </div>
         </div>
 
@@ -60,3 +51,4 @@ export function renderFooter() {
     </div>
   `;
 }
+

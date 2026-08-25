@@ -14,7 +14,6 @@ export function renderNavbar() {
         <a href="/tratamientos" class="navbar-link" data-navigo>Tratamientos</a>
         <a href="/nosotros" class="navbar-link" data-navigo>Nosotros</a>
         <a href="/galeria" class="navbar-link" data-navigo>Galería</a>
-        <a href="/blog" class="navbar-link" data-navigo>Blog</a>
         <a href="/contacto" class="navbar-link" data-navigo>Contacto</a>
       </div>
 
@@ -45,7 +44,6 @@ function renderMobileMenu() {
     <a href="/tratamientos" class="mobile-link" data-navigo>Tratamientos</a>
     <a href="/nosotros" class="mobile-link" data-navigo>Nosotros</a>
     <a href="/galeria" class="mobile-link" data-navigo>Galería</a>
-    <a href="/blog" class="mobile-link" data-navigo>Blog</a>
     <a href="/contacto" class="mobile-link" data-navigo>Contacto</a>
     <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold btn-lg" style="margin-top:auto;">
       <i class="fa-brands fa-whatsapp"></i> Agendar Cita
@@ -112,3 +110,4 @@ export function setActiveLink(path) {
         }
     });
 }
+
