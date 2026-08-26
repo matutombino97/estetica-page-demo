@@ -1,41 +1,35 @@
-﻿const galleryItems = [
+const galleryItems = [
   {
-    // Same close-up face photo â€” before: dull skin, after: glowing
     photo: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Botox & Rellenos',
     category: 'botox',
-    testimonial: 'Me veo 10 aÃ±os mÃ¡s joven, pero natural. Â¡Encantada!',
+    testimonial: 'Me veo 10 años más joven, pero natural. ¡Encantada!',
   },
   {
-    // Close-up woman face with clean skin
     photo: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Hydra-Glow Facial',
     category: 'facial',
-    testimonial: 'Mi piel brilla sin maquillaje. IncreÃ­ble resultado.',
+    testimonial: 'Mi piel brilla sin maquillaje. Increíble resultado.',
   },
   {
-    // Woman touching face
     photo: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
-    treatment: 'Peeling QuÃ­mico',
+    treatment: 'Peeling Químico',
     category: 'peeling',
     testimonial: 'Las manchas desaparecieron casi por completo. Muy recomendable.',
   },
   {
-    // Close-up skin with good lighting
     photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Mesoterapia Facial',
     category: 'mesoterapia',
-    testimonial: 'La textura de mi piel mejorÃ³ un 100%. Estoy feliz.',
+    testimonial: 'La textura de mi piel mejoró un 100%. Estoy feliz.',
   },
   {
-    // Woman profile with smooth skin
     photo: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Dermapen',
     category: 'dermapen',
-    testimonial: 'Mis cicatrices de acnÃ© se redujeron increÃ­blemente.',
+    testimonial: 'Mis cicatrices de acné se redujeron increíblemente.',
   },
   {
-    // Close-up lips/lower face
     photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format,compress&fit=crop&fm=webp&w=800&q=80',
     treatment: 'Botox & Rellenos',
     category: 'botox',
@@ -54,9 +48,9 @@ export function renderGaleria() {
       <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-label">âœ¦ Resultados Reales</span>
-        <h1>GalerÃ­a Antes & DespuÃ©s</h1>
-        <p class="hero-subtitle">DeslizÃ¡ el control para ver las transformaciones de nuestras pacientes.</p>
+        <span class="hero-label">✦ Resultados Reales</span>
+        <h1>Galería Antes & Después</h1>
+        <p class="hero-subtitle">Deslizá el control para ver las transformaciones de nuestras pacientes.</p>
       </div>
     </section>
 
@@ -83,7 +77,7 @@ export function renderGaleria() {
                 <div class="ba-image ba-after" style="background-image: url('${item.photo}');"></div>
                 <div class="ba-handle"></div>
                 <span class="ba-label ba-label-before">Antes</span>
-                <span class="ba-label ba-label-after">DespuÃ©s</span>
+                <span class="ba-label ba-label-after">Después</span>
               </div>
               <div class="gallery-item-info">
                 <h4>${item.treatment}</h4>
@@ -100,8 +94,8 @@ export function renderGaleria() {
     <!-- CTA -->
     <section class="cta-section">
       <div class="container anim">
-        <h2>Â¿QuerÃ©s ser la prÃ³xima transformaciÃ³n?</h2>
-        <p>AgendÃ¡ tu consulta y empezÃ¡ el camino hacia tu mejor versiÃ³n.</p>
+        <h2>¿Querés ser la próxima transformación?</h2>
+        <p>Agendá tu consulta y empezá el camino hacia tu mejor versión.</p>
         <a href="/contacto" class="btn btn-gold btn-lg" data-navigo>
           <i class="fa-regular fa-calendar-check"></i> Agendar Consulta
         </a>

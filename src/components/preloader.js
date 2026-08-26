@@ -1,4 +1,4 @@
-﻿export function initPreloader() {
+export function initPreloader() {
     const preloader = document.getElementById('preloader');
 
     window.addEventListener('load', () => {

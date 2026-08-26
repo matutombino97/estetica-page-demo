@@ -1,4 +1,4 @@
-﻿import './style.css';
+import './style.css';
 import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { renderWhatsApp } from './components/whatsapp.js';
@@ -19,7 +19,7 @@ function init() {
     router.hooks({
         after: () => {
             router.updatePageLinks();
-            },
+        },
     });
 
     // Start router (will render the correct page)
@@ -35,4 +35,3 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
-

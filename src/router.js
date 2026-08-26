@@ -1,4 +1,4 @@
-﻿import Navigo from 'navigo';
+import Navigo from 'navigo';
 import { renderHome } from './pages/home.js';
 import { renderTratamientos } from './pages/tratamientos.js';
 import { renderNosotros } from './pages/nosotros.js';
