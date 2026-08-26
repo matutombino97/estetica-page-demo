@@ -1,4 +1,4 @@
-export function renderNavbar() {
+﻿export function renderNavbar() {
     const nav = document.getElementById('navbar');
     nav.className = 'navbar';
 
@@ -6,14 +6,14 @@ export function renderNavbar() {
     <div class="navbar-inner">
       <a href="/" class="navbar-logo" data-navigo>
         <i class="fa-solid fa-gem"></i>
-        <span class="navbar-logo-text">ÉCLAT</span>
+        <span class="navbar-logo-text">Ã‰CLAT</span>
       </a>
 
       <div class="navbar-links">
         <a href="/" class="navbar-link" data-navigo>Inicio</a>
         <a href="/tratamientos" class="navbar-link" data-navigo>Tratamientos</a>
         <a href="/nosotros" class="navbar-link" data-navigo>Nosotros</a>
-        <a href="/galeria" class="navbar-link" data-navigo>Galería</a>
+        <a href="/galeria" class="navbar-link" data-navigo>GalerÃ­a</a>
         <a href="/contacto" class="navbar-link" data-navigo>Contacto</a>
       </div>
 
@@ -23,7 +23,7 @@ export function renderNavbar() {
         </a>
       </div>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+      <button class="menu-toggle" id="menu-toggle" aria-label="MenÃº">
         <span></span>
         <span></span>
         <span></span>
@@ -43,7 +43,7 @@ function renderMobileMenu() {
     <a href="/" class="mobile-link" data-navigo>Inicio</a>
     <a href="/tratamientos" class="mobile-link" data-navigo>Tratamientos</a>
     <a href="/nosotros" class="mobile-link" data-navigo>Nosotros</a>
-    <a href="/galeria" class="mobile-link" data-navigo>Galería</a>
+    <a href="/galeria" class="mobile-link" data-navigo>GalerÃ­a</a>
     <a href="/contacto" class="mobile-link" data-navigo>Contacto</a>
     <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold btn-lg" style="margin-top:auto;">
       <i class="fa-brands fa-whatsapp"></i> Agendar Cita

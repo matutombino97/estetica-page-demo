@@ -1,4 +1,4 @@
-export function renderWhatsApp() {
+﻿export function renderWhatsApp() {
     const container = document.getElementById('whatsapp-container');
     container.innerHTML = `
     <!-- WhatsApp Float Button -->
@@ -12,10 +12,10 @@ export function renderWhatsApp() {
         <i class="fa-solid fa-triangle-exclamation"></i>
         <span>SITIO DEMO</span>
       </div>
-      <p>Esta página es un diseño de muestra. La estética no existe.</p>
+      <p>Esta pÃ¡gina es un diseÃ±o de muestra. La estÃ©tica no existe.</p>
       <a href="https://wa.me/5492613433108?text=Hola!%20Vi%20la%20demo%20de%20estetica%20y%20quiero%20una%20web%20asi." 
          target="_blank" class="demo-banner-cta">
-        <i class="fa-solid fa-laptop-code"></i> ¿Querés una web así? Contactame
+        <i class="fa-solid fa-laptop-code"></i> Â¿QuerÃ©s una web asÃ­? Contactame
       </a>
     </div>
   `;

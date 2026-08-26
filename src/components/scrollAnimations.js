@@ -1,4 +1,4 @@
-export function initScrollAnimations() {
+﻿export function initScrollAnimations() {
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {

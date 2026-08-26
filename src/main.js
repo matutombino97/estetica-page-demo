@@ -1,4 +1,4 @@
-import './style.css';
+﻿import './style.css';
 import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { renderWhatsApp } from './components/whatsapp.js';

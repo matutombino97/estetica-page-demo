@@ -1,4 +1,4 @@
-export function renderHome() {
+﻿export function renderHome() {
   const app = document.getElementById('app');
   app.innerHTML = `
     <!-- HERO -->
@@ -8,10 +8,10 @@ export function renderHome() {
       </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-label">✦ Medicina Estética Avanzada</span>
-        <h1>Realzá tu belleza natural <em>sin filtros.</em></h1>
+        <span class="hero-label">âœ¦ Medicina EstÃ©tica Avanzada</span>
+        <h1>RealzÃ¡ tu belleza natural <em>sin filtros.</em></h1>
         <p class="hero-subtitle">
-          Tratamientos personalizados que combinan ciencia y arte para resultados visibles y duraderos. Tu mejor versión empieza hoy.
+          Tratamientos personalizados que combinan ciencia y arte para resultados visibles y duraderos. Tu mejor versiÃ³n empieza hoy.
         </p>
         <div class="hero-buttons">
           <a href="/tratamientos" class="btn btn-gold btn-lg" data-navigo>
@@ -35,22 +35,22 @@ export function renderHome() {
             <div class="feature-icon">
               <i class="fa-solid fa-user-doctor"></i>
             </div>
-            <h3>Profesionales Médicos</h3>
-            <p>Tu salud es prioridad. Procedimientos realizados exclusivamente por doctores certificados con años de experiencia.</p>
+            <h3>Profesionales MÃ©dicos</h3>
+            <p>Tu salud es prioridad. Procedimientos realizados exclusivamente por doctores certificados con aÃ±os de experiencia.</p>
           </div>
           <div class="feature-card featured anim anim-delay-2">
             <div class="feature-icon">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
             <h3>Resultados Naturales</h3>
-            <p>Nadie notará qué te hiciste, pero todos notarán que te ves radiante y descansada. Ese es nuestro arte.</p>
+            <p>Nadie notarÃ¡ quÃ© te hiciste, pero todos notarÃ¡n que te ves radiante y descansada. Ese es nuestro arte.</p>
           </div>
           <div class="feature-card anim anim-delay-3">
             <div class="feature-icon">
               <i class="fa-solid fa-gem"></i>
             </div>
-            <h3>Tecnología Premium</h3>
-            <p>Invertimos en la mejor aparatología del mercado mundial (FDA & ANMAT aprobados).</p>
+            <h3>TecnologÃ­a Premium</h3>
+            <p>Invertimos en la mejor aparatologÃ­a del mercado mundial (FDA & ANMAT aprobados).</p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ export function renderHome() {
         <div class="section-header anim">
           <span class="section-label">Nuestros Favoritos</span>
           <h2 class="section-title">Tratamientos Estrella</h2>
-          <p class="section-subtitle">Los procedimientos más demandados por nuestras clientas</p>
+          <p class="section-subtitle">Los procedimientos mÃ¡s demandados por nuestras clientas</p>
         </div>
 
         <div class="treatments-grid">
@@ -70,7 +70,7 @@ export function renderHome() {
             <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Botox & Rellenos</h3>
-              <p>Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos.</p>
+              <p>Suaviza lÃ­neas de expresiÃ³n y recupera el volumen perdido con resultados inmediatos.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 30 min</span>
                 <span><i class="fa-solid fa-rotate"></i> 4-6 meses</span>
@@ -80,8 +80,8 @@ export function renderHome() {
           <div class="treatment-card anim anim-delay-2">
             <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
-              <h3>Depilación Láser Soprano</h3>
-              <p>La solución definitiva para una piel suave todo el año. Indolora y efectiva.</p>
+              <h3>DepilaciÃ³n LÃ¡ser Soprano</h3>
+              <p>La soluciÃ³n definitiva para una piel suave todo el aÃ±o. Indolora y efectiva.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 45 min</span>
                 <span><i class="fa-solid fa-rotate"></i> 6-8 sesiones</span>
@@ -92,7 +92,7 @@ export function renderHome() {
             <div class="treatment-card-img" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format,compress&fit=crop&fm=webp&w=800&q=80');"></div>
             <div class="treatment-card-body">
               <h3>Hydra-Glow Facial</h3>
-              <p>Limpieza profunda + hidratación intensa para un brillo instantáneo y piel luminosa.</p>
+              <p>Limpieza profunda + hidrataciÃ³n intensa para un brillo instantÃ¡neo y piel luminosa.</p>
               <div class="treatment-meta">
                 <span><i class="fa-regular fa-clock"></i> 60 min</span>
                 <span><i class="fa-solid fa-rotate"></i> Mensual</span>
@@ -113,13 +113,13 @@ export function renderHome() {
     <section class="section" style="background:#E6D5C3;">
       <div class="container text-center anim">
         <span class="section-label">Asesor Virtual</span>
-        <h2 class="section-title">Descubrí tu tratamiento ideal</h2>
-        <p class="section-subtitle" style="margin-bottom:var(--space-2xl);">Completá este test de 2 pasos y te recomendamos el mejor protocolo para vos.</p>
+        <h2 class="section-title">DescubrÃ­ tu tratamiento ideal</h2>
+        <p class="section-subtitle" style="margin-bottom:var(--space-2xl);">CompletÃ¡ este test de 2 pasos y te recomendamos el mejor protocolo para vos.</p>
         
         <div class="quiz-container" id="quiz-container" style="background:var(--white); padding:var(--space-2xl); border-radius:var(--radius-xl); box-shadow: 0 15px 50px rgba(0,0,0,0.1); border: 1px solid var(--gold); max-width:600px; margin:0 auto; position:relative; overflow:hidden;">
           
           <div id="quiz-step-1" class="quiz-step" style="transition: transform 0.4s ease, opacity 0.4s ease;">
-            <h3 style="margin-bottom:var(--space-lg);">¿Qué zona querés tratar principalmente?</h3>
+            <h3 style="margin-bottom:var(--space-lg);">Â¿QuÃ© zona querÃ©s tratar principalmente?</h3>
             <div style="display:flex; gap:var(--space-md); justify-content:center; flex-wrap:wrap;">
               <button class="btn btn-outline" style="min-width:140px;" onclick="nextQuizStep(2, 'Rostro')">Rostro</button>
               <button class="btn btn-outline" style="min-width:140px;" onclick="nextQuizStep(2, 'Cuerpo')">Cuerpo</button>
@@ -127,21 +127,21 @@ export function renderHome() {
           </div>
           
           <div id="quiz-step-2" class="quiz-step" style="display:none; transition: transform 0.4s ease, opacity 0.4s ease;">
-            <h3 style="margin-bottom:var(--space-lg);">¿Cuál es tu objetivo principal?</h3>
+            <h3 style="margin-bottom:var(--space-lg);">Â¿CuÃ¡l es tu objetivo principal?</h3>
             <div style="display:flex; flex-direction:column; gap:var(--space-md); align-items:center;">
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Manchas')">Eliminar Manchas o Cicatrices</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Arrugas')">Reducir Arrugas y Flacidez</button>
-              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'luminosidad')">Más Hidratación y Brillo</button>
+              <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'luminosidad')">MÃ¡s HidrataciÃ³n y Brillo</button>
               <button class="btn btn-outline" style="width:100%; max-width:350px;" onclick="nextQuizStep(3, 'Vello')">Eliminar Vello No Deseado</button>
             </div>
           </div>
           
           <div id="quiz-step-3" class="quiz-step" style="display:none; transition: transform 0.4s ease, opacity 0.4s ease;">
-            <h3 style="margin-bottom:var(--space-md);">¡Tenemos tu plan perfecto!</h3>
-            <p style="color:var(--gray-500); margin-bottom:var(--space-lg);">Según tus respuestas, te recomendamos:</p>
+            <h3 style="margin-bottom:var(--space-md);">Â¡Tenemos tu plan perfecto!</h3>
+            <p style="color:var(--gray-500); margin-bottom:var(--space-lg);">SegÃºn tus respuestas, te recomendamos:</p>
             <div style="background:var(--white-warm); padding:var(--space-lg); border-radius:var(--radius-md); margin-bottom:var(--space-lg); border: 1px solid var(--gold-light);">
               <h4 id="quiz-result-title" style="color:var(--black); font-size:1.5rem; margin-bottom:var(--space-sm);">Glow Premium</h4>
-              <p id="quiz-result-desc" style="color:var(--gray-600);">El tratamiento ideal para renovar tu piel y lograr los objetivos que buscás.</p>
+              <p id="quiz-result-desc" style="color:var(--gray-600);">El tratamiento ideal para renovar tu piel y lograr los objetivos que buscÃ¡s.</p>
             </div>
             <a href="#" id="quiz-wa-btn" target="_blank" class="btn btn-gold btn-lg" style="width:100%;">
               <i class="fa-brands fa-whatsapp"></i> Consultar por este tratamiento
@@ -163,11 +163,11 @@ export function renderHome() {
           </div>
           <div class="stat-item anim anim-delay-2">
             <div class="stat-number">12</div>
-            <div class="stat-label">Años de Experiencia</div>
+            <div class="stat-label">AÃ±os de Experiencia</div>
           </div>
           <div class="stat-item anim anim-delay-3">
             <div class="stat-number">98%</div>
-            <div class="stat-label">Satisfacción</div>
+            <div class="stat-label">SatisfacciÃ³n</div>
           </div>
           <div class="stat-item anim anim-delay-4">
             <div class="stat-number">15+</div>
@@ -191,7 +191,7 @@ export function renderHome() {
               <div class="testimonial-stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p class="testimonial-text">"Tenía miedo de verme artificial, pero el resultado fue increíble. Mis amigas me dicen que me veo descansada y radiante. ¡Nadie nota que es botox!"</p>
+              <p class="testimonial-text">"TenÃ­a miedo de verme artificial, pero el resultado fue increÃ­ble. Mis amigas me dicen que me veo descansada y radiante. Â¡Nadie nota que es botox!"</p>
               <div class="testimonial-author">
                 <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
@@ -204,7 +204,7 @@ export function renderHome() {
               <div class="testimonial-stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p class="testimonial-text">"La depilación láser cambió mi vida. Después de 6 sesiones, olvídate de la cera y las cuchillas. El equipo es súper profesional y el lugar es hermoso."</p>
+              <p class="testimonial-text">"La depilaciÃ³n lÃ¡ser cambiÃ³ mi vida. DespuÃ©s de 6 sesiones, olvÃ­date de la cera y las cuchillas. El equipo es sÃºper profesional y el lugar es hermoso."</p>
               <div class="testimonial-author">
                 <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
@@ -221,7 +221,7 @@ export function renderHome() {
               <div class="testimonial-author">
                 <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format,compress&fit=crop&fm=webp&w=100&q=80');"></div>
                 <div class="testimonial-info">
-                  <h4>Lucía F.</h4>
+                  <h4>LucÃ­a F.</h4>
                   <p>Paciente desde 2024</p>
                 </div>
               </div>
@@ -234,14 +234,14 @@ export function renderHome() {
     <!-- CTA FINAL -->
     <section class="cta-section">
       <div class="container anim">
-        <h2>Tu mejor versión te está esperando.</h2>
-        <p>No postergues más ese mimo que te merecés. La agenda de este mes se está llenando rápido.</p>
+        <h2>Tu mejor versiÃ³n te estÃ¡ esperando.</h2>
+        <p>No postergues mÃ¡s ese mimo que te merecÃ©s. La agenda de este mes se estÃ¡ llenando rÃ¡pido.</p>
         <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita." target="_blank" class="btn btn-gold btn-lg">
           <i class="fa-brands fa-whatsapp"></i> Reservar mi Turno Ahora
         </a>
         <div class="cta-info">
           <span><i class="fa-solid fa-location-dot"></i> Mendoza Capital, Barrio Bombal</span>
-          <span><i class="fa-regular fa-clock"></i> Lun-Sáb 9hs a 20hs</span>
+          <span><i class="fa-regular fa-clock"></i> Lun-SÃ¡b 9hs a 20hs</span>
         </div>
       </div>
     </section>
@@ -323,27 +323,27 @@ window.nextQuizStep = (step, answer) => {
 window.calculateQuizResult = () => {
   const { zona, objetivo } = window.quizData;
   let title = 'Glow Premium';
-  let desc = 'El tratamiento ideal para renovar tu piel y lograr los objetivos que buscás.';
-  let waMessage = 'Hola! Completé el asesor virtual y me recomendó el Glow Premium. Quiero más info.';
+  let desc = 'El tratamiento ideal para renovar tu piel y lograr los objetivos que buscÃ¡s.';
+  let waMessage = 'Hola! CompletÃ© el asesor virtual y me recomendÃ³ el Glow Premium. Quiero mÃ¡s info.';
 
   if (zona === 'Rostro') {
     if (objetivo === 'Arrugas') {
       title = 'Botox & Rellenos Faciales';
-      desc = 'Suaviza líneas de expresión y recupera el volumen perdido con resultados inmediatos.';
-      waMessage = 'Hola! Completé el asesor virtual y me recomendó Botox & Rellenos. Quiero más info.';
+      desc = 'Suaviza lÃ­neas de expresiÃ³n y recupera el volumen perdido con resultados inmediatos.';
+      waMessage = 'Hola! CompletÃ© el asesor virtual y me recomendÃ³ Botox & Rellenos. Quiero mÃ¡s info.';
     } else if (objetivo === 'Manchas') {
-      title = 'Peeling Químico';
+      title = 'Peeling QuÃ­mico';
       desc = 'Renueva tu piel capa por capa, ideal para eliminar manchas y unificar el tono.';
-      waMessage = 'Hola! Completé el asesor virtual y me recomendó Peeling Químico. Quiero más info.';
+      waMessage = 'Hola! CompletÃ© el asesor virtual y me recomendÃ³ Peeling QuÃ­mico. Quiero mÃ¡s info.';
     } else if (objetivo === 'luminosidad') {
       title = 'Hydra-Glow Facial';
-      desc = 'Limpieza profunda e hidratación intensa para un brillo instantáneo y piel luminosa.';
-      waMessage = 'Hola! Completé el asesor virtual y me recomendó Hydra-Glow Facial. Quiero más info.';
+      desc = 'Limpieza profunda e hidrataciÃ³n intensa para un brillo instantÃ¡neo y piel luminosa.';
+      waMessage = 'Hola! CompletÃ© el asesor virtual y me recomendÃ³ Hydra-Glow Facial. Quiero mÃ¡s info.';
     }
   } else if (zona === 'Cuerpo' || objetivo === 'Vello') {
-    title = 'Depilación Láser Soprano';
-    desc = 'La solución definitiva para una piel suave todo el año. Indolora y efectiva.';
-    waMessage = 'Hola! Completé el asesor virtual y me recomendó Depilación Láser Soprano. Quiero más info.';
+    title = 'DepilaciÃ³n LÃ¡ser Soprano';
+    desc = 'La soluciÃ³n definitiva para una piel suave todo el aÃ±o. Indolora y efectiva.';
+    waMessage = 'Hola! CompletÃ© el asesor virtual y me recomendÃ³ DepilaciÃ³n LÃ¡ser Soprano. Quiero mÃ¡s info.';
   }
 
   document.getElementById('quiz-result-title').textContent = title;

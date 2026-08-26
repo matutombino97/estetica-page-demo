@@ -1,4 +1,4 @@
-export function renderContacto() {
+﻿export function renderContacto() {
     const app = document.getElementById('app');
     app.innerHTML = `
     <!-- SUB HERO -->
@@ -6,9 +6,9 @@ export function renderContacto() {
       <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format,compress&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-label">✦ Hablemos</span>
+        <span class="hero-label">âœ¦ Hablemos</span>
         <h1>Contacto</h1>
-        <p class="hero-subtitle">Estamos para ayudarte. Agendá tu cita o consultanos lo que necesites por WhatsApp.</p>
+        <p class="hero-subtitle">Estamos para ayudarte. AgendÃ¡ tu cita o consultanos lo que necesites por WhatsApp.</p>
       </div>
     </section>
 
@@ -19,7 +19,7 @@ export function renderContacto() {
           
           <!-- INFO -->
           <div class="anim-up text-center" style="margin-bottom: var(--space-xl);">
-            <h2 class="section-title">¿En qué podemos ayudarte?</h2>
+            <h2 class="section-title">Â¿En quÃ© podemos ayudarte?</h2>
             <p style="color:var(--gray-500); margin-bottom: var(--space-xl);">Escribinos directamente a nuestro WhatsApp y te responderemos a la brevedad para coordinar tu turno.</p>
             
             <a href="https://wa.me/549261000000?text=Hola!%20Quiero%20agendar%20una%20cita%20o%20hacer%20una%20consulta." target="_blank" class="btn btn-gold btn-lg" style="margin-bottom: var(--space-2xl);">
@@ -32,14 +32,14 @@ export function renderContacto() {
               <div class="contact-info-item">
                 <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
-                  <h4>Ubicación</h4>
-                  <p>Mendoza Capital, Barrio Bombal<br>Av. San Martín 1234, Piso 3</p>
+                  <h4>UbicaciÃ³n</h4>
+                  <p>Mendoza Capital, Barrio Bombal<br>Av. San MartÃ­n 1234, Piso 3</p>
                 </div>
               </div>
               <div class="contact-info-item">
                 <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
                 <div>
-                  <h4>Teléfono</h4>
+                  <h4>TelÃ©fono</h4>
                   <p>+54 261 000 0000</p>
                 </div>
               </div>
@@ -47,7 +47,7 @@ export function renderContacto() {
                 <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
                 <div>
                   <h4>Horarios</h4>
-                  <p>Lun — Vie: 9:00 – 20:00 hs<br>Sábados: 9:00 – 14:00 hs</p>
+                  <p>Lun â€” Vie: 9:00 â€“ 20:00 hs<br>SÃ¡bados: 9:00 â€“ 14:00 hs</p>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ export function renderContacto() {
                 style="border:0;"
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de ÉCLAT Estética">
+                title="UbicaciÃ³n de Ã‰CLAT EstÃ©tica">
               </iframe>
             </div>
           </div>

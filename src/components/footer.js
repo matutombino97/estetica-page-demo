@@ -1,4 +1,4 @@
-export function renderFooter() {
+﻿export function renderFooter() {
   const footer = document.getElementById('footer-container');
   footer.innerHTML = `
     <div class="footer">
@@ -8,9 +8,9 @@ export function renderFooter() {
           <div class="footer-brand">
             <div class="navbar-logo">
               <i class="fa-solid fa-gem" style="color:var(--gold);font-size:1.5rem;"></i>
-              <span class="navbar-logo-text">ÉCLAT</span>
+              <span class="navbar-logo-text">Ã‰CLAT</span>
             </div>
-            <p>Medicina estética avanzada. Combinamos ciencia y arte para realzar tu belleza natural con resultados visibles y duraderos.</p>
+            <p>Medicina estÃ©tica avanzada. Combinamos ciencia y arte para realzar tu belleza natural con resultados visibles y duraderos.</p>
             <div class="footer-social">
               <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -20,21 +20,21 @@ export function renderFooter() {
           </div>
 
           <div class="footer-col">
-            <h4>Navegación</h4>
+            <h4>NavegaciÃ³n</h4>
             <a href="/" data-navigo>Inicio</a>
             <a href="/tratamientos" data-navigo>Tratamientos</a>
             <a href="/nosotros" data-navigo>Nosotros</a>
-            <a href="/galeria" data-navigo>Galería</a>
+            <a href="/galeria" data-navigo>GalerÃ­a</a>
             <a href="/contacto" data-navigo>Contacto</a>
           </div>
 
           <div class="footer-col">
             <h4>Horarios</h4>
             <p>
-              <strong style="color:var(--white);">Lun — Vie</strong><br>
-              9:00 – 20:00 hs<br><br>
-              <strong style="color:var(--white);">Sábados</strong><br>
-              9:00 – 14:00 hs<br><br>
+              <strong style="color:var(--white);">Lun â€” Vie</strong><br>
+              9:00 â€“ 20:00 hs<br><br>
+              <strong style="color:var(--white);">SÃ¡bados</strong><br>
+              9:00 â€“ 14:00 hs<br><br>
               <strong style="color:var(--white);">Domingos</strong><br>
               Cerrado
             </p>
@@ -44,7 +44,7 @@ export function renderFooter() {
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; ${new Date().getFullYear()} ÉCLAT Estética. Todos los derechos reservados.</p>
+          <p>&copy; ${new Date().getFullYear()} Ã‰CLAT EstÃ©tica. Todos los derechos reservados.</p>
           <p>Mendoza Capital, Barrio Bombal</p>
         </div>
       </div>

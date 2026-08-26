@@ -1,45 +1,45 @@
-const team = [
+﻿const team = [
   {
-    name: 'Dra. Camila Sánchez',
-    role: 'Directora Médica',
+    name: 'Dra. Camila SÃ¡nchez',
+    role: 'Directora MÃ©dica',
     photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Especialista en Dermatología Estética con 15 años de experiencia. Formada en la UBA y especializada en rejuvenecimiento facial en Barcelona.',
+    bio: 'Especialista en DermatologÃ­a EstÃ©tica con 15 aÃ±os de experiencia. Formada en la UBA y especializada en rejuvenecimiento facial en Barcelona.',
   },
   {
-    name: 'Dr. Martín Rivas',
-    role: 'Cirujano Plástico',
+    name: 'Dr. MartÃ­n Rivas',
+    role: 'Cirujano PlÃ¡stico',
     photo: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Cirujano plástico matriculado con maestría en Medicina Estética. Referente en técnicas de Botox y rellenos con ácido hialurónico.',
+    bio: 'Cirujano plÃ¡stico matriculado con maestrÃ­a en Medicina EstÃ©tica. Referente en tÃ©cnicas de Botox y rellenos con Ã¡cido hialurÃ³nico.',
   },
   {
-    name: 'Lic. Sofía Moretti',
+    name: 'Lic. SofÃ­a Moretti',
     role: 'Cosmiatra Senior',
     photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964ae17?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Cosmiatra con 10 años de práctica clínica. Certificada en dermapen, peelings avanzados y protocolos de skincare personalizados.',
+    bio: 'Cosmiatra con 10 aÃ±os de prÃ¡ctica clÃ­nica. Certificada en dermapen, peelings avanzados y protocolos de skincare personalizados.',
   },
   {
     name: 'Dra. Valentina Lagos',
-    role: 'Dermatóloga',
+    role: 'DermatÃ³loga',
     photo: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Dermatóloga clínica y estética. Especialista en tratamientos con láser, manchas pigmentarias y rosácea. Posgrado en la Universidad de Milán.',
+    bio: 'DermatÃ³loga clÃ­nica y estÃ©tica. Especialista en tratamientos con lÃ¡ser, manchas pigmentarias y rosÃ¡cea. Posgrado en la Universidad de MilÃ¡n.',
   },
   {
-    name: 'Lic. Joaquín Herrera',
-    role: 'Kinesiólogo Estético',
+    name: 'Lic. JoaquÃ­n Herrera',
+    role: 'KinesiÃ³logo EstÃ©tico',
     photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Kinesiólogo con formación en drenaje linfático, masajes post-quirúrgicos y rehabilitación facial. Más de 2.000 procedimientos realizados.',
+    bio: 'KinesiÃ³logo con formaciÃ³n en drenaje linfÃ¡tico, masajes post-quirÃºrgicos y rehabilitaciÃ³n facial. MÃ¡s de 2.000 procedimientos realizados.',
   },
   {
-    name: 'Lic. Lucía Fernández',
-    role: 'Nutricionista Estética',
+    name: 'Lic. LucÃ­a FernÃ¡ndez',
+    role: 'Nutricionista EstÃ©tica',
     photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Nutricionista especializada en dermonutrición y suplementación para piel. Diseña planes nutricionales que potencian los tratamientos estéticos.',
+    bio: 'Nutricionista especializada en dermonutriciÃ³n y suplementaciÃ³n para piel. DiseÃ±a planes nutricionales que potencian los tratamientos estÃ©ticos.',
   },
   {
-    name: 'Lic. Ana Paula Domínguez',
+    name: 'Lic. Ana Paula DomÃ­nguez',
     role: 'Cosmiatra',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format,compress&fit=crop&fm=webp&w=600&q=80',
-    bio: 'Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de luminosidad. Atención cálida y personalizada.',
+    bio: 'Cosmiatra especializada en limpiezas faciales profundas, HydraFacial y protocolos de luminosidad. AtenciÃ³n cÃ¡lida y personalizada.',
   },
 ];
 
@@ -56,13 +56,13 @@ const values = [
   },
   {
     icon: 'fa-solid fa-microscope',
-    title: 'Tecnología de Punta',
-    desc: 'Equipamiento de última generación importado de Europa y Estados Unidos, con calibración y mantenimiento permanente.',
+    title: 'TecnologÃ­a de Punta',
+    desc: 'Equipamiento de Ãºltima generaciÃ³n importado de Europa y Estados Unidos, con calibraciÃ³n y mantenimiento permanente.',
   },
   {
     icon: 'fa-solid fa-heart-pulse',
-    title: 'Atención Humana',
-    desc: 'Cada paciente es única. Escuchamos tus necesidades, evaluamos tu caso y diseñamos un plan 100% personalizado.',
+    title: 'AtenciÃ³n Humana',
+    desc: 'Cada paciente es Ãºnica. Escuchamos tus necesidades, evaluamos tu caso y diseÃ±amos un plan 100% personalizado.',
   },
 ];
 
@@ -74,9 +74,9 @@ export function renderNosotros() {
       <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format,compress&fit=crop&fm=webp&w=1920&q=80');"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-label">✦ Sobre Nosotros</span>
-        <h1>Conocé al Equipo</h1>
-        <p class="hero-subtitle">Profesionales apasionados por la belleza natural y la medicina estética de excelencia.</p>
+        <span class="hero-label">âœ¦ Sobre Nosotros</span>
+        <h1>ConocÃ© al Equipo</h1>
+        <p class="hero-subtitle">Profesionales apasionados por la belleza natural y la medicina estÃ©tica de excelencia.</p>
       </div>
     </section>
 
@@ -86,19 +86,19 @@ export function renderNosotros() {
         <div class="two-col-layout">
           <div class="anim anim-left">
             <span class="section-label">Nuestra Historia</span>
-            <h2 class="section-title">Más de una década cuidando tu belleza</h2>
+            <h2 class="section-title">MÃ¡s de una dÃ©cada cuidando tu belleza</h2>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
-              ÉCLAT nació en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estética se encuentre con el arte y la tecnología. Un lugar donde cada paciente sea tratada como única, con protocolos diseñados exclusivamente para ella.
+              Ã‰CLAT naciÃ³ en 2014 de una idea simple pero ambiciosa: crear un espacio donde la medicina estÃ©tica se encuentre con el arte y la tecnologÃ­a. Un lugar donde cada paciente sea tratada como Ãºnica, con protocolos diseÃ±ados exclusivamente para ella.
             </p>
             <p style="color:var(--gray-500);line-height:1.8;margin-bottom:var(--space-lg);">
-              Fundada por la Dra. Camila Sánchez en el corazón de Barrio Bombal, Mendoza, lo que comenzó como un consultorio de 40m² hoy es un centro de referencia con más de 150m² equipados con la última tecnología del mercado mundial.
+              Fundada por la Dra. Camila SÃ¡nchez en el corazÃ³n de Barrio Bombal, Mendoza, lo que comenzÃ³ como un consultorio de 40mÂ² hoy es un centro de referencia con mÃ¡s de 150mÂ² equipados con la Ãºltima tecnologÃ­a del mercado mundial.
             </p>
             <p style="color:var(--gray-500);line-height:1.8;">
-              Nuestro equipo creció de 2 a 7 profesionales, pero nuestro compromiso sigue siendo el mismo: resultados visibles, naturales y seguros. Cada técnica, cada producto y cada protocolo es seleccionado con un estándar: si no lo usaríamos en nosotras mismas, no lo usamos en nuestras pacientes.
+              Nuestro equipo creciÃ³ de 2 a 7 profesionales, pero nuestro compromiso sigue siendo el mismo: resultados visibles, naturales y seguros. Cada tÃ©cnica, cada producto y cada protocolo es seleccionado con un estÃ¡ndar: si no lo usarÃ­amos en nosotras mismas, no lo usamos en nuestras pacientes.
             </p>
           </div>
           <div class="anim anim-right">
-            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="Clínica ÉCLAT" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
+            <img src="https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?auto=format,compress&fit=crop&fm=webp&w=800&q=80" alt="ClÃ­nica Ã‰CLAT" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);">
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ export function renderNosotros() {
     <section class="section section-pink">
       <div class="container">
         <div class="text-center anim" style="margin-bottom:var(--space-3xl);">
-          <span class="section-label">Lo que nos guía</span>
+          <span class="section-label">Lo que nos guÃ­a</span>
           <h2 class="section-title">Nuestros Valores</h2>
         </div>
         <div class="values-grid">
@@ -133,7 +133,7 @@ export function renderNosotros() {
         <div class="text-center anim" style="margin-bottom:var(--space-3xl);">
           <span class="section-label">Profesionales</span>
           <h2 class="section-title">Nuestro Equipo</h2>
-          <p style="max-width:600px;margin:var(--space-md) auto 0;color:var(--gray-500);">7 especialistas trabajando en conjunto para ofrecerte los mejores resultados con la máxima seguridad.</p>
+          <p style="max-width:600px;margin:var(--space-md) auto 0;color:var(--gray-500);">7 especialistas trabajando en conjunto para ofrecerte los mejores resultados con la mÃ¡xima seguridad.</p>
         </div>
         <div class="team-grid">
           ${team
@@ -178,7 +178,7 @@ export function renderNosotros() {
           </div>
           <div style="text-align:center;">
             <i class="fa-solid fa-user-doctor" style="font-size:2.5rem;color:var(--gold);display:block;margin-bottom:var(--space-sm);"></i>
-            <span style="color:var(--gray-400);font-size:0.85rem;">Colegio Médico<br>Mendoza</span>
+            <span style="color:var(--gray-400);font-size:0.85rem;">Colegio MÃ©dico<br>Mendoza</span>
           </div>
         </div>
       </div>
@@ -187,8 +187,8 @@ export function renderNosotros() {
     <!-- CTA -->
     <section class="cta-section">
       <div class="container anim">
-        <h2>¿Querés conocernos en persona?</h2>
-        <p>Agendá tu primera consulta sin compromiso y visitá nuestras instalaciones.</p>
+        <h2>Â¿QuerÃ©s conocernos en persona?</h2>
+        <p>AgendÃ¡ tu primera consulta sin compromiso y visitÃ¡ nuestras instalaciones.</p>
         <a href="/contacto" class="btn btn-gold btn-lg" data-navigo>
           <i class="fa-regular fa-calendar-check"></i> Agendar Visita
         </a>
