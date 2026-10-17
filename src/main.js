@@ -1,37 +1,81 @@
+import { pages, aliases, missingPage } from './routes.js';
+import { mountAgenda } from './agenda.js';
+import './agenda.css';
+import { mountMotion, mountDialogMotion, animateCatalog, motionAllowed } from './motion.js';
 import './style.css';
-import { renderNavbar } from './components/navbar.js';
-import { renderFooter } from './components/footer.js';
-import { renderWhatsApp } from './components/whatsapp.js';
-import { initPreloader } from './components/preloader.js';
-import { initBookingModal } from './components/bookingModal.js';
-import router from './router.js';
-
-// Initialize app
-function init() {
-    // Render persistent components
-    renderNavbar();
-    renderFooter();
-    renderWhatsApp();
-    initPreloader();
-    initBookingModal();
-
-    // Update Navigo links after each navigation
-    router.hooks({
-        after: () => {
-            router.updatePageLinks();
-        },
-    });
-
-    // Start router (will render the correct page)
-    router.resolve();
-
-    // Initial link update
-    router.updatePageLinks();
+import './studio.css';
+import './pages.css';
+import { services, config, money, photo, whatsappURL } from './site.js';
+import { card, esc, whatsappCTA } from './views.js';
+const app=document.querySelector('#app');
+let saved=[];try{const data=JSON.parse(localStorage.getItem('mimara:favorites')||'[]');if(Array.isArray(data))saved=[...new Set(data)].filter(id=>services.some(s=>s.id===id));}catch{}
+let compared=[],category='Todos',goal='',maxTime=1000,returnFocus;
+const selected=ids=>services.filter(s=>ids.includes(s.id));
+const totals=items=>({time:items.reduce((n,s)=>n+s.minutes,0),price:items.reduce((n,s)=>n+s.price,0)});
+document.querySelector('#navbar').innerHTML=`<a href="/" class="logo" aria-label="Mímara, inicio">mímara<span>✳</span></a><button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menú <span>☰</span></button><div id="nav-links"><a href="/tratamientos">Tratamientos</a><a href="/el-centro">El centro</a><a href="/bonos-y-regalos">Bonos y regalos</a><a href="/contacto">Contacto</a><a class="nav-management" href="/gestion">Gestión de turnos ↗</a></div><div class="nav-actions"><button class="list-button" data-plan aria-label="Abrir mi lista">♡ <span>Mi lista</span> <b data-count>0</b></button>${whatsappCTA('Hola, vi Mímara y me gustaría consultar por un tratamiento.','Hablemos','nav-book')}</div>`;
+document.querySelector('#footer-container').innerHTML=`<div class="footer-top wrap"><div><a class="logo" href="/">mímara<span>✳</span></a><p>Piel, cuerpo y pausa.<br>Un mimo para vos, a tu manera.</p></div><div><span class="eyebrow">EXPLORÁ</span><a href="/tratamientos">Encontrá tu tratamiento</a><a href="/el-centro">El centro</a><a href="/bonos-y-regalos">Bonos y regalos</a><a href="/contacto">Contacto y turnos</a><button data-plan>Mi lista de mimos</button><a href="/contacto#preguntas">Preguntas frecuentes</a></div><div><span class="eyebrow">¿TENÉS UN CENTRO?</span><p>Tu identidad. Tus tratamientos.<br>Una experiencia así para tu negocio.</p><a href="/para-centros">Conocé la propuesta</a><a href="/gestion">Entrar a gestión de turnos ↗</a><a href="https://wa.me/${config.businessPhone}?text=${encodeURIComponent('Hola, vi la demo Mímara. Me interesa una web para mi centro de estética.')}" target="_blank" rel="noopener noreferrer">Hablemos de tu web ↗</a></div></div><div class="footer-bottom wrap"><span>© ${new Date().getFullYear()} Mímara · Demo conceptual</span><span>Marca, precios e imágenes ilustrativos</span><a href="/privacidad">Privacidad</a></div>`;
+document.querySelector('#whatsapp-container').innerHTML=`<div id="compare-bar" hidden><span><b id="compare-count">0</b> tratamientos seleccionados</span><button class="button butter" data-show-compare>Comparar ↗</button><button class="clear-compare" aria-label="Quitar selección de comparación">×</button></div>${whatsappCTA('Hola, me gustaría consultar por los tratamientos de Mímara.','¿Te asesoramos?','floating-consult')}<div id="toast" role="status"></div>`;
+document.body.insertAdjacentHTML('beforeend',`<dialog id="modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Cerrar ventana">×</button><div id="modal-body"></div></dialog>`);
+const modal=document.querySelector('#modal'),body=document.querySelector('#modal-body');
+mountDialogMotion();
+let toastTimeout;function toast(text){const t=document.querySelector('#toast');t.textContent=text;t.classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>t.classList.remove('visible'),3000);}
+function open(html,trigger){if(trigger)returnFocus=trigger;else if(!modal.open)returnFocus=document.activeElement;body.innerHTML=html;if(!modal.open)modal.showModal();}
+modal.addEventListener('close',()=>{returnFocus?.isConnected&&returnFocus.focus();});
+modal.querySelector('.modal-close').onclick=()=>modal.close();
+modal.addEventListener('click',e=>{if(e.target===modal){const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)modal.close();}});
+function sync(){document.querySelectorAll('[data-count]').forEach(x=>x.textContent=saved.length);document.querySelectorAll('[data-save]').forEach(b=>{const yes=saved.includes(b.dataset.save);b.setAttribute('aria-pressed',yes);b.innerHTML=b.classList.contains('save')?(yes?'♥':'♡'):(yes?'♥ Guardado':'♡ Guardar');b.setAttribute('aria-label',`${yes?'Quitar':'Guardar'} ${services.find(s=>s.id===b.dataset.save)?.name||'tratamiento'}`);});document.querySelectorAll('[data-compare]').forEach(c=>c.checked=compared.includes(c.dataset.compare));document.querySelector('#compare-bar').hidden=!compared.length;document.querySelector('#compare-count').textContent=compared.length;document.querySelector('[data-show-compare]').disabled=compared.length<2;}
+function save(id){if(!services.some(s=>s.id===id))return;const exists=saved.includes(id);saved=exists?saved.filter(x=>x!==id):[...saved,id];let persisted=true;try{localStorage.setItem('mimara:favorites',JSON.stringify(saved));}catch{persisted=false;}sync();if(category==='Guardados')filter();if(body.querySelector('#plan-list')&&modal.open)plan();toast(!persisted?'Tu lista se conservará solo mientras esta página esté abierta.':exists?'Tratamiento quitado de tu lista':'Un mimo más en tu lista ♡');}
+function plan(trigger){const items=selected(saved),t=totals(items);open(`<p class="eyebrow">UN RATITO PARA VOS</p><h2 id="modal-title">Mi lista de <em>mimos.</em></h2><p>Guardados en este navegador.</p><div id="plan-list">${items.length?items.map(s=>`<div class="plan-row"><div><h3>${s.name}</h3><span>${s.minutes} min · ${money(s.price)}</span></div><button data-remove="${s.id}" aria-label="Quitar ${s.name}">×</button></div>`).join(''):`<div class="empty-state"><span>♡</span><h3>Tu próxima pausa empieza acá.</h3><p>Elegí el corazón de un tratamiento para guardarlo.</p><button class="button plum" data-explore>Explorar tratamientos ↗</button></div>`}</div>${items.length?`<div class="plan-total"><span>Suma de referencia</span><b>${t.time} min · ${money(t.price)}</b></div><p class="small-note">Precios de ejemplo. El equipo debe confirmar combinaciones, duración y valor final.</p><button class="button plum full" data-book-list>Consultar por mi selección ↗</button><button class="text-button clear-list" data-clear-list>Vaciar mi lista</button>`:''}`,trigger);}
+function compare(trigger){const items=selected(compared);if(items.length<2)return;open(`<p class="eyebrow">ELEGÍ CON MÁS CLARIDAD</p><h2 id="modal-title">Dos tratamientos.<br><em>Tu decisión.</em></h2><div class="comparison">${items.map(s=>`<article><span class="eyebrow">${s.category}</span><h3>${s.name}</h3><p>${s.desc}</p><dl><dt>Duración</dt><dd>${s.minutes} minutos</dd><dt>Valor de ejemplo</dt><dd>${money(s.price)}</dd><dt>El tratamiento incluye</dt><dd>${s.steps.map(esc).join(' · ')}</dd></dl><button class="button plum" data-book="${s.id}">Elegir este ↗</button></article>`).join('')}</div><p class="small-note">Una comparación de servicios, no una recomendación clínica.</p>`,trigger);}
+function booking(ids=[],trigger){const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());open(`<div class="booking-header"><div><p class="eyebrow">MÍMARA · ESTÉTICA & BIENESTAR</p><h2 id="modal-title">Tu piel.<br><em>Tu momento.</em></h2><p>Elegí tu tratamiento y contanos cuándo te gustaría venir.</p></div><svg class="beauty-line" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M73 17C32 11 20 48 34 75c6 12 9 15 8 30-1 12 8 24 25 28m6-116c30 17 29 42 19 57-8 11-11 18-9 30 2 12-4 24-16 29m-25-72c7-7 15-7 22-1m8-1c5-5 10-5 15-1M66 66l-6 22 9 3m-15 13c9 6 17 6 24 0m-34 26-14 22m48-19 12 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18 32c0-9-5-14-10-17 8 0 14-5 16-12 0 9 5 14 11 17-9 0-14 5-17 12Z" stroke="currentColor" stroke-width="1.2"/></svg></div><form id="booking-form"><fieldset><legend>01 / Elegí tu tratamiento</legend>${services.map(s=>`<label class="booking-option"><input type="checkbox" name="tratamiento" value="${s.id}" ${ids.includes(s.id)?'checked':''}><img class="booking-thumb" src="${photo(s.img,150)}" alt="" width="54" height="54"><span>${s.name}<small>${s.category} · ${s.minutes} min</small></span><b class="booking-price">${money(s.price)}</b></label>`).join('')}</fieldset><p class="small-note">También podés continuar sin elegir y pedir orientación.</p><fieldset><legend>02 / ¿Cuándo te gustaría venir?</legend><div class="field-grid"><label>Día preferido<input type="date" name="date" required min="${today.toISOString().slice(0,10)}"></label><label>Franja horaria<select name="time"><option>Sin preferencia</option><option>Mañana</option><option>Tarde</option></select></label></div></fieldset><p class="demo-notice">Revisá tu solicitud antes de continuar a WhatsApp. El centro confirma disponibilidad y valor final.</p><button class="button plum full">Revisar mi solicitud <span>↗</span></button></form>`,trigger);body.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target),items=selected(f.getAll('tratamiento')),t=totals(items),date=f.get('date').split('-').reverse().join('/');const message=`Hola, me gustaría consultar por ${items.length?items.map(s=>s.name).join(' + '):'una primera visita y orientación'}.\nDía preferido: ${date}.\nFranja: ${f.get('time')}.\n¿Podrían confirmarme disponibilidad, duración y valor final?`;body.innerHTML=`<p class="eyebrow">LISTA PARA COMPARTIR</p><h2 id="modal-title">Tu momento,<br><em>un paso más cerca.</em></h2><div class="request-summary"><span>Tratamientos</span><b>${items.length?items.map(s=>s.name).join(' + '):'Primera consulta'}</b><span>Preferencia</span><b>${esc(date)} · ${esc(f.get('time'))}</b>${items.length?`<span>Referencia ilustrativa</span><b>${t.time} min · ${money(t.price)}</b>`:''}</div><label class="message-label" for="request-text">Tu mensaje</label><textarea id="request-text" readonly rows="6">${esc(message)}</textarea><p class="demo-notice">El mensaje se abrirá en WhatsApp para que puedas revisarlo y enviarlo. Tu turno queda sujeto a confirmación del centro.</p>${whatsappCTA(message,'Continuar a WhatsApp','full request-whatsapp')}<button class="text-button copy-secondary" id="copy-request">Copiar mensaje</button><button class="text-button" id="edit-request">← Cambiar mis preferencias</button>`;body.querySelector('#copy-request').onclick=async()=>{try{await navigator.clipboard.writeText(message);body.querySelector('#copy-request').textContent='Solicitud copiada ✓';}catch{body.querySelector('textarea').select();toast('Seleccionamos el mensaje para que puedas copiarlo.');}};body.querySelector('#edit-request').onclick=()=>{booking(items.map(s=>s.id),returnFocus);body.querySelector('[name=date]').value=f.get('date');body.querySelector('[name=time]').value=f.get('time');};body.querySelector('.request-whatsapp').focus();});}
+function filter(){const list=document.querySelector('#catalog');if(!list)return;const items=services.filter(s=>(category==='Todos'||category==='Guardados'&&saved.includes(s.id)||s.category===category)&&(!goal||s.goal===goal)&&s.minutes<=maxTime);list.innerHTML=items.length?items.map(card).join(''):`<div class="empty-state"><span>✳</span><h3>${category==='Guardados'?'Todavía no hay mimos en esta selección.':'Este mimo necesita un poco más de tiempo.'}</h3><p>Probá otra combinación o explorá todos los tratamientos.</p><button class="button plum" data-reset>Ver todos los tratamientos ↗</button></div>`;document.querySelector('#result-count').textContent=`${items.length} ${items.length===1?'tratamiento':'tratamientos'} para descubrir`;document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));sync();animateCatalog();}
+function closeMenu(){document.querySelector('#nav-links').classList.remove('open');document.querySelector('#menu-toggle').setAttribute('aria-expanded','false');}
+document.querySelector('#menu-toggle').onclick=()=>{const b=document.querySelector('#menu-toggle'),open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',open);document.querySelector('#nav-links').classList.toggle('open',open);};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+document.addEventListener('change',e=>{const c=e.target.closest('[data-compare]');if(!c)return;const id=c.dataset.compare;if(c.checked){if(compared.length>=2){c.checked=false;toast('Compará dos tratamientos a la vez. Quitá uno para sumar otro.');return;}compared.push(id);}else compared=compared.filter(x=>x!==id);sync();});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(b){if(b.hasAttribute('data-save'))save(b.dataset.save);else if(b.hasAttribute('data-remove'))save(b.dataset.remove);else if(b.hasAttribute('data-plan'))plan(b);else if(b.hasAttribute('data-book'))booking(b.dataset.book?[b.dataset.book]:[],modal.open?returnFocus:b);else if(b.hasAttribute('data-book-list'))booking(saved,returnFocus);else if(b.hasAttribute('data-show-compare'))compare(b);else if(b.classList.contains('clear-compare')){compared=[];sync();}else if(b.hasAttribute('data-discover')){category=b.dataset.discover;goal='';maxTime=1000;document.querySelector('#finder')?.reset();filter();document.querySelector('#explorar')?.scrollIntoView({behavior:motionAllowed()?'smooth':'instant'});}else if(b.hasAttribute('data-category')){category=b.dataset.category;filter();}else if(b.hasAttribute('data-reset')){category='Todos';goal='';maxTime=1000;document.querySelector('#finder').reset();filter();}else if(b.hasAttribute('data-clear-list')){saved=[];try{localStorage.removeItem('mimara:favorites');}catch{}sync();plan(returnFocus);filter();}else if(b.hasAttribute('data-explore')){modal.close();navigate('/tratamientos');}return;}const a=e.target.closest('a');if(!a||a.target||a.origin!==location.origin||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;e.preventDefault();navigate(a.pathname+a.search+a.hash);});
+function navigate(url){
+ const target=new URL(url,location.href);
+ if(target.pathname===location.pathname&&target.hash){history.pushState({},'',url);closeMenu();document.getElementById(target.hash.slice(1))?.scrollIntoView({behavior:motionAllowed()?'smooth':'instant'});return;}
+ const update=()=>{history.pushState({},'',url);render(true);};
+ if(document.startViewTransition&&motionAllowed()){document.startViewTransition(update);}else update();
 }
 
-// Start when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-} else {
-    init();
+function wireGiftBuilder(){
+ const form=document.querySelector('#gift-form');if(!form)return;
+ const update=()=>{
+  const service=services.find(s=>s.id===form.elements.service.value)||services[0];
+  const occasion=form.elements.occasion.value;
+  document.querySelector('#gift-preview-service').textContent=service.name;
+  document.querySelector('#gift-reference').textContent='Valor de ejemplo: '+money(service.price);
+  document.querySelector('#gift-whatsapp').href=whatsappURL('Hola, me interesa regalar '+service.name+'. Ocasión: '+occasion+'. ¿Podrían confirmarme valor, vigencia, forma de entrega y condiciones?');
+ };
+ form.addEventListener('change',update);form.addEventListener('submit',e=>e.preventDefault());update();
 }
+function render(focus=false){
+ let path=location.pathname.replace(/\/$/,'')||'/';
+ const oldSections={'#explorar':'/tratamientos','#experiencia':'/el-centro','#preguntas':'/contacto#preguntas','#descubrir':'/el-centro'};
+ if(path==='/'&&oldSections[location.hash]){history.replaceState({},'',oldSections[location.hash]);path=location.pathname;}
+ if(aliases[path]){history.replaceState({},'',aliases[path]);path=location.pathname;}
+ const page=pages[path]||missingPage;
+ document.body.classList.toggle('management-mode',path==='/gestion');
+ app.innerHTML=page.view();
+ document.title=page.title+' | Mímara';
+ document.querySelector('meta[name=description]').content=page.description;
+ document.querySelector('meta[property="og:title"]').content=document.title;
+ document.querySelector('meta[property="og:description"]').content=page.description;
+ const canonical=document.querySelector('link[rel=canonical]');if(canonical)canonical.href=new URL(path,canonical.href).href;
+ closeMenu();
+ document.querySelectorAll('#nav-links a').forEach(a=>{const active=path===a.pathname||a.pathname==='/tratamientos'&&path.startsWith('/tratamientos/');a.classList.toggle('section-active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ category=new URLSearchParams(location.search).get('categoria')||'Todos';
+ if(!['Todos','Facial','Corporal','Mirada','Guardados'].includes(category))category='Todos';
+ goal='';maxTime=1000;
+ document.querySelector('#finder')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);goal=f.get('goal');maxTime=Number(f.get('time'));category='Todos';filter();document.querySelector('.catalog-toolbar').scrollIntoView({behavior:motionAllowed()?'smooth':'instant',block:'start'});});
+ if(category!=='Todos')filter();
+ sync();wireGiftBuilder();mountAgenda();
+ if(location.hash){requestAnimationFrame(()=>{document.getElementById(location.hash.slice(1))?.scrollIntoView({behavior:'instant'});mountMotion();});}
+ else{if(focus){window.scrollTo({top:0,behavior:'instant'});const h=app.querySelector('h1');h?.setAttribute('tabindex','-1');h?.focus({preventScroll:true});}mountMotion();}
+}
+window.addEventListener('popstate',()=>render(true));render();
+
+

@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+let s=fs.readFileSync('src/site.js','utf8').replace("phone:''","phone:'5492613433108'");
+s+=`\nexport const whatsappURL=message=>'https://wa.me/'+config.phone+'?text='+encodeURIComponent(message);\nexport const treatmentMessage=s=>'Hola, vi '+s.name+' en Mímara. Me gustaría consultar disponibilidad y valor final para este tratamiento. ¿Podrían darme más información?';\n`;
+fs.writeFileSync('src/site.js',s);
+s=fs.readFileSync('src/views.js','utf8').replace('services, money, photo','services, money, photo, whatsappURL, treatmentMessage');
+s=s.replace('export const card=',`export const whatsappCTA=(message,label='Consultar por WhatsApp',extra='')=>\`<a class="button whatsapp-button \${extra}" href="\${esc(whatsappURL(message))}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.6 8.6 0 0 1-12.7 7.5L3 20.5l1.3-4.7A8.6 8.6 0 1 1 20.5 11.7Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 7c-2 3 4 9 7 7l1-2-3-1-1 1-2-2 1-1-1-2Z" fill="currentColor"/></svg>\${label}<span>↗</span></a>\`;\nexport const card=`);
+s=s.replace('<div class="treatment-actions">','${whatsappCTA(treatmentMessage(s))}<div class="treatment-actions">');
+s=s.replace('<div class="detail-buttons">','${whatsappCTA(treatmentMessage(s),\'Consultar por WhatsApp\',\'detail-whatsapp\')}<div class="detail-buttons">');
+s=s.replace('no se reciben reservas ni pagos reales.','las consultas se abren en WhatsApp; no se confirman reservas ni se procesan pagos desde la web.');
+s=s.replace('No se reciben reservas ni pagos reales.','Las consultas se abren en WhatsApp; no se confirman reservas ni se procesan pagos desde la web.');
+s=s.replace('no envía formularios a un servidor.','no envía formularios a un servidor propio. Al continuar a WhatsApp, el mensaje se comparte con ese servicio y el número de atención configurado.');
+fs.writeFileSync('src/views.js',s);
+s=fs.readFileSync('src/main.js','utf8').replace('notFound, card, esc','notFound, card, esc, whatsappCTA');
+s=s.replace('Demo interactiva: no se envían datos ni se reserva un turno. Podés copiar tu solicitud al finalizar.','Revisá tu solicitud antes de continuar a WhatsApp. El centro confirma disponibilidad y valor final.');
+s=s.replace('Esto es una solicitud, no una reserva confirmada. Esta demo no está conectada a la agenda de un centro.','El mensaje se abrirá en WhatsApp para que puedas revisarlo y enviarlo. Tu turno queda sujeto a confirmación del centro.');
+s=s.replace('<button class="button plum full" id="copy-request">Copiar solicitud ↗</button>', '${whatsappCTA(message,\'Continuar a WhatsApp\',\'full request-whatsapp\')}<button class="text-button copy-secondary" id="copy-request">Copiar mensaje</button>');
+s=s.replace("body.querySelector('#copy-request').focus();","body.querySelector('.request-whatsapp').focus();");
+fs.writeFileSync('src/main.js',s);

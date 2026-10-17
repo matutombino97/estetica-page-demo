@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+let v=fs.readFileSync('src/views.js','utf8');
+const start=v.indexOf('export const home=()=>`');
+const end=v.indexOf('export const detail=',start);
+const full=v.slice(start+'export const home=()=>`'.length,end).trim().replace(/`;$/,'');
+const markers=['<section class="hero','<section class="ribbon','<section id="explorar"','<section class="manifesto"','<section id="experiencia"','<section class="plan-invite','<section id="preguntas"','<section class="closing'];
+const names=['heroSection','ribbonSection','catalogSection','manifestoSection','experienceSection','favoritesSection','faqSection','closingSection'];
+const pieces=markers.map((m,i)=>{const a=full.indexOf(m),b=i+1<markers.length?full.indexOf(markers[i+1]):full.length;return `const ${names[i]}=()=>\`${full.slice(a,b).trim()}\`;`;});
+v=v.slice(0,start)+pieces.join('\n')+'\n'+v.slice(end);
+v=v.replaceAll('href="/#explorar"','href="/tratamientos"');
+v=v.replace('href="#explorar">Descubrí tu tratamiento','href="/tratamientos">Descubrí tu tratamiento');
+v=v.replace('href="#explorar" class="scroll-cue"','href="#destacados" class="scroll-cue"');
+v=v.replace('<button data-discover="Facial">01 <b>Faciales</b> ↗</button>','<a href="/tratamientos?categoria=Facial">01 <b>Faciales</b> ↗</a>').replace('<button data-discover="Corporal">02 <b>Corporales</b> ↗</button>','<a href="/tratamientos?categoria=Corporal">02 <b>Corporales</b> ↗</a>').replace('<button data-discover="Mirada">03 <b>Mirada</b> ↗</button>','<a href="/tratamientos?categoria=Mirada">03 <b>Mirada</b> ↗</a>');
+fs.writeFileSync('src/views.js',v);

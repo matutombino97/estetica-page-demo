@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {validate,conflict,sampleEntries} from '../src/agenda-model.js';
+const entries=sampleEntries(),base=entries[0];
+const next={...base,id:'new',name:'Prueba',time:'09:30'};
+assert(conflict(next,entries));
+assert(validate(next,entries).includes('ya tiene'));
+assert.equal(validate({...next,time:'10:00'},entries),'');
+assert.equal(validate({...next,professional:'Profesional 2'},entries),'');
+assert.equal(validate({...next,status:'Cancelado'},entries),'');
+assert.equal(validate(base,entries),'');
+assert(conflict({...next,time:'13:15'},entries));
+assert(validate({...next,time:'23:30',duration:60},[]).includes('mismo día'));
+assert(validate({...next,duration:0},[]));
+assert(validate({...next,phone:'123'},[]));
+assert.equal(validate({...next,time:'10:00',phone:'5492613433108'},entries),'');
+console.log('OK: superposiciones, límites contiguos, profesionales, bloqueos, edición y validación.');

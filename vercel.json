@@ -1,8 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/nosotros", "destination": "/el-centro", "permanent": true },
+    { "source": "/galeria", "destination": "/el-centro#espacio", "permanent": true }
   ]
 }
